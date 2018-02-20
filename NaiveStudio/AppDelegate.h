@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  NaiveStudio
+//  NaiveC
 //
-//  Created by Liang,Zhiyuan(GIS) on 2018/2/16.
-//  Copyright © 2018年 Liang,Zhiyuan(GIS). All rights reserved.
+//  Created by 梁志远 on 16/09/2017.
+//  Copyright © 2017 Ogreaxe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

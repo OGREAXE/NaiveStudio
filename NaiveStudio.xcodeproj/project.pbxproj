@@ -14,6 +14,27 @@
 		D4E06E8A203701CA0095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */; };
 		D4E06E8D203701CA0095F442 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E8C203701CA0095F442 /* main.m */; };
 		D4E06E97203701CA0095F442 /* NaiveStudioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E96203701CA0095F442 /* NaiveStudioTests.m */; };
+		D4E06EC9203703980095F442 /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
+		D4E06ECA203703980095F442 /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
+		D4E06ECB203703980095F442 /* NCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA9203703950095F442 /* NCConsole.m */; };
+		D4E06ECC203703980095F442 /* NCInterpreterController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCInterpreterController.mm */; };
+		D4E06ECD203703980095F442 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
+		D4E06ECE203703980095F442 /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
+		D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB4203703960095F442 /* NCProjectContentViewController.m */; };
+		D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */; };
+		D4E06ED1203703980095F442 /* NCProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */; };
+		D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
+		D4E06ED3203703980095F442 /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
+		D4E06ED4203703980095F442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBA203703960095F442 /* Assets.xcassets */; };
+		D4E06ED5203703980095F442 /* NCCodeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBB203703960095F442 /* NCCodeTemplate.m */; };
+		D4E06ED6203703980095F442 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBF203703970095F442 /* image.xcassets */; };
+		D4E06ED7203703980095F442 /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
+		D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
+		D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC5203703980095F442 /* LaunchScreen.storyboard */; };
+		D4E06EDA203703980095F442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC7203703980095F442 /* Main.storyboard */; };
+		D4E06EE320370E1C0095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
+		D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
+		D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +46,20 @@
 			remoteInfo = NaiveStudio;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E06F0B20386B810095F442 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D4E06E7A203701C90095F442 /* NaiveStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +75,41 @@
 		D4E06E92203701CA0095F442 /* NaiveStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaiveStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E06E96203701CA0095F442 /* NaiveStudioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioTests.m; sourceTree = "<group>"; };
 		D4E06E98203701CA0095F442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E06EA5203703940095F442 /* NCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCProject.m; sourceTree = "<group>"; };
+		D4E06EA6203703940095F442 /* NCProjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCProjectManager.m; sourceTree = "<group>"; };
+		D4E06EA7203703940095F442 /* NCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProject.h; sourceTree = "<group>"; };
+		D4E06EA8203703940095F442 /* NCProjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProjectManager.h; sourceTree = "<group>"; };
+		D4E06EA9203703950095F442 /* NCConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCConsole.m; sourceTree = "<group>"; };
+		D4E06EAA203703950095F442 /* NCInterpreterController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCInterpreterController.mm; sourceTree = "<group>"; };
+		D4E06EAB203703950095F442 /* Common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Common.mm; sourceTree = "<group>"; };
+		D4E06EAC203703950095F442 /* NaiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveC.h; sourceTree = "<group>"; };
+		D4E06EAD203703950095F442 /* NCTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTextManager.h; sourceTree = "<group>"; };
+		D4E06EAE203703950095F442 /* NCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDataSource.h; sourceTree = "<group>"; };
+		D4E06EAF203703950095F442 /* NCInterpreterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCInterpreterController.h; sourceTree = "<group>"; };
+		D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCodeFastInputViewController.h; sourceTree = "<group>"; };
+		D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAddNewFileViewController.h; sourceTree = "<group>"; };
+		D4E06EB2203703950095F442 /* NCConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCConsole.h; sourceTree = "<group>"; };
+		D4E06EB3203703960095F442 /* NCTextManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCTextManager.mm; sourceTree = "<group>"; };
+		D4E06EB4203703960095F442 /* NCProjectContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCProjectContentViewController.m; sourceTree = "<group>"; };
+		D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAddNewFileViewController.m; sourceTree = "<group>"; };
+		D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCProjectTableViewCell.m; sourceTree = "<group>"; };
+		D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NCExtension.m"; sourceTree = "<group>"; };
+		D4E06EB8203703960095F442 /* NCCodeTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCodeTemplate.h; sourceTree = "<group>"; };
+		D4E06EB9203703960095F442 /* NCEditorViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCEditorViewController.mm; sourceTree = "<group>"; };
+		D4E06EBA203703960095F442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4E06EBB203703960095F442 /* NCCodeTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCodeTemplate.m; sourceTree = "<group>"; };
+		D4E06EBC203703970095F442 /* NCProjectContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProjectContentViewController.h; sourceTree = "<group>"; };
+		D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProjectTableViewCell.h; sourceTree = "<group>"; };
+		D4E06EBE203703970095F442 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		D4E06EBF203703970095F442 /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
+		D4E06EC0203703970095F442 /* NCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDataSource.m; sourceTree = "<group>"; };
+		D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NCExtension.h"; sourceTree = "<group>"; };
+		D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCodeFastInputViewController.m; sourceTree = "<group>"; };
+		D4E06EC3203703970095F442 /* NCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCEditorViewController.h; sourceTree = "<group>"; };
+		D4E06EC6203703980095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4E06EC8203703980095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		D4E06EDD2037053A0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaiveC.framework; path = NaiveStudio/lib/NaiveC.framework; sourceTree = "<group>"; };
+		D4E06EE420370E1C0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NaiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */,
+				D4E06EE320370E1C0095F442 /* NaiveC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +138,7 @@
 				D4E06E7C203701C90095F442 /* NaiveStudio */,
 				D4E06E95203701CA0095F442 /* NaiveStudioTests */,
 				D4E06E7B203701C90095F442 /* Products */,
+				D4E06EDC203705390095F442 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +154,35 @@
 		D4E06E7C203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXGroup;
 			children = (
+				D4E06EBA203703960095F442 /* Assets.xcassets */,
+				D4E06EC4203703980095F442 /* Base.lproj */,
+				D4E06EBE203703970095F442 /* Common.h */,
+				D4E06EAB203703950095F442 /* Common.mm */,
+				D4E06EBF203703970095F442 /* image.xcassets */,
+				D4E06EA4203703940095F442 /* Model */,
+				D4E06EAC203703950095F442 /* NaiveC.h */,
+				D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */,
+				D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */,
+				D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */,
+				D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */,
+				D4E06EB8203703960095F442 /* NCCodeTemplate.h */,
+				D4E06EBB203703960095F442 /* NCCodeTemplate.m */,
+				D4E06EB2203703950095F442 /* NCConsole.h */,
+				D4E06EA9203703950095F442 /* NCConsole.m */,
+				D4E06EAE203703950095F442 /* NCDataSource.h */,
+				D4E06EC0203703970095F442 /* NCDataSource.m */,
+				D4E06EC3203703970095F442 /* NCEditorViewController.h */,
+				D4E06EB9203703960095F442 /* NCEditorViewController.mm */,
+				D4E06EAF203703950095F442 /* NCInterpreterController.h */,
+				D4E06EAA203703950095F442 /* NCInterpreterController.mm */,
+				D4E06EBC203703970095F442 /* NCProjectContentViewController.h */,
+				D4E06EB4203703960095F442 /* NCProjectContentViewController.m */,
+				D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */,
+				D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */,
+				D4E06EAD203703950095F442 /* NCTextManager.h */,
+				D4E06EB3203703960095F442 /* NCTextManager.mm */,
+				D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */,
+				D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */,
 				D4E06E7D203701CA0095F442 /* AppDelegate.h */,
 				D4E06E7E203701CA0095F442 /* AppDelegate.m */,
 				D4E06E80203701CA0095F442 /* ViewController.h */,
@@ -103,6 +205,35 @@
 			path = NaiveStudioTests;
 			sourceTree = "<group>";
 		};
+		D4E06EA4203703940095F442 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4E06EA5203703940095F442 /* NCProject.m */,
+				D4E06EA6203703940095F442 /* NCProjectManager.m */,
+				D4E06EA7203703940095F442 /* NCProject.h */,
+				D4E06EA8203703940095F442 /* NCProjectManager.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4E06EC4203703980095F442 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D4E06EC5203703980095F442 /* LaunchScreen.storyboard */,
+				D4E06EC7203703980095F442 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		D4E06EDC203705390095F442 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4E06EE420370E1C0095F442 /* NaiveC.framework */,
+				D4E06EDD2037053A0095F442 /* NaiveC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,6 +244,7 @@
 				D4E06E76203701C90095F442 /* Sources */,
 				D4E06E77203701C90095F442 /* Frameworks */,
 				D4E06E78203701C90095F442 /* Resources */,
+				D4E06F0B20386B810095F442 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,7 +284,7 @@
 				TargetAttributes = {
 					D4E06E79203701C90095F442 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D4E06E91203701CA0095F442 = {
 						CreatedOnToolsVersion = 9.2;
@@ -185,8 +317,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E06EDA203703980095F442 /* Main.storyboard in Resources */,
 				D4E06E8A203701CA0095F442 /* LaunchScreen.storyboard in Resources */,
 				D4E06E87203701CA0095F442 /* Assets.xcassets in Resources */,
+				D4E06ED6203703980095F442 /* image.xcassets in Resources */,
+				D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */,
+				D4E06ED4203703980095F442 /* Assets.xcassets in Resources */,
 				D4E06E85203701CA0095F442 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,9 +341,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E06ED5203703980095F442 /* NCCodeTemplate.m in Sources */,
+				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
+				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
 				D4E06E82203701CA0095F442 /* ViewController.m in Sources */,
+				D4E06ECD203703980095F442 /* Common.mm in Sources */,
+				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
+				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
+				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
 				D4E06E8D203701CA0095F442 /* main.m in Sources */,
+				D4E06ED1203703980095F442 /* NCProjectTableViewCell.m in Sources */,
+				D4E06ECC203703980095F442 /* NCInterpreterController.mm in Sources */,
+				D4E06EC9203703980095F442 /* NCProject.m in Sources */,
+				D4E06ED3203703980095F442 /* NCEditorViewController.mm in Sources */,
+				D4E06ECE203703980095F442 /* NCTextManager.mm in Sources */,
 				D4E06E7F203701CA0095F442 /* AppDelegate.m in Sources */,
+				D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */,
+				D4E06ECA203703980095F442 /* NCProjectManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +394,22 @@
 				D4E06E89203701CA0095F442 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E06EC5203703980095F442 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E06EC6203703980095F442 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D4E06EC7203703980095F442 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4E06EC8203703980095F442 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -357,11 +523,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KLS72L88F6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
+				);
 				INFOPLIST_FILE = NaiveStudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "63464b79-2000-4d6a-b9bf-bee8560eaf7e";
+				PROVISIONING_PROFILE_SPECIFIER = 20180106;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -370,11 +543,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
+				);
 				INFOPLIST_FILE = NaiveStudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

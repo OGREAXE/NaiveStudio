@@ -1,12 +1,14 @@
 //
 //  AppDelegate.m
-//  NaiveStudio
+//  NaiveC
 //
-//  Created by Liang,Zhiyuan(GIS) on 2018/2/16.
-//  Copyright © 2018年 Liang,Zhiyuan(GIS). All rights reserved.
+//  Created by 梁志远 on 16/09/2017.
+//  Copyright © 2017 Ogreaxe. All rights reserved.
 //
 
 #import "AppDelegate.h"
+
+#define kFirstTimeRunKey @"kFirstTimeRunKey"
 
 @interface AppDelegate ()
 
@@ -17,9 +19,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:kFirstTimeRunKey]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kFirstTimeRunKey];
+        
+        //copy a sample file to /Document/projects/project0/
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+        
+        NSString * fromfilepath = [[NSBundle mainBundle] pathForResource:@"CodeTest" ofType:nil];
+        
+        NSString * projectDir = [documentsDirectoryPath stringByAppendingPathComponent:@"projects"];
+        
+        NSError * error = nil;
+        
+        if(![[NSFileManager defaultManager] createDirectoryAtPath:projectDir withIntermediateDirectories:NO attributes:nil error:&error]){
+            NSLog(@"create project folder at didFinishLaunchingWithOptions error, %@",error);
+        }
+        
+        projectDir = [projectDir stringByAppendingPathComponent:@"project0"];
+        if(![[NSFileManager defaultManager] createDirectoryAtPath:projectDir withIntermediateDirectories:NO attributes:nil error:&error]){
+            NSLog(@"create project0 folder at didFinishLaunchingWithOptions error, %@",error);
+        }
+        
+        NSString * tofilepath = [projectDir stringByAppendingPathComponent:@"helloworld"];
+        
+        if(![[NSFileManager defaultManager] copyItemAtPath:fromfilepath toPath:tofilepath error:&error]){
+            NSLog(@"copy sample file at didFinishLaunchingWithOptions error, %@",error);
+        }
+        
+        /////////
+        NSArray * files = [[NSFileManager defaultManager]  contentsOfDirectoryAtPath:projectDir error:&error];
+        
+        if (error) {
+            NSLog(@"error project folders not exists");
+        }
+        [files enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"_________%@",obj);
+        }];
+    }
+
+    
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
