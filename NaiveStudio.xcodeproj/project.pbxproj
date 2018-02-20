@@ -82,7 +82,6 @@
 		D4E06EA9203703950095F442 /* NCConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCConsole.m; sourceTree = "<group>"; };
 		D4E06EAA203703950095F442 /* NCInterpreterController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCInterpreterController.mm; sourceTree = "<group>"; };
 		D4E06EAB203703950095F442 /* Common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Common.mm; sourceTree = "<group>"; };
-		D4E06EAC203703950095F442 /* NaiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveC.h; sourceTree = "<group>"; };
 		D4E06EAD203703950095F442 /* NCTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTextManager.h; sourceTree = "<group>"; };
 		D4E06EAE203703950095F442 /* NCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDataSource.h; sourceTree = "<group>"; };
 		D4E06EAF203703950095F442 /* NCInterpreterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCInterpreterController.h; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 				D4E06EAB203703950095F442 /* Common.mm */,
 				D4E06EBF203703970095F442 /* image.xcassets */,
 				D4E06EA4203703940095F442 /* Model */,
-				D4E06EAC203703950095F442 /* NaiveC.h */,
 				D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */,
 				D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */,
 				D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */,
