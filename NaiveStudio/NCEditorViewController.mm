@@ -56,6 +56,11 @@
     self.textViewDataSource.linkedStorage = self.sourceFile.filepath;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UINavigationController * naviVc = [UIApplication sharedApplication].keyWindow.rootViewController;
+        naviVc.topViewController.view;
+    });
 }
 
 //-(void)testNC{
