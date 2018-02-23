@@ -48,6 +48,8 @@
     //    string str = "int i=0 \n if(i==0)i=2+1";
     _textViewDataSource  = [[NCTextViewDataSource alloc] initWithTextView:self.textView];
     
+    _textView.smartQuotesType = UITextSmartQuotesTypeNo; 
+    
     _textManager = [[NCTextManager alloc] initWithDataSource:self.textViewDataSource];
     _interpreter = [[NCInterpreterController alloc] init];
     self.interpreter.delegate  = self.textManager;
@@ -56,6 +58,8 @@
     self.textViewDataSource.linkedStorage = self.sourceFile.filepath;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogNotification:) name:@"NCLogNotification" object:nil];
 }
 
 //-(void)testNC{
@@ -92,6 +96,12 @@
     self.outputView.text = [[[self.outputView.text stringByAppendingString:str]stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"] stringByAppendingString:@"\n"];
 }
 
+-(void)didReceiveLogNotification:(NSNotification*)notification{
+    NSString * str = notification.object;
+    
+    self.outputView.text = [[[self.outputView.text stringByAppendingString:str]stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"] stringByAppendingString:@"\n"];
+}
+
 #pragma mark shortcut input
 -(IBAction)didTapFor:(id)sender{
 //    [self.textManager insertCodeTemplate:NCCodeTemplateFor];
@@ -116,7 +126,7 @@
 }
 //{
 -(IBAction)didTapPar1:(id)sender{
-    
+    [self.textManager insertText:@"\"\""];
 }
 //(
 -(IBAction)didTapPar2:(id)sender{

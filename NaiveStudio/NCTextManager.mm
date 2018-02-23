@@ -257,4 +257,8 @@ struct BalanceInfo{
     [self.dataSource replaceRange:self.dataSource.selectedRange withText:templateStr];
 }
 
+-(void)insertText:(NSString*)text {
+    [self.dataSource replaceRange:self.dataSource.selectedRange withText:text];
+}
+
 @end

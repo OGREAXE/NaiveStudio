@@ -19,4 +19,6 @@
 
 -(void)insertCodeTemplate:(NCCodeTemplateType)type placeholdersFillerArray:(NSArray*)fillers;
 
+-(void)insertText:(NSString*)text;
+
 @end
