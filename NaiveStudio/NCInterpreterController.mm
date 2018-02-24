@@ -101,10 +101,9 @@
     
     if (!source.text || source.text.length == 0) {
         return NO;
-        
     }
         
-    return [self.codeEngine run:source.text error:nil];;
+    return [self.codeEngine run:source.text mode:self.mode error:nil];;
 }
 
 @end

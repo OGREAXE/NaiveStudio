@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NCDataSource.h"
+#import <NaiveC/NCCodeEngine_iOS.h>
 
 @class NCInterpreterController;
 
@@ -22,6 +23,8 @@
 @interface NCInterpreterController : NSObject<NCDataSourceDelegate>
 
 @property (nonatomic) id<NCInterpreterControllerDelegate> delegate;
+
+@property (nonatomic) NCInterpretorMode mode;
 
 -(BOOL)reinterprete;
 
