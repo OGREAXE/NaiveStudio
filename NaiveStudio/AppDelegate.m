@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NCProjectManager.h"
 
 #define kFirstTimeRunKey @"kFirstTimeRunKey"
 
@@ -20,43 +21,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSString *documentsDirectoryPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    [NCProjectManager sharedManager].rootPath = documentsDirectoryPath;
     if (![[NSUserDefaults standardUserDefaults] boolForKey:kFirstTimeRunKey]) {
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kFirstTimeRunKey];
-        
-        //copy a sample file to /Document/projects/project0/
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectoryPath = [paths objectAtIndex:0];
-        
-        NSString * fromfilepath = [[NSBundle mainBundle] pathForResource:@"CodeTest" ofType:nil];
-        
-        NSString * projectDir = [documentsDirectoryPath stringByAppendingPathComponent:@"projects"];
-        
-        NSError * error = nil;
-        
-        if(![[NSFileManager defaultManager] createDirectoryAtPath:projectDir withIntermediateDirectories:NO attributes:nil error:&error]){
-            NSLog(@"create project folder at didFinishLaunchingWithOptions error, %@",error);
-        }
-        
-        projectDir = [projectDir stringByAppendingPathComponent:@"project0"];
-        if(![[NSFileManager defaultManager] createDirectoryAtPath:projectDir withIntermediateDirectories:NO attributes:nil error:&error]){
-            NSLog(@"create project0 folder at didFinishLaunchingWithOptions error, %@",error);
-        }
-        
-        NSString * tofilepath = [projectDir stringByAppendingPathComponent:@"helloworld"];
-        
-        if(![[NSFileManager defaultManager] copyItemAtPath:fromfilepath toPath:tofilepath error:&error]){
-            NSLog(@"copy sample file at didFinishLaunchingWithOptions error, %@",error);
-        }
-        
-        /////////
-        NSArray * files = [[NSFileManager defaultManager]  contentsOfDirectoryAtPath:projectDir error:&error];
-        
-        if (error) {
-            NSLog(@"error project folders not exists");
-        }
-        [files enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSLog(@"_________%@",obj);
-        }];
+        [[NCProjectManager sharedManager] onAppFirstLaunch];
     }
 
     

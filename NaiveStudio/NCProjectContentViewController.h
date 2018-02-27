@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NCInterpreterController.h"
+
+@class NCProject;
 
 @interface NCProjectContentViewController : UIViewController
-
+@property  (nonatomic) NCProject * project;
+@property (nonatomic) NCInterpretorMode mode;
 @end

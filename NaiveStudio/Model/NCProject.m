@@ -45,3 +45,6 @@
 }
 
 @end
+
+@implementation NCPlayground
+@end

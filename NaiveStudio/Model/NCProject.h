@@ -29,3 +29,6 @@
 -(void)reload;
 
 @end
+
+@interface NCPlayground:NCProject
+@end

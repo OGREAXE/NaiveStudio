@@ -49,6 +49,9 @@
         
         controller.sourceFile = file;
         
+        if ([self.delegate respondsToSelector:@selector(addNewFileViewController:willPushtoEditController:)] ) {
+            [self.delegate addNewFileViewController:self willPushtoEditController:controller];
+        }
         [self.navigationController pushViewController:controller animated:YES];
         
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "NCProjectManager.h"
+#import "NCInterpreterController.h"
 
 @interface NCEditorViewController : UIViewController
 
 @property (nonatomic) NCSourceFile * sourceFile;
+
+@property (nonatomic) NCInterpretorMode mode;
 
 @end
 

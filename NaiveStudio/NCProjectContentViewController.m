@@ -13,11 +13,9 @@
 #import "NCAddNewFileViewController.h"
 #import "Common.h"
 
-@interface NCProjectContentViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface NCProjectContentViewController ()<UITableViewDataSource, UITableViewDelegate,NCAddNewFileViewControllerDelegate>
 
 @property  (nonatomic) IBOutlet UITableView * tableView;
-
-@property  (nonatomic) NCProject * project;
 
 @end
 
@@ -26,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.project = [[NCProjectManager sharedManager] defaultProject];
     
     self.title= self.project.name;
     [self.tableView reloadData];
@@ -88,6 +85,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NCEditorViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
     
+    controller.mode = self.mode;
     controller.sourceFile = self.project.sourceFiles[indexPath.row];
     
     [self.navigationController pushViewController:controller animated:YES];
@@ -121,7 +119,12 @@
 -(void)didTapAddNew{
     NCAddNewFileViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCAddNewFileViewController class])];
     controller.currentProject = self.project;
+    controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+-(void)addNewFileViewController:(NCAddNewFileViewController*)addNewController willPushtoEditController:(NCEditorViewController*)editController{
+    editController.mode = self.mode;
 }
 
 @end

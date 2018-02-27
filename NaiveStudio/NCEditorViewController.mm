@@ -52,6 +52,8 @@
     
     _textManager = [[NCTextManager alloc] initWithDataSource:self.textViewDataSource];
     _interpreter = [[NCInterpreterController alloc] init];
+    _interpreter.mode = self.mode;
+    
     self.interpreter.delegate  = self.textManager;
     
     [self.textViewDataSource addDelegate:self.interpreter];

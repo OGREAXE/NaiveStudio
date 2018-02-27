@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
+		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
 		D4E06E7F203701CA0095F442 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E7E203701CA0095F442 /* AppDelegate.m */; };
 		D4E06E82203701CA0095F442 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E81203701CA0095F442 /* ViewController.m */; };
 		D4E06E85203701CA0095F442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D4892E952043B1730052267E /* NCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewController.h; sourceTree = "<group>"; };
+		D4892E962043B1730052267E /* NCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewController.m; sourceTree = "<group>"; };
+		D4892E9E2043B41F0052267E /* NCMainViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewCell.h; sourceTree = "<group>"; };
+		D4892E9F2043B41F0052267E /* NCMainViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewCell.m; sourceTree = "<group>"; };
 		D4E06E7A203701C90095F442 /* NaiveStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E06E7D203701CA0095F442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4E06E7E203701CA0095F442 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,6 +179,10 @@
 				D4E06EB9203703960095F442 /* NCEditorViewController.mm */,
 				D4E06EAF203703950095F442 /* NCInterpreterController.h */,
 				D4E06EAA203703950095F442 /* NCInterpreterController.mm */,
+				D4892E9E2043B41F0052267E /* NCMainViewCell.h */,
+				D4892E9F2043B41F0052267E /* NCMainViewCell.m */,
+				D4892E952043B1730052267E /* NCMainViewController.h */,
+				D4892E962043B1730052267E /* NCMainViewController.m */,
 				D4E06EBC203703970095F442 /* NCProjectContentViewController.h */,
 				D4E06EB4203703960095F442 /* NCProjectContentViewController.m */,
 				D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */,
@@ -339,7 +349,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4892E972043B1730052267E /* NCMainViewController.m in Sources */,
 				D4E06ED5203703980095F442 /* NCCodeTemplate.m in Sources */,
+				D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */,
 				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
 				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
 				D4E06E82203701CA0095F442 /* ViewController.m in Sources */,

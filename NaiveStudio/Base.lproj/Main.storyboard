@@ -20,12 +20,55 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="A2q-2n-sFF" kind="relationship" relationship="rootViewController" id="p9t-H9-k1R"/>
+                        <segue destination="vpJ-Rw-Zid" kind="relationship" relationship="rootViewController" id="dLC-W7-mjb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgS-gf-Kao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1821" y="97"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="RGU-QY-Rxz">
+            <objects>
+                <viewController id="vpJ-Rw-Zid" customClass="NCMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YVu-tY-Eew"/>
+                        <viewControllerLayoutGuide type="bottom" id="wUa-kY-GPD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k2q-Zk-eez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjs-Ky-cVI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vpJ-Rw-Zid" id="v6t-Z2-V5R"/>
+                                    <outlet property="delegate" destination="vpJ-Rw-Zid" id="9dx-VQ-6Yw"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-tY-DjL">
+                                <rect key="frame" x="0.0" y="614" width="375" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Playground"/>
+                                <connections>
+                                    <action selector="didTapGotoPlaygound:" destination="vpJ-Rw-Zid" eventType="touchUpInside" id="zKQ-rD-QQA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QgM-fg-qvX"/>
+                    <connections>
+                        <outlet property="playgroundButton" destination="vWF-tY-DjL" id="2Dh-49-Bhx"/>
+                        <outlet property="tableView" destination="pjs-Ky-cVI" id="qtA-lG-8xM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHV-zW-Jlu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-832.79999999999995" y="-562.66866566716647"/>
         </scene>
         <!--Project Content View Controller-->
         <scene sceneID="1dD-FV-56c">
