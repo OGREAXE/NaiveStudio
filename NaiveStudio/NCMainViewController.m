@@ -11,6 +11,7 @@
 #import "NCProject.h"
 #import "NCProjectContentViewController.h"
 #import "NCEditorViewController.h"
+#import "Common.h"
 
 @interface NCMainViewController ()
 
@@ -28,6 +29,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (self.isPresented) {
+        UIBarButtonItem *btnClose = [[UIBarButtonItem alloc] initWithTitle:@"Close"
+                                                                 style:UIBarButtonItemStylePlain
+                                                                target:self
+                                                                action:@selector(didTapCloseButton:)];
+        self.navigationItem.leftBarButtonItems = @[btnClose];
+    }
     UIBarButtonItem *btn0 = [[UIBarButtonItem alloc] initWithTitle:@"New Project"
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
@@ -42,6 +50,8 @@
     self.projectList = [NSMutableArray arrayWithObject:[[NCProjectManager sharedManager] defaultProject]];
     
     [self.tableView reloadData];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,7 +90,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
+    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
     
     controller.project = self.projectList[indexPath.row];
     
@@ -96,12 +106,18 @@
         [[NCProjectManager sharedManager] createPlayground];
     }
     
-    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
+    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
     
     controller.mode = NCInterpretorModeCommandLine;
     controller.project = [NCProjectManager sharedManager].playground;
     
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+-(void)didTapCloseButton:(id)sender{
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 @end

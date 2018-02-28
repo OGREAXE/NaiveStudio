@@ -39,7 +39,7 @@
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(didTapAddNew)];
-    btn0.image = [UIImage imageNamed:@"add"];
+    btn0.image = [UIImage imageNamed:@"add" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     self.navigationItem.rightBarButtonItems = @[btn0];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,7 +83,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NCEditorViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
+    NCEditorViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
     
     controller.mode = self.mode;
     controller.sourceFile = self.project.sourceFiles[indexPath.row];
@@ -117,7 +117,7 @@
 }
 
 -(void)didTapAddNew{
-    NCAddNewFileViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCAddNewFileViewController class])];
+    NCAddNewFileViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCAddNewFileViewController class])];
     controller.currentProject = self.project;
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];

@@ -10,4 +10,6 @@
 
 @interface NCMainViewController : UIViewController
 
+@property (nonatomic) BOOL isPresented;
+
 @end

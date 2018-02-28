@@ -200,7 +200,7 @@
 -(void)showFastInputViewController:(NCFastInputType)type{
     self.selectedRange = self.textView.selectedRange;
     
-    NCCodeFastInputViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCCodeFastInputViewController class])];
+    NCCodeFastInputViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCCodeFastInputViewController class])];
     controller.type = type;
     controller.delegate = self;
     

@@ -9,9 +9,52 @@
 /* Begin PBXBuildFile section */
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
+		D4892EF3204569800052267E /* NaiveStudioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; };
+		D4892EFA204569800052267E /* NaiveStudioSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892EF9204569800052267E /* NaiveStudioSDKTests.m */; };
+		D4892EFC204569800052267E /* NaiveStudioSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4892EFF204569800052267E /* NaiveStudioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; };
+		D4892F00204569800052267E /* NaiveStudioSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4892F07204569FF0052267E /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBE203703970095F442 /* Common.h */; };
+		D4892F08204569FF0052267E /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
+		D4892F0A204569FF0052267E /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
+		D4892F0B204569FF0052267E /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
+		D4892F0C204569FF0052267E /* NCProject.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA7203703940095F442 /* NCProject.h */; };
+		D4892F0D204569FF0052267E /* NCProjectManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA8203703940095F442 /* NCProjectManager.h */; };
+		D4892F0E204569FF0052267E /* NCAddNewFileViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */; };
+		D4892F0F204569FF0052267E /* NCAddNewFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */; };
+		D4892F10204569FF0052267E /* NCCodeFastInputViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */; };
+		D4892F11204569FF0052267E /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
+		D4892F12204569FF0052267E /* NCCodeTemplate.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB8203703960095F442 /* NCCodeTemplate.h */; };
+		D4892F13204569FF0052267E /* NCCodeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBB203703960095F442 /* NCCodeTemplate.m */; };
+		D4892F14204569FF0052267E /* NCConsole.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB2203703950095F442 /* NCConsole.h */; };
+		D4892F15204569FF0052267E /* NCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA9203703950095F442 /* NCConsole.m */; };
+		D4892F16204569FF0052267E /* NCDataSource.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAE203703950095F442 /* NCDataSource.h */; };
+		D4892F17204569FF0052267E /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
+		D4892F18204569FF0052267E /* NCEditorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC3203703970095F442 /* NCEditorViewController.h */; };
+		D4892F19204569FF0052267E /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
+		D4892F1A204569FF0052267E /* NCInterpreterController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCInterpreterController.h */; };
+		D4892F1B204569FF0052267E /* NCInterpreterController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCInterpreterController.mm */; };
+		D4892F1C204569FF0052267E /* NCMainViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9E2043B41F0052267E /* NCMainViewCell.h */; };
+		D4892F1D204569FF0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
+		D4892F1E204569FF0052267E /* NCMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; };
+		D4892F1F204569FF0052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
+		D4892F20204569FF0052267E /* NCProjectContentViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBC203703970095F442 /* NCProjectContentViewController.h */; };
+		D4892F21204569FF0052267E /* NCProjectContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB4203703960095F442 /* NCProjectContentViewController.m */; };
+		D4892F22204569FF0052267E /* NCProjectTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */; };
+		D4892F23204569FF0052267E /* NCProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */; };
+		D4892F24204569FF0052267E /* NCTextManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAD203703950095F442 /* NCTextManager.h */; };
+		D4892F25204569FF0052267E /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
+		D4892F26204569FF0052267E /* UIViewController+NCExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */; };
+		D4892F27204569FF0052267E /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
+		D4892F2C204577600052267E /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
+		D4892F2D2045787A0052267E /* NCMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4892F2E2045787A0052267E /* NaiveStudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4B9A78F2045B2000077EA1B /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
+		D4BB862B2045833600582695 /* NaiveStudio.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; };
+		D4BB862C2045833600582695 /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
+		D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		D4E06E7F203701CA0095F442 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E7E203701CA0095F442 /* AppDelegate.m */; };
-		D4E06E82203701CA0095F442 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E81203701CA0095F442 /* ViewController.m */; };
-		D4E06E85203701CA0095F442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* Main.storyboard */; };
+		D4E06E85203701CA0095F442 /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
 		D4E06E87203701CA0095F442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E86203701CA0095F442 /* Assets.xcassets */; };
 		D4E06E8A203701CA0095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */; };
 		D4E06E8D203701CA0095F442 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06E8C203701CA0095F442 /* main.m */; };
@@ -33,13 +76,35 @@
 		D4E06ED7203703980095F442 /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
 		D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
 		D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC5203703980095F442 /* LaunchScreen.storyboard */; };
-		D4E06EDA203703980095F442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC7203703980095F442 /* Main.storyboard */; };
-		D4E06EE320370E1C0095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
 		D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
 		D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4F022732046497C0039A449 /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
+		D4F0229A20465F870039A449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBA203703960095F442 /* Assets.xcassets */; };
+		D4F0229B20465F870039A449 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBF203703970095F442 /* image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D4892EF4204569800052267E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E06E72203701C90095F442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4892EE92045697F0052267E;
+			remoteInfo = NaiveStudioSDK;
+		};
+		D4892EF6204569800052267E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E06E72203701C90095F442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4E06E79203701C90095F442;
+			remoteInfo = NaiveStudio;
+		};
+		D4892EFD204569800052267E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E06E72203701C90095F442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4892EE92045697F0052267E;
+			remoteInfo = NaiveStudioSDK;
+		};
 		D4E06E93203701CA0095F442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4E06E72203701C90095F442 /* Project object */;
@@ -57,6 +122,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */,
+				D4892F00204569800052267E /* NaiveStudioSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,12 +134,18 @@
 		D4892E962043B1730052267E /* NCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewController.m; sourceTree = "<group>"; };
 		D4892E9E2043B41F0052267E /* NCMainViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewCell.h; sourceTree = "<group>"; };
 		D4892E9F2043B41F0052267E /* NCMainViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewCell.m; sourceTree = "<group>"; };
+		D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NaiveStudioSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4892EEC204569800052267E /* NaiveStudioSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaiveStudioSDK.h; sourceTree = "<group>"; };
+		D4892EED204569800052267E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaiveStudioSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4892EF9204569800052267E /* NaiveStudioSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioSDKTests.m; sourceTree = "<group>"; };
+		D4892EFB204569800052267E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4892F2A204577600052267E /* NaiveStudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaiveStudio.h; sourceTree = "<group>"; };
+		D4892F2B204577600052267E /* NaiveStudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudio.m; sourceTree = "<group>"; };
 		D4E06E7A203701C90095F442 /* NaiveStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E06E7D203701CA0095F442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4E06E7E203701CA0095F442 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D4E06E80203701CA0095F442 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D4E06E81203701CA0095F442 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D4E06E84203701CA0095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4E06E84203701CA0095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NaiveStudio.storyboard; sourceTree = "<group>"; };
 		D4E06E86203701CA0095F442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E06E89203701CA0095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E06E8B203701CA0095F442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,18 +184,32 @@
 		D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCodeFastInputViewController.m; sourceTree = "<group>"; };
 		D4E06EC3203703970095F442 /* NCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCEditorViewController.h; sourceTree = "<group>"; };
 		D4E06EC6203703980095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4E06EC8203703980095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		D4E06EDD2037053A0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NaiveC.framework; path = NaiveStudio/lib/NaiveC.framework; sourceTree = "<group>"; };
 		D4E06EE420370E1C0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NaiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4892EE62045697F0052267E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B9A78F2045B2000077EA1B /* NaiveC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4892EEF204569800052267E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4892EF3204569800052267E /* NaiveStudioSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4E06E77203701C90095F442 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4892EFF204569800052267E /* NaiveStudioSDK.framework in Frameworks */,
 				D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */,
-				D4E06EE320370E1C0095F442 /* NaiveC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,11 +223,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4892EEB204569800052267E /* NaiveStudioSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D4892EEC204569800052267E /* NaiveStudioSDK.h */,
+				D4892EED204569800052267E /* Info.plist */,
+			);
+			path = NaiveStudioSDK;
+			sourceTree = "<group>";
+		};
+		D4892EF8204569800052267E /* NaiveStudioSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4892EF9204569800052267E /* NaiveStudioSDKTests.m */,
+				D4892EFB204569800052267E /* Info.plist */,
+			);
+			path = NaiveStudioSDKTests;
+			sourceTree = "<group>";
+		};
 		D4E06E71203701C90095F442 = {
 			isa = PBXGroup;
 			children = (
 				D4E06E7C203701C90095F442 /* NaiveStudio */,
 				D4E06E95203701CA0095F442 /* NaiveStudioTests */,
+				D4892EEB204569800052267E /* NaiveStudioSDK */,
+				D4892EF8204569800052267E /* NaiveStudioSDKTests */,
 				D4E06E7B203701C90095F442 /* Products */,
 				D4E06EDC203705390095F442 /* Frameworks */,
 			);
@@ -152,6 +258,8 @@
 			children = (
 				D4E06E7A203701C90095F442 /* NaiveStudio.app */,
 				D4E06E92203701CA0095F442 /* NaiveStudioTests.xctest */,
+				D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */,
+				D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,11 +299,11 @@
 				D4E06EB3203703960095F442 /* NCTextManager.mm */,
 				D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */,
 				D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */,
+				D4892F2A204577600052267E /* NaiveStudio.h */,
+				D4892F2B204577600052267E /* NaiveStudio.m */,
 				D4E06E7D203701CA0095F442 /* AppDelegate.h */,
 				D4E06E7E203701CA0095F442 /* AppDelegate.m */,
-				D4E06E80203701CA0095F442 /* ViewController.h */,
-				D4E06E81203701CA0095F442 /* ViewController.m */,
-				D4E06E83203701CA0095F442 /* Main.storyboard */,
+				D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */,
 				D4E06E86203701CA0095F442 /* Assets.xcassets */,
 				D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */,
 				D4E06E8B203701CA0095F442 /* Info.plist */,
@@ -228,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				D4E06EC5203703980095F442 /* LaunchScreen.storyboard */,
-				D4E06EC7203703980095F442 /* Main.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -237,14 +344,63 @@
 			isa = PBXGroup;
 			children = (
 				D4E06EE420370E1C0095F442 /* NaiveC.framework */,
-				D4E06EDD2037053A0095F442 /* NaiveC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D4892EE72045697F0052267E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4892EFC204569800052267E /* NaiveStudioSDK.h in Headers */,
+				D4892F2D2045787A0052267E /* NCMainViewController.h in Headers */,
+				D4892F2E2045787A0052267E /* NaiveStudio.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		D4892EE92045697F0052267E /* NaiveStudioSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4892F01204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDK" */;
+			buildPhases = (
+				D4892EE52045697F0052267E /* Sources */,
+				D4892EE62045697F0052267E /* Frameworks */,
+				D4892EE72045697F0052267E /* Headers */,
+				D4892EE82045697F0052267E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaiveStudioSDK;
+			productName = NaiveStudioSDK;
+			productReference = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4892EF1204569800052267E /* NaiveStudioSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4892F04204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDKTests" */;
+			buildPhases = (
+				D4892EEE204569800052267E /* Sources */,
+				D4892EEF204569800052267E /* Frameworks */,
+				D4892EF0204569800052267E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4892EF5204569800052267E /* PBXTargetDependency */,
+				D4892EF7204569800052267E /* PBXTargetDependency */,
+			);
+			name = NaiveStudioSDKTests;
+			productName = NaiveStudioSDKTests;
+			productReference = D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D4E06E79203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E06E9B203701CA0095F442 /* Build configuration list for PBXNativeTarget "NaiveStudio" */;
@@ -257,6 +413,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D4892EFE204569800052267E /* PBXTargetDependency */,
 			);
 			name = NaiveStudio;
 			productName = NaiveStudio;
@@ -290,6 +447,15 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Liang,Zhiyuan(GIS)";
 				TargetAttributes = {
+					D4892EE92045697F0052267E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					D4892EF1204569800052267E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D4E06E79203701C90095F442;
+					};
 					D4E06E79203701C90095F442 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -316,22 +482,40 @@
 			targets = (
 				D4E06E79203701C90095F442 /* NaiveStudio */,
 				D4E06E91203701CA0095F442 /* NaiveStudioTests */,
+				D4892EE92045697F0052267E /* NaiveStudioSDK */,
+				D4892EF1204569800052267E /* NaiveStudioSDKTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D4892EE82045697F0052267E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F0229A20465F870039A449 /* Assets.xcassets in Resources */,
+				D4F0229B20465F870039A449 /* image.xcassets in Resources */,
+				D4F022732046497C0039A449 /* NaiveStudio.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4892EF0204569800052267E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4E06E78203701C90095F442 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E06EDA203703980095F442 /* Main.storyboard in Resources */,
 				D4E06E8A203701CA0095F442 /* LaunchScreen.storyboard in Resources */,
 				D4E06E87203701CA0095F442 /* Assets.xcassets in Resources */,
 				D4E06ED6203703980095F442 /* image.xcassets in Resources */,
 				D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */,
 				D4E06ED4203703980095F442 /* Assets.xcassets in Resources */,
-				D4E06E85203701CA0095F442 /* Main.storyboard in Resources */,
+				D4E06E85203701CA0095F442 /* NaiveStudio.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +529,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D4892EE52045697F0052267E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */,
+				D4BB862B2045833600582695 /* NaiveStudio.h in Sources */,
+				D4BB862C2045833600582695 /* NaiveStudio.m in Sources */,
+				D4892F07204569FF0052267E /* Common.h in Sources */,
+				D4892F08204569FF0052267E /* Common.mm in Sources */,
+				D4892F0A204569FF0052267E /* NCProject.m in Sources */,
+				D4892F0B204569FF0052267E /* NCProjectManager.m in Sources */,
+				D4892F0C204569FF0052267E /* NCProject.h in Sources */,
+				D4892F0D204569FF0052267E /* NCProjectManager.h in Sources */,
+				D4892F0E204569FF0052267E /* NCAddNewFileViewController.h in Sources */,
+				D4892F0F204569FF0052267E /* NCAddNewFileViewController.m in Sources */,
+				D4892F10204569FF0052267E /* NCCodeFastInputViewController.h in Sources */,
+				D4892F11204569FF0052267E /* NCCodeFastInputViewController.m in Sources */,
+				D4892F12204569FF0052267E /* NCCodeTemplate.h in Sources */,
+				D4892F13204569FF0052267E /* NCCodeTemplate.m in Sources */,
+				D4892F14204569FF0052267E /* NCConsole.h in Sources */,
+				D4892F15204569FF0052267E /* NCConsole.m in Sources */,
+				D4892F16204569FF0052267E /* NCDataSource.h in Sources */,
+				D4892F17204569FF0052267E /* NCDataSource.m in Sources */,
+				D4892F18204569FF0052267E /* NCEditorViewController.h in Sources */,
+				D4892F19204569FF0052267E /* NCEditorViewController.mm in Sources */,
+				D4892F1A204569FF0052267E /* NCInterpreterController.h in Sources */,
+				D4892F1B204569FF0052267E /* NCInterpreterController.mm in Sources */,
+				D4892F1C204569FF0052267E /* NCMainViewCell.h in Sources */,
+				D4892F1D204569FF0052267E /* NCMainViewCell.m in Sources */,
+				D4892F1E204569FF0052267E /* NCMainViewController.h in Sources */,
+				D4892F1F204569FF0052267E /* NCMainViewController.m in Sources */,
+				D4892F20204569FF0052267E /* NCProjectContentViewController.h in Sources */,
+				D4892F21204569FF0052267E /* NCProjectContentViewController.m in Sources */,
+				D4892F22204569FF0052267E /* NCProjectTableViewCell.h in Sources */,
+				D4892F23204569FF0052267E /* NCProjectTableViewCell.m in Sources */,
+				D4892F24204569FF0052267E /* NCTextManager.h in Sources */,
+				D4892F25204569FF0052267E /* NCTextManager.mm in Sources */,
+				D4892F26204569FF0052267E /* UIViewController+NCExtension.h in Sources */,
+				D4892F27204569FF0052267E /* UIViewController+NCExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4892EEE204569800052267E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4892EFA204569800052267E /* NaiveStudioSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4E06E76203701C90095F442 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,8 +588,8 @@
 				D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */,
 				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
 				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
-				D4E06E82203701CA0095F442 /* ViewController.m in Sources */,
 				D4E06ECD203703980095F442 /* Common.mm in Sources */,
+				D4892F2C204577600052267E /* NaiveStudio.m in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
 				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
@@ -382,6 +616,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D4892EF5204569800052267E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4892EE92045697F0052267E /* NaiveStudioSDK */;
+			targetProxy = D4892EF4204569800052267E /* PBXContainerItemProxy */;
+		};
+		D4892EF7204569800052267E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4E06E79203701C90095F442 /* NaiveStudio */;
+			targetProxy = D4892EF6204569800052267E /* PBXContainerItemProxy */;
+		};
+		D4892EFE204569800052267E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4892EE92045697F0052267E /* NaiveStudioSDK */;
+			targetProxy = D4892EFD204569800052267E /* PBXContainerItemProxy */;
+		};
 		D4E06E94203701CA0095F442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4E06E79203701C90095F442 /* NaiveStudio */;
@@ -390,12 +639,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D4E06E83203701CA0095F442 /* Main.storyboard */ = {
+		D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D4E06E84203701CA0095F442 /* Base */,
 			);
-			name = Main.storyboard;
+			name = NaiveStudio.storyboard;
 			sourceTree = "<group>";
 		};
 		D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */ = {
@@ -414,17 +663,107 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		D4E06EC7203703980095F442 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4E06EC8203703980095F442 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D4892F02204569800052267E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NaiveStudioSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lstdc++",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4892F03204569800052267E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NaiveStudioSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4892F05204569800052267E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaiveStudioSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudio.app/NaiveStudio";
+			};
+			name = Debug;
+		};
+		D4892F06204569800052267E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NaiveStudioSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudio.app/NaiveStudio";
+			};
+			name = Release;
+		};
 		D4E06E99203701CA0095F442 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -599,6 +938,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4892F01204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4892F02204569800052267E /* Debug */,
+				D4892F03204569800052267E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4892F04204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4892F05204569800052267E /* Debug */,
+				D4892F06204569800052267E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4E06E75203701C90095F442 /* Build configuration list for PBXProject "NaiveStudio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -30,7 +30,7 @@
         <!--Main View Controller-->
         <scene sceneID="RGU-QY-Rxz">
             <objects>
-                <viewController id="vpJ-Rw-Zid" customClass="NCMainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NCMainViewController" id="vpJ-Rw-Zid" customClass="NCMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YVu-tY-Eew"/>
                         <viewControllerLayoutGuide type="bottom" id="wUa-kY-GPD"/>

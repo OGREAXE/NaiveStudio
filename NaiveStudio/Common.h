@@ -15,4 +15,6 @@
 
 #define SAFE_RELEASE(p) if(p){delete p;p=nullptr;}
 
+#define MainStoryBoardName @"NaiveStudio"
+
 #endif /* Common_h */

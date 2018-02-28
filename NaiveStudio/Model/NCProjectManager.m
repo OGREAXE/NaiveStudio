@@ -42,6 +42,12 @@
 -(void)createPlayground{
     NSString *documentsDirectoryPath = self.rootPath;
     
+    if (!documentsDirectoryPath) {
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        [NCProjectManager sharedManager].rootPath = path;
+        documentsDirectoryPath = self.rootPath;
+    }
+    
     NSString * playgroundDir = [documentsDirectoryPath stringByAppendingPathComponent:PLAYGROUND_PROJ_NAME];
     
     NSError * error = nil;

@@ -10,6 +10,7 @@
 #import "Common.h"
 #import "NCEditorViewController.h"
 #import "NCProjectManager.h"
+#import "Common.h"
 
 @interface NCAddNewFileViewController ()
 
@@ -45,7 +46,7 @@
         NSLog(@"write file fail: %@",error);
     }
     else {
-        NCEditorViewController * controller = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
+        NCEditorViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
         
         controller.sourceFile = file;
         
