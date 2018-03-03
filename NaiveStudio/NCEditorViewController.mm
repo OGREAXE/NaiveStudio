@@ -150,7 +150,8 @@
 }
 
 -(IBAction)didTapUndo:(id)sender{
-    
+    NSUndoManager * manager = self.textView.undoManager;
+    [manager undo];
 }
 
 -(IBAction)didTapMoveLeft:(id)sender{

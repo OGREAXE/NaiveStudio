@@ -45,8 +45,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
-    self.title= @"Naive!";
-    
     self.projectList = [NSMutableArray arrayWithObject:[[NCProjectManager sharedManager] defaultProject]];
     
     [self.tableView reloadData];
