@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
 		D4892EF3204569800052267E /* NaiveStudioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; };
@@ -130,6 +131,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D430BCB12058C02F00EC49AE /* NCTestCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTestCenter.h; sourceTree = "<group>"; };
+		D430BCB22058C02F00EC49AE /* NCTestCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTestCenter.m; sourceTree = "<group>"; };
 		D4892E952043B1730052267E /* NCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewController.h; sourceTree = "<group>"; };
 		D4892E962043B1730052267E /* NCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewController.m; sourceTree = "<group>"; };
 		D4892E9E2043B41F0052267E /* NCMainViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewCell.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 		D4E06E7C203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXGroup;
 			children = (
+				D430BCB12058C02F00EC49AE /* NCTestCenter.h */,
+				D430BCB22058C02F00EC49AE /* NCTestCenter.m */,
 				D4E06EBA203703960095F442 /* Assets.xcassets */,
 				D4E06EC4203703980095F442 /* Base.lproj */,
 				D4E06EBE203703970095F442 /* Common.h */,
@@ -598,6 +603,7 @@
 				D4E06ECC203703980095F442 /* NCInterpreterController.mm in Sources */,
 				D4E06EC9203703980095F442 /* NCProject.m in Sources */,
 				D4E06ED3203703980095F442 /* NCEditorViewController.mm in Sources */,
+				D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */,
 				D4E06ECE203703980095F442 /* NCTextManager.mm in Sources */,
 				D4E06E7F203701CA0095F442 /* AppDelegate.m in Sources */,
 				D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */,
