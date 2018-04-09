@@ -24,6 +24,8 @@
 
 @property (weak, nonatomic) IBOutlet  UITextView * outputView;
 
+@property (weak, nonatomic) IBOutlet  UIButton * runButton;
+
 @property (nonatomic) NCTextManager * textManager;
 
 @property (nonatomic) NCInterpreterController * interpreter;
@@ -62,6 +64,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogNotification:) name:@"NCLogNotification" object:nil];
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didLongPressCompile:)];
+    longPress.minimumPressDuration = 0.8; //定义按的时间
+    [self.runButton addGestureRecognizer:longPress];
 }
 
 //-(void)testNC{
@@ -147,6 +153,32 @@
     //    [self testNC];
     
     [self.interpreter runWithDataSource:self.textViewDataSource];
+}
+
+-(void)didLongPressCompile:(UILongPressGestureRecognizer*)gestureRecognizer{
+    if ([gestureRecognizer state] == UIGestureRecognizerStateEnded) {
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Run Action" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        
+        __weak UIAlertController * wAlert = alert;
+        
+        UIAlertAction * actionDelay = [UIAlertAction actionWithTitle:@"Run after dismiss" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                [self.interpreter runWithDataSource:self.textViewDataSource];
+            }];
+        }];
+        
+        UIAlertAction * actionCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [wAlert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alert addAction:actionDelay];
+        [alert addAction:actionCancel];
+        
+        [self presentViewController:alert animated:YES completion:^{
+            
+        }];
+    }
 }
 
 -(IBAction)didTapUndo:(id)sender{
