@@ -14,9 +14,13 @@
 
 @interface NCAddNewFileViewController ()
 
-@property (nonatomic) IBOutlet UITextField * textField;
+//@property (nonatomic) IBOutlet UITextField * textField;
+//
+//@property (nonatomic) IBOutlet UIButton * okButton;
 
-@property (nonatomic) IBOutlet UIButton * okButton;
+@property (nonatomic) UITextField * textField;
+
+@property (nonatomic) UIButton * okButton;
 
 @end
 
@@ -25,6 +29,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.textField = [[UITextField alloc] initWithFrame:CGRectZero];
+    self.textField.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:self.textField];
+    
+    self.okButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.okButton setTitle:@"确定" forState:UIControlStateNormal];
+    [self.view addSubview:self.okButton];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    CGSize mainSize = self.view.frame.size;
+    self.textField.frame = CGRectMake((mainSize.width - 250)/2, 80, 250, 40);
+    self.okButton.frame = CGRectMake((mainSize.width - 150)/2, 80 + 40 + 15, 150, 40);
 }
 
 - (void)didReceiveMemoryWarning {

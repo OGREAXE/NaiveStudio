@@ -15,7 +15,9 @@
 
 @interface NCProjectContentViewController ()<UITableViewDataSource, UITableViewDelegate,NCAddNewFileViewControllerDelegate>
 
-@property  (nonatomic) IBOutlet UITableView * tableView;
+//@property  (nonatomic) IBOutlet UITableView * tableView;
+
+@property  (nonatomic) UITableView * tableView;
 
 @end
 
@@ -25,8 +27,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title= self.project.name;
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
     [self.tableView reloadData];
+    
+    self.title= self.project.name;
     
 //    UIButton * addNewButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    addNewButton.imageView.image = [UIImage imageNamed:@"add"];
@@ -35,11 +43,11 @@
 //    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:addNewButton];
 //    self.navigationItem.rightBarButtonItems = @[item];
     
-    UIBarButtonItem *btn0 = [[UIBarButtonItem alloc] initWithTitle:@""
+    UIBarButtonItem *btn0 = [[UIBarButtonItem alloc] initWithTitle:@"new"
                                                              style:UIBarButtonItemStylePlain
                                                             target:self
                                                             action:@selector(didTapAddNew)];
-    btn0.image = [UIImage imageNamed:@"add" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+    //btn0.image = [UIImage imageNamed:@"add" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     self.navigationItem.rightBarButtonItems = @[btn0];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -117,7 +125,9 @@
 }
 
 -(void)didTapAddNew{
-    NCAddNewFileViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCAddNewFileViewController class])];
+//    NCAddNewFileViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCAddNewFileViewController class])];
+    NCAddNewFileViewController * controller = [[NCAddNewFileViewController alloc] init];
+    
     controller.currentProject = self.project;
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];

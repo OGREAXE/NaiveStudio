@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "NCDataSource.h"
-#import <NaiveC/NCCodeEngine_iOS.h>
+//#import <NaiveC/NCCodeEngine_iOS.h>
+#import "NCCodeEngine_iOS.h"
 
 @class NCInterpreterController;
 

@@ -7,7 +7,7 @@
 //
 
 #import "NCInterpreterController.h"
-#import <NaiveC/NaiveC.h>
+//#import <NaiveC/NaiveC.h>
 
 #include "Common.h"
 

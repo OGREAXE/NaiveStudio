@@ -168,11 +168,31 @@
             }];
         }];
         
+        UIAlertAction * actionDelay5sec = [UIAlertAction actionWithTitle:@"Run in 5 seconds" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.interpreter runWithDataSource:self.textViewDataSource];
+                });
+                
+            }];
+        }];
+        
+        UIAlertAction * actionDelay15sec = [UIAlertAction actionWithTitle:@"Run in 15 seconds" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.interpreter runWithDataSource:self.textViewDataSource];
+                });
+                
+            }];
+        }];
+        
         UIAlertAction * actionCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             [wAlert dismissViewControllerAnimated:YES completion:nil];
         }];
         
         [alert addAction:actionDelay];
+        [alert addAction:actionDelay5sec];
+        [alert addAction:actionDelay15sec];
         [alert addAction:actionCancel];
         
         [self presentViewController:alert animated:YES completion:^{

@@ -13,11 +13,15 @@
 #import "NCEditorViewController.h"
 #import "Common.h"
 
-@interface NCMainViewController ()
+@interface NCMainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property  (nonatomic) IBOutlet UITableView * tableView;
+//@property  (nonatomic) IBOutlet UITableView * tableView;
+//
+//@property (nonatomic) IBOutlet UIButton * playgroundButton;
 
-@property (nonatomic) IBOutlet UIButton * playgroundButton;
+@property  (nonatomic) UITableView * tableView;
+
+@property (nonatomic) UIButton * playgroundButton;
 
 @property (nonatomic) NSMutableArray * projectList;
 
@@ -28,6 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+    
+    self.playgroundButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.playgroundButton setTitle:@"playground" forState:UIControlStateNormal];
+    [self.playgroundButton addTarget:self action:@selector(didTapGotoPlaygound:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.playgroundButton];
     
     if (self.isPresented) {
         UIBarButtonItem *btnClose = [[UIBarButtonItem alloc] initWithTitle:@"Close"
@@ -50,6 +64,15 @@
     [self.tableView reloadData];
     
     
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    CGFloat buttonHeight = 50;
+    CGSize mainSize = self.view.frame.size;
+    self.playgroundButton.frame = CGRectMake(0, mainSize.height-buttonHeight, mainSize.width, buttonHeight);
+    self.tableView.frame = CGRectMake(0, 0, mainSize.width, mainSize.height-buttonHeight);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,7 +127,9 @@
         [[NCProjectManager sharedManager] createPlayground];
     }
     
-    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
+//    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
+    
+    NCProjectContentViewController * controller = [[NCProjectContentViewController alloc] init];
     
     controller.mode = NCInterpretorModeCommandLine;
     controller.project = [NCProjectManager sharedManager].playground;

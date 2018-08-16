@@ -23,7 +23,9 @@ static NaiveStudio *_instance = NULL;
 }
 
 -(NCMainViewController*)mainViewController{
-    NCMainViewController * mainVC = [[UIStoryboard storyboardWithName:@"NaiveStudio" bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass(NCMainViewController.class)];
+//    NCMainViewController * mainVC = [[UIStoryboard storyboardWithName:@"NaiveStudio" bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass(NCMainViewController.class)];
+    NCMainViewController * mainVC = [[NCMainViewController alloc] init];
+
     return mainVC;
 }
 
