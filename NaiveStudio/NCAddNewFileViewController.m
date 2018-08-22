@@ -37,6 +37,7 @@
     
     self.okButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.okButton setTitle:@"确定" forState:UIControlStateNormal];
+    [self.okButton addTarget:self action:@selector(didTapOk:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.okButton];
 }
 
@@ -67,8 +68,9 @@
         NSLog(@"write file fail: %@",error);
     }
     else {
-        NCEditorViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
-        
+//        NCEditorViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
+
+        NCEditorViewController * controller = [[NCEditorViewController alloc] init];
         controller.sourceFile = file;
         
         if ([self.delegate respondsToSelector:@selector(addNewFileViewController:willPushtoEditController:)] ) {

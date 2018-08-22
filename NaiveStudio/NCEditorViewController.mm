@@ -20,11 +20,19 @@
 
 @interface NCEditorViewController ()<UIGestureRecognizerDelegate, NCCodeFastInputViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet  UITextView * textView;
+//@property (weak, nonatomic) IBOutlet  UITextView * textView;
+//
+//@property (weak, nonatomic) IBOutlet  UITextView * outputView;
+//
+//@property (weak, nonatomic) IBOutlet  UIButton * runButton;
 
-@property (weak, nonatomic) IBOutlet  UITextView * outputView;
+@property (nonatomic)  UITextView * textView;
 
-@property (weak, nonatomic) IBOutlet  UIButton * runButton;
+@property (nonatomic)  UITextView * outputView;
+
+@property (nonatomic)  UIView * inputPanel;
+
+@property (nonatomic)  UIButton * runButton;
 
 @property (nonatomic) NCTextManager * textManager;
 
@@ -42,6 +50,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor  = [UIColor grayColor];
+    
+    self.textView = [[UITextView alloc] initWithFrame:CGRectZero];
+    self.textView.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    [self.view addSubview:self.textView];
+    
+    self.outputView = [[UITextView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.outputView];
+    
+    self.inputPanel = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.inputPanel];
+    
+    self.runButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.runButton setTitle:@"run" forState:UIControlStateNormal];
+    [self.runButton addTarget:self action:@selector(didTapCompile:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputPanel addSubview:self.runButton];
+    
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
@@ -50,7 +77,11 @@
     //    string str = "int i=0 \n if(i==0)i=2+1";
     _textViewDataSource  = [[NCTextViewDataSource alloc] initWithTextView:self.textView];
     
-    _textView.smartQuotesType = UITextSmartQuotesTypeNo; 
+    if (@available(iOS 11_0, *)) {
+        _textView.smartQuotesType = UITextSmartQuotesTypeNo;
+    } else {
+        // Fallback on earlier versions
+    }
     
     _textManager = [[NCTextManager alloc] initWithDataSource:self.textViewDataSource];
     _interpreter = [[NCInterpreterController alloc] init];
@@ -69,6 +100,21 @@
     longPress.minimumPressDuration = 0.8; //定义按的时间
     [self.runButton addGestureRecognizer:longPress];
 }
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    CGSize mainSize = self.view.frame.size;
+    
+    self.textView.frame = CGRectMake(5,40,mainSize.width - 5 * 2, 250);
+    
+    self.inputPanel.frame = CGRectMake(5,self.textView.frame.origin.y + self.textView.frame.size.height + 5,mainSize.width - 5 * 2, 50);
+    
+    self.runButton.frame = CGRectMake(5,4,70, 40);
+    
+    self.outputView.frame = CGRectMake(5,self.inputPanel.frame.origin.y + self.inputPanel.frame.size.height + 5,mainSize.width - 5 * 2, 230);
+}
+
 
 //-(void)testNC{
 //

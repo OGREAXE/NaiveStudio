@@ -126,7 +126,6 @@
 		F31D7FB42122FB9500E11E5F /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
 		F31D7FBC2122FB9500E11E5F /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		F31D7FC02122FB9500E11E5F /* libOnlineDebugToolkit.h in Sources */ = {isa = PBXBuildFile; fileRef = F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */; };
-		F31D80072123C54D00E11E5F /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
 		F31D80522124221A00E11E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D80502124221900E11E5F /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -244,7 +243,7 @@
 		D4E06EE420370E1C0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NaiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2438802050220800AC27EB /* NSTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTestManager.h; sourceTree = "<group>"; };
 		ED2438812050220800AC27EB /* NSTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTestManager.m; sourceTree = "<group>"; };
-		F31D7F822122FB5600E11E5F /* liblibOnlineDebugToolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibOnlineDebugToolkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnlineDebugToolkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libOnlineDebugToolkit.h; sourceTree = "<group>"; };
 		F31D7F852122FB5600E11E5F /* libOnlineDebugToolkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libOnlineDebugToolkit.m; sourceTree = "<group>"; };
 		F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibNaiveC.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,7 +337,7 @@
 				D4E06E92203701CA0095F442 /* NaiveStudioTests.xctest */,
 				D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */,
 				D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */,
-				F31D7F822122FB5600E11E5F /* liblibOnlineDebugToolkit.a */,
+				F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -542,9 +541,9 @@
 			productReference = D4E06E92203701CA0095F442 /* NaiveStudioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F31D7F812122FB5600E11E5F /* libOnlineDebugToolkit */ = {
+		F31D7F812122FB5600E11E5F /* OnlineDebugToolkit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F31D7F8A2122FB5600E11E5F /* Build configuration list for PBXNativeTarget "libOnlineDebugToolkit" */;
+			buildConfigurationList = F31D7F8A2122FB5600E11E5F /* Build configuration list for PBXNativeTarget "OnlineDebugToolkit" */;
 			buildPhases = (
 				F31D7F7E2122FB5600E11E5F /* Sources */,
 				F31D7F7F2122FB5600E11E5F /* Frameworks */,
@@ -555,9 +554,9 @@
 			);
 			dependencies = (
 			);
-			name = libOnlineDebugToolkit;
+			name = OnlineDebugToolkit;
 			productName = libOnlineDebugToolkit;
-			productReference = F31D7F822122FB5600E11E5F /* liblibOnlineDebugToolkit.a */;
+			productReference = F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -580,7 +579,7 @@
 					};
 					D4E06E79203701C90095F442 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D4E06E91203701CA0095F442 = {
 						CreatedOnToolsVersion = 9.2;
@@ -610,7 +609,7 @@
 				D4E06E91203701CA0095F442 /* NaiveStudioTests */,
 				D4892EE92045697F0052267E /* NaiveStudioSDK */,
 				D4892EF1204569800052267E /* NaiveStudioSDKTests */,
-				F31D7F812122FB5600E11E5F /* libOnlineDebugToolkit */,
+				F31D7F812122FB5600E11E5F /* OnlineDebugToolkit */,
 			);
 		};
 /* End PBXProject section */
@@ -656,7 +655,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31D80072123C54D00E11E5F /* NaiveStudio.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,8 +1053,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KLS72L88F6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
@@ -1066,8 +1064,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "85fa56aa-396b-4522-aab6-df43df009449";
+				PROVISIONING_PROFILE_SPECIFIER = 20180713;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1077,7 +1075,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1128,7 +1126,9 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1144,7 +1144,9 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1201,7 +1203,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F31D7F8A2122FB5600E11E5F /* Build configuration list for PBXNativeTarget "libOnlineDebugToolkit" */ = {
+		F31D7F8A2122FB5600E11E5F /* Build configuration list for PBXNativeTarget "OnlineDebugToolkit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F31D7F882122FB5600E11E5F /* Debug */,
