@@ -47,12 +47,12 @@
 		D4892F25204569FF0052267E /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
 		D4892F26204569FF0052267E /* UIViewController+NCExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */; };
 		D4892F27204569FF0052267E /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
-		D4892F2C204577600052267E /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
+		D4892F2C204577600052267E /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
 		D4892F2D2045787A0052267E /* NCMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4892F2E2045787A0052267E /* NaiveStudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4B9A78F2045B2000077EA1B /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
 		D4BB862B2045833600582695 /* NaiveStudio.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; };
-		D4BB862C2045833600582695 /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
+		D4BB862C2045833600582695 /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
 		D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		D4E06E85203701CA0095F442 /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
 		D4E06E87203701CA0095F442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E86203701CA0095F442 /* Assets.xcassets */; };
@@ -86,10 +86,8 @@
 		F31D7F8C2122FB8700E11E5F /* liblibNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */; };
 		F31D7F8D2122FB9500E11E5F /* NCTestCenter.h in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB12058C02F00EC49AE /* NCTestCenter.h */; };
 		F31D7F8E2122FB9500E11E5F /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
-		F31D7F8F2122FB9500E11E5F /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBA203703960095F442 /* Assets.xcassets */; };
 		F31D7F902122FB9500E11E5F /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBE203703970095F442 /* Common.h */; };
 		F31D7F912122FB9500E11E5F /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
-		F31D7F922122FB9500E11E5F /* image.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBF203703970095F442 /* image.xcassets */; };
 		F31D7F932122FB9500E11E5F /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
 		F31D7F942122FB9500E11E5F /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
 		F31D7F952122FB9500E11E5F /* NCProject.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA7203703940095F442 /* NCProject.h */; };
@@ -123,10 +121,13 @@
 		F31D7FB12122FB9500E11E5F /* UIViewController+NCExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */; };
 		F31D7FB22122FB9500E11E5F /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
 		F31D7FB32122FB9500E11E5F /* NaiveStudio.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; };
-		F31D7FB42122FB9500E11E5F /* NaiveStudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.m */; };
+		F31D7FB42122FB9500E11E5F /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
 		F31D7FBC2122FB9500E11E5F /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		F31D7FC02122FB9500E11E5F /* libOnlineDebugToolkit.h in Sources */ = {isa = PBXBuildFile; fileRef = F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */; };
 		F31D80522124221A00E11E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D80502124221900E11E5F /* AppDelegate.m */; };
+		F3A5B05C212FD8F00034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
+		F3A5B05D212FD93E0034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
+		F3A5B05E212FE4920034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,7 +200,7 @@
 		D4892EF9204569800052267E /* NaiveStudioSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioSDKTests.m; sourceTree = "<group>"; };
 		D4892EFB204569800052267E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4892F2A204577600052267E /* NaiveStudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaiveStudio.h; sourceTree = "<group>"; };
-		D4892F2B204577600052267E /* NaiveStudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudio.m; sourceTree = "<group>"; };
+		D4892F2B204577600052267E /* NaiveStudio.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NaiveStudio.mm; sourceTree = "<group>"; };
 		D4E06E7A203701C90095F442 /* NaiveStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E06E84203701CA0095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NaiveStudio.storyboard; sourceTree = "<group>"; };
 		D4E06E86203701CA0095F442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,6 +253,8 @@
 		F31D7FFD2123BD7400E11E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F31D80502124221900E11E5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F31D80512124221A00E11E5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBuiltinManager.h; sourceTree = "<group>"; };
+		F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NCBuiltinManager.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,7 @@
 		D4E06E71203701C90095F442 = {
 			isa = PBXGroup;
 			children = (
+				F36762DE212FB47400A497F8 /* Builtin */,
 				F31D7FC12122FC9B00E11E5F /* inc */,
 				D4E06E7C203701C90095F442 /* NaiveStudio */,
 				D4E06E95203701CA0095F442 /* NaiveStudioTests */,
@@ -380,7 +384,7 @@
 				D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */,
 				D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */,
 				D4892F2A204577600052267E /* NaiveStudio.h */,
-				D4892F2B204577600052267E /* NaiveStudio.m */,
+				D4892F2B204577600052267E /* NaiveStudio.mm */,
 				D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */,
 				D4E06E86203701CA0095F442 /* Assets.xcassets */,
 				D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */,
@@ -449,6 +453,16 @@
 			);
 			name = inc;
 			path = NaiveStudio/inc;
+			sourceTree = "<group>";
+		};
+		F36762DE212FB47400A497F8 /* Builtin */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */,
+				F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */,
+			);
+			name = Builtin;
+			path = NaiveStudio/Builtin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -665,9 +679,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A5B05D212FD93E0034232C /* NCBuiltinManager.mm in Sources */,
 				D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */,
 				D4BB862B2045833600582695 /* NaiveStudio.h in Sources */,
-				D4BB862C2045833600582695 /* NaiveStudio.m in Sources */,
+				D4BB862C2045833600582695 /* NaiveStudio.mm in Sources */,
 				D4892F07204569FF0052267E /* Common.h in Sources */,
 				D4892F08204569FF0052267E /* Common.mm in Sources */,
 				D4892F0A204569FF0052267E /* NCProject.m in Sources */,
@@ -722,11 +737,12 @@
 				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
 				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
 				D4E06ECD203703980095F442 /* Common.mm in Sources */,
-				D4892F2C204577600052267E /* NaiveStudio.m in Sources */,
+				D4892F2C204577600052267E /* NaiveStudio.mm in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
 				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
 				D4E06E8D203701CA0095F442 /* main.m in Sources */,
+				F3A5B05C212FD8F00034232C /* NCBuiltinManager.mm in Sources */,
 				D4E06ED1203703980095F442 /* NCProjectTableViewCell.m in Sources */,
 				D4E06ECC203703980095F442 /* NCInterpreterController.mm in Sources */,
 				D4E06EC9203703980095F442 /* NCProject.m in Sources */,
@@ -751,12 +767,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A5B05E212FE4920034232C /* NCBuiltinManager.mm in Sources */,
 				F31D7F8D2122FB9500E11E5F /* NCTestCenter.h in Sources */,
 				F31D7F8E2122FB9500E11E5F /* NCTestCenter.m in Sources */,
-				F31D7F8F2122FB9500E11E5F /* Assets.xcassets in Sources */,
 				F31D7F902122FB9500E11E5F /* Common.h in Sources */,
 				F31D7F912122FB9500E11E5F /* Common.mm in Sources */,
-				F31D7F922122FB9500E11E5F /* image.xcassets in Sources */,
 				F31D7F932122FB9500E11E5F /* NCProject.m in Sources */,
 				F31D7F942122FB9500E11E5F /* NCProjectManager.m in Sources */,
 				F31D7F952122FB9500E11E5F /* NCProject.h in Sources */,
@@ -790,7 +805,7 @@
 				F31D7FB12122FB9500E11E5F /* UIViewController+NCExtension.h in Sources */,
 				F31D7FB22122FB9500E11E5F /* UIViewController+NCExtension.m in Sources */,
 				F31D7FB32122FB9500E11E5F /* NaiveStudio.h in Sources */,
-				F31D7FB42122FB9500E11E5F /* NaiveStudio.m in Sources */,
+				F31D7FB42122FB9500E11E5F /* NaiveStudio.mm in Sources */,
 				F31D7FBC2122FB9500E11E5F /* NaiveStudioSDK.h in Sources */,
 				F31D7FC02122FB9500E11E5F /* libOnlineDebugToolkit.h in Sources */,
 				F31D7F862122FB5600E11E5F /* libOnlineDebugToolkit.m in Sources */,
@@ -990,6 +1005,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ./NaiveStudio/inc/;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1041,6 +1057,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ./NaiveStudio/inc/;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

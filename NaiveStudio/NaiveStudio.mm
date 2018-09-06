@@ -7,8 +7,8 @@
 //
 
 #import "NaiveStudio.h"
-
 #import <UIKit/UIKit.h>
+#import "NCBuiltinManager.h"
 
 static NaiveStudio *_instance = NULL;
 
@@ -22,8 +22,14 @@ static NaiveStudio *_instance = NULL;
     return _instance;
 }
 
+-(id)init{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
 -(NCMainViewController*)mainViewController{
-//    NCMainViewController * mainVC = [[UIStoryboard storyboardWithName:@"NaiveStudio" bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass(NCMainViewController.class)];
     NCMainViewController * mainVC = [[NCMainViewController alloc] init];
 
     return mainVC;

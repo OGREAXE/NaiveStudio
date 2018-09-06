@@ -12,6 +12,7 @@
 #import "NCProjectContentViewController.h"
 #import "NCEditorViewController.h"
 #import "Common.h"
+#import "NCBuiltinManager.h"
 
 @interface NCMainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [NCBuiltinManager addAll];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.delegate = self;

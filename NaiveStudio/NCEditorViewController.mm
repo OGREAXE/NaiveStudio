@@ -30,10 +30,6 @@
 
 @property (nonatomic)  UITextView * outputView;
 
-@property (nonatomic)  UIView * inputPanel;
-
-@property (nonatomic)  UIButton * runButton;
-
 @property (nonatomic) NCTextManager * textManager;
 
 @property (nonatomic) NCInterpreterController * interpreter;
@@ -43,6 +39,16 @@
 @property (nonatomic) NSMutableArray * fileDataSourceArray;  //could be many
 
 @property (nonatomic) NSRange selectedRange;
+
+//buttons
+@property (nonatomic)  UIView * inputPanel;
+
+@property (nonatomic)  UIButton * runButton;
+
+@property (nonatomic)  UIButton * moveUpButton;
+@property (nonatomic)  UIButton * moveDownButton;
+@property (nonatomic)  UIButton * moveLeftButton;
+@property (nonatomic)  UIButton * moveRightButton;
 
 @end
 
@@ -68,6 +74,30 @@
     [self.runButton setTitle:@"run" forState:UIControlStateNormal];
     [self.runButton addTarget:self action:@selector(didTapCompile:) forControlEvents:UIControlEventTouchUpInside];
     [self.inputPanel addSubview:self.runButton];
+    
+    self.moveUpButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.moveUpButton setTitle:@"^" forState:UIControlStateNormal];
+    [self.moveUpButton addTarget:self action:@selector(didTapMoveUp:) forControlEvents:UIControlEventTouchUpInside];
+    [self.moveUpButton setBackgroundColor:[UIColor whiteColor]];
+    [self.inputPanel addSubview:self.moveUpButton];
+    
+    self.moveDownButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.moveDownButton setTitle:@"v" forState:UIControlStateNormal];
+    [self.moveDownButton addTarget:self action:@selector(didTapMoveDown:) forControlEvents:UIControlEventTouchUpInside];
+    [self.moveDownButton setBackgroundColor:[UIColor whiteColor]];
+    [self.inputPanel addSubview:self.moveDownButton];
+    
+    self.moveLeftButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.moveLeftButton setTitle:@"<" forState:UIControlStateNormal];
+    [self.moveLeftButton addTarget:self action:@selector(didTapMoveLeft:) forControlEvents:UIControlEventTouchUpInside];
+    [self.moveLeftButton setBackgroundColor:[UIColor whiteColor]];
+    [self.inputPanel addSubview:self.moveLeftButton];
+    
+    self.moveRightButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.moveRightButton setTitle:@">" forState:UIControlStateNormal];
+    [self.moveRightButton addTarget:self action:@selector(didTapMoveRight:) forControlEvents:UIControlEventTouchUpInside];
+    [self.moveRightButton setBackgroundColor:[UIColor whiteColor]];
+    [self.inputPanel addSubview:self.moveRightButton];
     
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
@@ -113,6 +143,12 @@
     self.runButton.frame = CGRectMake(5,4,70, 40);
     
     self.outputView.frame = CGRectMake(5,self.inputPanel.frame.origin.y + self.inputPanel.frame.size.height + 5,mainSize.width - 5 * 2, 230);
+    
+    float directionButtonWidth = 38,directionButtonHeight = 20;
+    self.moveLeftButton.frame = CGRectMake(CGRectGetMaxX(self.runButton.frame) + 4, CGRectGetMaxY(self.runButton.frame)-directionButtonHeight, directionButtonWidth, directionButtonHeight);
+    self.moveDownButton.frame = CGRectMake(CGRectGetMaxX(self.moveLeftButton.frame)+1,self.moveLeftButton.frame.origin.y,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
+    self.moveUpButton.frame = CGRectMake(self.moveDownButton.frame.origin.x,self.moveDownButton.frame.origin.y-directionButtonHeight-1,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
+    self.moveRightButton.frame = CGRectMake(CGRectGetMaxX(self.moveDownButton.frame)+1,self.moveLeftButton.frame.origin.y,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
 }
 
 
