@@ -50,6 +50,8 @@
 @property (nonatomic)  UIButton * moveLeftButton;
 @property (nonatomic)  UIButton * moveRightButton;
 
+@property (nonatomic)  UIButton * closeButton;
+
 @end
 
 @implementation NCEditorViewController
@@ -98,6 +100,11 @@
     [self.moveRightButton addTarget:self action:@selector(didTapMoveRight:) forControlEvents:UIControlEventTouchUpInside];
     [self.moveRightButton setBackgroundColor:[UIColor whiteColor]];
     [self.inputPanel addSubview:self.moveRightButton];
+    
+    self.closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.closeButton setTitle:@"close" forState:UIControlStateNormal];
+    [self.closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputPanel addSubview:self.closeButton];
     
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
@@ -149,6 +156,8 @@
     self.moveDownButton.frame = CGRectMake(CGRectGetMaxX(self.moveLeftButton.frame)+1,self.moveLeftButton.frame.origin.y,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
     self.moveUpButton.frame = CGRectMake(self.moveDownButton.frame.origin.x,self.moveDownButton.frame.origin.y-directionButtonHeight-1,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
     self.moveRightButton.frame = CGRectMake(CGRectGetMaxX(self.moveDownButton.frame)+1,self.moveLeftButton.frame.origin.y,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
+    
+    self.closeButton.frame = CGRectMake(CGRectGetMaxX(self.moveRightButton.frame)+50,self.moveRightButton.frame.origin.y,self.moveRightButton.frame.size.width,self.moveRightButton.frame.size.height);
 }
 
 
@@ -349,6 +358,12 @@
 -(void)didClose:(NCCodeFastInputViewController *)controller{
     [self.textView becomeFirstResponder];
     self.textView.selectedRange  = self.selectedRange;
+}
+
+-(void)close{
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 @end

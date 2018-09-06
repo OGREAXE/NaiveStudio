@@ -65,8 +65,6 @@
     self.projectList = [NSMutableArray arrayWithObject:[[NCProjectManager sharedManager] defaultProject]];
     
     [self.tableView reloadData];
-    
-    
 }
 
 -(void)viewDidLayoutSubviews{
@@ -126,11 +124,19 @@
 }
 
 -(IBAction)didTapGotoPlaygound:(id)sender{
+    [self goToPlayground];
+}
+
+-(void)didTapCloseButton:(id)sender{
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+-(void)goToPlayground{
     if (![[NCProjectManager sharedManager] playgroundExist]) {
         [[NCProjectManager sharedManager] createPlayground];
     }
-    
-//    NCProjectContentViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCProjectContentViewController class])];
     
     NCProjectContentViewController * controller = [[NCProjectContentViewController alloc] init];
     
@@ -138,12 +144,6 @@
     controller.project = [NCProjectManager sharedManager].playground;
     
     [self.navigationController pushViewController:controller animated:YES];
-}
-
--(void)didTapCloseButton:(id)sender{
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
 }
 
 @end
