@@ -115,9 +115,12 @@
      NSString * fromfilepath = [[NSBundle mainBundle] pathForResource:@"CodeTest" ofType:nil];
     NSString * tofilepath = [projectDir stringByAppendingPathComponent:@"helloworld"];
    
-    if(![[NSFileManager defaultManager] copyItemAtPath:fromfilepath toPath:tofilepath error:&error]){
-        NSLog(@"copy sample file at didFinishLaunchingWithOptions error, %@",error);
+    if (fromfilepath) {
+        if(![[NSFileManager defaultManager] copyItemAtPath:fromfilepath toPath:tofilepath error:&error]){
+            NSLog(@"copy sample file at didFinishLaunchingWithOptions error, %@",error);
+        }
     }
+    
     
     /////////
     NSArray * files = [[NSFileManager defaultManager]  contentsOfDirectoryAtPath:projectDir error:&error];
