@@ -143,6 +143,25 @@
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didLongPressCompile:)];
     longPress.minimumPressDuration = 0.8; //定义按的时间
     [self.runButton addGestureRecognizer:longPress];
+    
+//    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    UIGestureRecognizer *popRecognizer = self.navigationController.interactivePopGestureRecognizer;
+    [popRecognizer addTarget:self action:@selector(navigationControllerPopGestureRecognizerAction:)];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
+
+- (void)navigationControllerPopGestureRecognizerAction:(UIGestureRecognizer *)sender
+{
+    switch (sender.state)
+    {
+        case UIGestureRecognizerStateEnded:
+            [self saveCurrentContent];
+        default:
+            break;
+    }
 }
 
 -(void)viewDidLayoutSubviews{
@@ -357,10 +376,18 @@
 }
 
 -(IBAction)didTapSave:(id)sender{
+    [self saveCurrentContent];
+}
+
+-(BOOL)saveCurrentContent{
     NSError * error;
     if([self.textViewDataSource save:&error]){
-        
+        return YES;
     }
+    if (error) {
+        NSLog(@"save error:%@",error);
+    }
+    return NO;
 }
 
 -(void)showFastInputViewController:(NCFastInputType)type{

@@ -120,4 +120,9 @@
     [self.codeEngine setDirty:filename];
 }
 
+-(void)setMode:(NCInterpretorMode)mode{
+    _mode = mode;
+    self.codeEngine.mode = mode;
+}
+
 @end
