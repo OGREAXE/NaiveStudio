@@ -408,10 +408,10 @@
 		D4E06EA4203703940095F442 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D4E06EA5203703940095F442 /* NCProject.m */,
-				D4E06EA6203703940095F442 /* NCProjectManager.m */,
 				D4E06EA7203703940095F442 /* NCProject.h */,
+				D4E06EA5203703940095F442 /* NCProject.m */,
 				D4E06EA8203703940095F442 /* NCProjectManager.h */,
+				D4E06EA6203703940095F442 /* NCProjectManager.m */,
 				ED2438802050220800AC27EB /* NSTestManager.h */,
 				ED2438812050220800AC27EB /* NSTestManager.m */,
 			);

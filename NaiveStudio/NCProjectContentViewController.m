@@ -19,6 +19,8 @@
 
 @property  (nonatomic) UITableView * tableView;
 
+@property (nonatomic) NCInterpreterController * interpreter;
+
 @end
 
 @implementation NCProjectContentViewController
@@ -52,6 +54,9 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    
+    self.interpreter = [[NCInterpreterController alloc] init];
+    self.interpreter.project = self.project;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -93,12 +98,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    NCEditorViewController * controller = [[UIStoryboard storyboardWithName:MainStoryBoardName bundle:[NSBundle bundleForClass:self.class]] instantiateViewControllerWithIdentifier:NSStringFromClass([NCEditorViewController class])];
     
-    NCEditorViewController * controller = [[NCEditorViewController alloc] init];
+    NCEditorViewController * editVC = [[NCEditorViewController alloc] init];
     
-    controller.mode = self.mode;
-    controller.sourceFile = self.project.sourceFiles[indexPath.row];
+    editVC.mode = self.mode;
+    editVC.sourceFile = self.project.sourceFiles[indexPath.row];
+    editVC.interpreter = self.interpreter;
     
-    [self.navigationController pushViewController:controller animated:YES];
+    [self.navigationController pushViewController:editVC animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

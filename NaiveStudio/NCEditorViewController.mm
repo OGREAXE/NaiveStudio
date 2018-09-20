@@ -32,8 +32,6 @@
 
 @property (nonatomic) NCTextManager * textManager;
 
-@property (nonatomic) NCInterpreterController * interpreter;
-
 @property (nonatomic) NCTextViewDataSource * textViewDataSource;  //only one
 
 @property (nonatomic) NSMutableArray * fileDataSourceArray;  //could be many
@@ -51,6 +49,7 @@
 @property (nonatomic)  UIButton * moveRightButton;
 
 @property (nonatomic)  UIButton * closeButton;
+@property (nonatomic)  UIButton * saveButton;
 
 @end
 
@@ -106,6 +105,14 @@
     [self.closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [self.inputPanel addSubview:self.closeButton];
     
+    self.saveButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.saveButton setTitle:@"save" forState:UIControlStateNormal];
+    [self.saveButton addTarget:self action:@selector(didTapSave:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputPanel addSubview:self.saveButton];
+    if (self.mode == NCInterpretorModeCommandLine) {
+        self.saveButton.hidden = YES;
+    }
+    
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
@@ -121,7 +128,7 @@
     }
     
     _textManager = [[NCTextManager alloc] initWithDataSource:self.textViewDataSource];
-    _interpreter = [[NCInterpreterController alloc] init];
+//    _interpreter = [[NCInterpreterController alloc] init];
     _interpreter.mode = self.mode;
     
     self.interpreter.delegate  = self.textManager;
@@ -158,6 +165,8 @@
     self.moveRightButton.frame = CGRectMake(CGRectGetMaxX(self.moveDownButton.frame)+1,self.moveLeftButton.frame.origin.y,self.moveLeftButton.frame.size.width,self.moveLeftButton.frame.size.height);
     
     self.closeButton.frame = CGRectMake(CGRectGetMaxX(self.moveRightButton.frame)+50,self.moveRightButton.frame.origin.y,self.moveRightButton.frame.size.width,self.moveRightButton.frame.size.height);
+    
+    self.saveButton.frame = CGRectMake(CGRectGetMaxX(self.closeButton.frame)+10,self.closeButton.frame.origin.y,self.closeButton.frame.size.width,self.closeButton.frame.size.height);
 }
 
 
@@ -233,17 +242,30 @@
 }
 
 -(IBAction)didTapCompile:(id)sender{
-    NSError * error;
-    if(![self.textViewDataSource save:&error]){
-        NSLog(@"compile error");
-        return;
+    
+    if (self.mode == NCInterpretorModeCommandLine) {
+        NSError * error;
+        if(![self.textViewDataSource save:&error]){
+            NSLog(@"compile error");
+            return;
+        }
+        
+        self.outputView.text = @"";
+        [self.textView endEditing:YES];
+        //    [self testNC];
+        
+        [self.interpreter runWithDataSource:self.textViewDataSource];
     }
-    
-    self.outputView.text = @"";
-    [self.textView endEditing:YES];
-    //    [self testNC];
-    
-    [self.interpreter runWithDataSource:self.textViewDataSource];
+    else {
+        NSError * error;
+        if(![self.textViewDataSource save:&error]){
+            NSLog(@"compile error");
+            return;
+        }
+        
+        [self.interpreter markDirty:self.sourceFile.filename];
+        [self.interpreter runProject];
+    }
 }
 
 -(void)didLongPressCompile:(UILongPressGestureRecognizer*)gestureRecognizer{

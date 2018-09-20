@@ -16,5 +16,7 @@
 
 @property (nonatomic) NCInterpretorMode mode;
 
+@property (nonatomic) NCInterpreterController * interpreter;
+
 @end
 

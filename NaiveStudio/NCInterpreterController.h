@@ -10,6 +10,7 @@
 #import "NCDataSource.h"
 //#import <NaiveC/NCCodeEngine_iOS.h>
 #import "NCCodeEngine_iOS.h"
+#import "NCProject.h"
 
 @class NCInterpreterController;
 
@@ -27,10 +28,16 @@
 
 @property (nonatomic) NCInterpretorMode mode;
 
+@property (nonatomic) NCProject * project;
+
 -(BOOL)reinterprete;
+
+-(BOOL)runProject;
 
 -(BOOL)runWithDataSource:(NCDataSource*)source;
 
 -(BOOL)reparse;
+
+-(void)markDirty:(NSString*)filename;
 
 @end

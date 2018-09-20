@@ -106,4 +106,18 @@
     return [self.codeEngine run:source.text mode:self.mode error:nil];;
 }
 
+-(BOOL)runProject{
+    return [self.codeEngine runWithError:nil];
+}
+
+-(void)setProject:(NCProject *)project{
+    _project = project;
+    
+    [self.codeEngine setRoot:project.rootDirectory];
+}
+
+-(void)markDirty:(NSString*)filename{
+    [self.codeEngine setDirty:filename];
+}
+
 @end
