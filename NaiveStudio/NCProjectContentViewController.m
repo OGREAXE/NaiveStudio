@@ -142,6 +142,9 @@
 }
 
 -(void)addNewFileViewController:(NCAddNewFileViewController*)addNewController willPushtoEditController:(NCEditorViewController*)editController{
+    if (!editController.interpreter) {
+        editController.interpreter = self.interpreter;
+    }
     editController.mode = self.mode;
 }
 
