@@ -157,6 +157,35 @@
 		F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */; };
 		F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */; };
 		F3EAAC8321EDD1CF00D7CBA4 /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */; };
+		F3EAAC8421EDFC5300D7CBA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */; };
+		F3EAAC8521EDFC5300D7CBA4 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */; };
+		F3EAAC8621EDFC5300D7CBA4 /* GCDAsyncUdpSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2221ED797B00D7CBA4 /* GCDAsyncUdpSocket.h */; };
+		F3EAAC8721EDFC5300D7CBA4 /* GCDAsyncSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2321ED797B00D7CBA4 /* GCDAsyncSocket.h */; };
+		F3EAAC8821EDFC5300D7CBA4 /* CocoaAsyncSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2421ED797B00D7CBA4 /* CocoaAsyncSocket.h */; };
+		F3EAAC8921EDFC5300D7CBA4 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2721ED797B00D7CBA4 /* DDTTYLogger.m */; };
+		F3EAAC8A21EDFC5300D7CBA4 /* DDLog.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2821ED797B00D7CBA4 /* DDLog.h */; };
+		F3EAAC8B21EDFC5300D7CBA4 /* DDAbstractDatabaseLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2921ED797B00D7CBA4 /* DDAbstractDatabaseLogger.h */; };
+		F3EAAC8C21EDFC5300D7CBA4 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2A21ED797B00D7CBA4 /* DDASLLogger.m */; };
+		F3EAAC8D21EDFC5300D7CBA4 /* DDFileLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2B21ED797B00D7CBA4 /* DDFileLogger.h */; };
+		F3EAAC8E21EDFC5300D7CBA4 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m */; };
+		F3EAAC8F21EDFC5300D7CBA4 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m */; };
+		F3EAAC9021EDFC5300D7CBA4 /* DDMultiFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2F21ED797B00D7CBA4 /* DDMultiFormatter.h */; };
+		F3EAAC9121EDFC5300D7CBA4 /* DDContextFilterLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3021ED797B00D7CBA4 /* DDContextFilterLogFormatter.h */; };
+		F3EAAC9221EDFC5300D7CBA4 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3121ED797B00D7CBA4 /* DDMultiFormatter.m */; };
+		F3EAAC9321EDFC5300D7CBA4 /* DDDispatchQueueLogFormatter.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3221ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.h */; };
+		F3EAAC9421EDFC5300D7CBA4 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3321ED797B00D7CBA4 /* DDLog.m */; };
+		F3EAAC9521EDFC5300D7CBA4 /* DDTTYLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3421ED797B00D7CBA4 /* DDTTYLogger.h */; };
+		F3EAAC9621EDFC5300D7CBA4 /* DDLog+LOGV.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3521ED797B00D7CBA4 /* DDLog+LOGV.h */; };
+		F3EAAC9721EDFC5300D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */; };
+		F3EAAC9821EDFC5300D7CBA4 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */; };
+		F3EAAC9921EDFC5300D7CBA4 /* DDASLLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3821ED797B00D7CBA4 /* DDASLLogger.h */; };
+		F3EAAC9A21EDFC5300D7CBA4 /* NCBuiltinManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */; };
+		F3EAAC9B21EDFC5300D7CBA4 /* NCNetworkData.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */; };
+		F3EAAC9C21EDFC5300D7CBA4 /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */; };
+		F3EAAC9D21EDFC5300D7CBA4 /* UIView+Avatar.h in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218D21E373E300C05483 /* UIView+Avatar.h */; };
+		F3EAAC9E21EDFC5300D7CBA4 /* UIView+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218E21E373E300C05483 /* UIView+Avatar.m */; };
+		F3EAAC9F21EDFC5300D7CBA4 /* NCServerManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218221E3717400C05483 /* NCServerManager.h */; };
+		F3EAACA021EDFC5300D7CBA4 /* NCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218321E3717400C05483 /* NCServerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -994,6 +1023,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EAAC8421EDFC5300D7CBA4 /* GCDAsyncUdpSocket.m in Sources */,
+				F3EAAC8521EDFC5300D7CBA4 /* GCDAsyncSocket.m in Sources */,
+				F3EAAC8621EDFC5300D7CBA4 /* GCDAsyncUdpSocket.h in Sources */,
+				F3EAAC8721EDFC5300D7CBA4 /* GCDAsyncSocket.h in Sources */,
+				F3EAAC8821EDFC5300D7CBA4 /* CocoaAsyncSocket.h in Sources */,
+				F3EAAC8921EDFC5300D7CBA4 /* DDTTYLogger.m in Sources */,
+				F3EAAC8A21EDFC5300D7CBA4 /* DDLog.h in Sources */,
+				F3EAAC8B21EDFC5300D7CBA4 /* DDAbstractDatabaseLogger.h in Sources */,
+				F3EAAC8C21EDFC5300D7CBA4 /* DDASLLogger.m in Sources */,
+				F3EAAC8D21EDFC5300D7CBA4 /* DDFileLogger.h in Sources */,
+				F3EAAC8E21EDFC5300D7CBA4 /* DDContextFilterLogFormatter.m in Sources */,
+				F3EAAC8F21EDFC5300D7CBA4 /* DDDispatchQueueLogFormatter.m in Sources */,
+				F3EAAC9021EDFC5300D7CBA4 /* DDMultiFormatter.h in Sources */,
+				F3EAAC9121EDFC5300D7CBA4 /* DDContextFilterLogFormatter.h in Sources */,
+				F3EAAC9221EDFC5300D7CBA4 /* DDMultiFormatter.m in Sources */,
+				F3EAAC9321EDFC5300D7CBA4 /* DDDispatchQueueLogFormatter.h in Sources */,
+				F3EAAC9421EDFC5300D7CBA4 /* DDLog.m in Sources */,
+				F3EAAC9521EDFC5300D7CBA4 /* DDTTYLogger.h in Sources */,
+				F3EAAC9621EDFC5300D7CBA4 /* DDLog+LOGV.h in Sources */,
+				F3EAAC9721EDFC5300D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */,
+				F3EAAC9821EDFC5300D7CBA4 /* DDFileLogger.m in Sources */,
+				F3EAAC9921EDFC5300D7CBA4 /* DDASLLogger.h in Sources */,
+				F3EAAC9A21EDFC5300D7CBA4 /* NCBuiltinManager.h in Sources */,
+				F3EAAC9B21EDFC5300D7CBA4 /* NCNetworkData.h in Sources */,
+				F3EAAC9C21EDFC5300D7CBA4 /* NCNetworkData.m in Sources */,
+				F3EAAC9D21EDFC5300D7CBA4 /* UIView+Avatar.h in Sources */,
+				F3EAAC9E21EDFC5300D7CBA4 /* UIView+Avatar.m in Sources */,
+				F3EAAC9F21EDFC5300D7CBA4 /* NCServerManager.h in Sources */,
+				F3EAACA021EDFC5300D7CBA4 /* NCServerManager.m in Sources */,
 				F3A5B05E212FE4920034232C /* NCBuiltinManager.mm in Sources */,
 				F31D7F8D2122FB9500E11E5F /* NCTestCenter.h in Sources */,
 				F31D7F8E2122FB9500E11E5F /* NCTestCenter.m in Sources */,

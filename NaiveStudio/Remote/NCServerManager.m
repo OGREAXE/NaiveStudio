@@ -191,6 +191,12 @@ static NCServerManager *_instance = nil;
     [self.clientSockect writeData:data withTimeout:10 tag:TAG_TEXT];
 }
 
+- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
+    if (tag == TAG_TEXT) {
+        LOG_SERVER(@"didWriteDataWithTag");
+    }
+}
+
 -(void)didReceivePrintNotification:(NSNotification*)notification{
     NSString * str = notification.object;
     
