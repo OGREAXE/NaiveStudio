@@ -36,6 +36,8 @@
 
 -(BOOL)runWithDataSource:(NCDataSource*)source;
 
+-(BOOL)runWithCode:(NSString*)code;
+
 -(BOOL)reparse;
 
 -(void)markDirty:(NSString*)filename;

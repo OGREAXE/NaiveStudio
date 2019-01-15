@@ -103,7 +103,11 @@
         return NO;
     }
         
-    return [self.codeEngine run:source.text mode:self.mode error:nil];;
+    return [self.codeEngine run:source.text mode:self.mode error:nil];
+}
+
+-(BOOL)runWithCode:(NSString*)code{
+    return [self.codeEngine run:code mode:NCInterpretorModeCommandLine error:nil];
 }
 
 -(BOOL)runProject{

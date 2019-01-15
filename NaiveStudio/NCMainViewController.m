@@ -65,6 +65,9 @@
     self.projectList = [NSMutableArray arrayWithObject:[[NCProjectManager sharedManager] defaultProject]];
     
     [self.tableView reloadData];
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    NSLog(@"%@",data);
 }
 
 -(void)viewDidLayoutSubviews{

@@ -10,50 +10,7 @@
 		D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
-		D4892EF3204569800052267E /* NaiveStudioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; };
-		D4892EFA204569800052267E /* NaiveStudioSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892EF9204569800052267E /* NaiveStudioSDKTests.m */; };
-		D4892EFC204569800052267E /* NaiveStudioSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4892EFF204569800052267E /* NaiveStudioSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; };
-		D4892F00204569800052267E /* NaiveStudioSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D4892F07204569FF0052267E /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBE203703970095F442 /* Common.h */; };
-		D4892F08204569FF0052267E /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
-		D4892F0A204569FF0052267E /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
-		D4892F0B204569FF0052267E /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
-		D4892F0C204569FF0052267E /* NCProject.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA7203703940095F442 /* NCProject.h */; };
-		D4892F0D204569FF0052267E /* NCProjectManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA8203703940095F442 /* NCProjectManager.h */; };
-		D4892F0E204569FF0052267E /* NCAddNewFileViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */; };
-		D4892F0F204569FF0052267E /* NCAddNewFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */; };
-		D4892F10204569FF0052267E /* NCCodeFastInputViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */; };
-		D4892F11204569FF0052267E /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
-		D4892F12204569FF0052267E /* NCCodeTemplate.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB8203703960095F442 /* NCCodeTemplate.h */; };
-		D4892F13204569FF0052267E /* NCCodeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBB203703960095F442 /* NCCodeTemplate.m */; };
-		D4892F14204569FF0052267E /* NCConsole.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB2203703950095F442 /* NCConsole.h */; };
-		D4892F15204569FF0052267E /* NCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA9203703950095F442 /* NCConsole.m */; };
-		D4892F16204569FF0052267E /* NCDataSource.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAE203703950095F442 /* NCDataSource.h */; };
-		D4892F17204569FF0052267E /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
-		D4892F18204569FF0052267E /* NCEditorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC3203703970095F442 /* NCEditorViewController.h */; };
-		D4892F19204569FF0052267E /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
-		D4892F1A204569FF0052267E /* NCInterpreterController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCInterpreterController.h */; };
-		D4892F1B204569FF0052267E /* NCInterpreterController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCInterpreterController.mm */; };
-		D4892F1C204569FF0052267E /* NCMainViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9E2043B41F0052267E /* NCMainViewCell.h */; };
-		D4892F1D204569FF0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
-		D4892F1E204569FF0052267E /* NCMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; };
-		D4892F1F204569FF0052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
-		D4892F20204569FF0052267E /* NCProjectContentViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBC203703970095F442 /* NCProjectContentViewController.h */; };
-		D4892F21204569FF0052267E /* NCProjectContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB4203703960095F442 /* NCProjectContentViewController.m */; };
-		D4892F22204569FF0052267E /* NCProjectTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */; };
-		D4892F23204569FF0052267E /* NCProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */; };
-		D4892F24204569FF0052267E /* NCTextManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAD203703950095F442 /* NCTextManager.h */; };
-		D4892F25204569FF0052267E /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
-		D4892F26204569FF0052267E /* UIViewController+NCExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */; };
-		D4892F27204569FF0052267E /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
 		D4892F2C204577600052267E /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
-		D4892F2D2045787A0052267E /* NCMainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4892F2E2045787A0052267E /* NaiveStudio.h in Headers */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4B9A78F2045B2000077EA1B /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
-		D4BB862B2045833600582695 /* NaiveStudio.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; };
-		D4BB862C2045833600582695 /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
-		D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		D4E06E85203701CA0095F442 /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
 		D4E06E87203701CA0095F442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E86203701CA0095F442 /* Assets.xcassets */; };
 		D4E06E8A203701CA0095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E88203701CA0095F442 /* LaunchScreen.storyboard */; };
@@ -77,9 +34,6 @@
 		D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC5203703980095F442 /* LaunchScreen.storyboard */; };
 		D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
 		D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D4F022732046497C0039A449 /* NaiveStudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06E83203701CA0095F442 /* NaiveStudio.storyboard */; };
-		D4F0229A20465F870039A449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBA203703960095F442 /* Assets.xcassets */; };
-		D4F0229B20465F870039A449 /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EBF203703970095F442 /* image.xcassets */; };
 		ED2438822050220800AC27EB /* NSTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2438812050220800AC27EB /* NSTestManager.m */; };
 		F31D7F862122FB5600E11E5F /* libOnlineDebugToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D7F852122FB5600E11E5F /* libOnlineDebugToolkit.m */; };
 		F31D7F872122FB5600E11E5F /* libOnlineDebugToolkit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */; };
@@ -125,39 +79,100 @@
 		F31D7FBC2122FB9500E11E5F /* NaiveStudioSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892EEC204569800052267E /* NaiveStudioSDK.h */; };
 		F31D7FC02122FB9500E11E5F /* libOnlineDebugToolkit.h in Sources */ = {isa = PBXBuildFile; fileRef = F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */; };
 		F31D80522124221A00E11E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D80502124221900E11E5F /* AppDelegate.m */; };
+		F366DA1A21ECC622001824AE /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F366D9FE21ECC621001824AE /* GCDWebServerResponse.m */; };
+		F366DA1B21ECC622001824AE /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0121ECC621001824AE /* GCDWebServerRequest.m */; };
+		F366DA1C21ECC622001824AE /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0421ECC621001824AE /* GCDWebServerFunctions.m */; };
+		F366DA1D21ECC622001824AE /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0521ECC621001824AE /* GCDWebServer.m */; };
+		F366DA1E21ECC622001824AE /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0621ECC621001824AE /* GCDWebServerConnection.m */; };
+		F366DA1F21ECC622001824AE /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0B21ECC621001824AE /* GCDWebServerErrorResponse.m */; };
+		F366DA2021ECC622001824AE /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0D21ECC621001824AE /* GCDWebServerFileResponse.m */; };
+		F366DA2121ECC622001824AE /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA0E21ECC621001824AE /* GCDWebServerDataResponse.m */; };
+		F366DA2221ECC622001824AE /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA1021ECC621001824AE /* GCDWebServerStreamedResponse.m */; };
+		F366DA2321ECC622001824AE /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA1521ECC621001824AE /* GCDWebServerURLEncodedFormRequest.m */; };
+		F366DA2421ECC622001824AE /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA1621ECC621001824AE /* GCDWebServerMultiPartFormRequest.m */; };
+		F366DA2521ECC622001824AE /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA1721ECC621001824AE /* GCDWebServerDataRequest.m */; };
+		F366DA2621ECC622001824AE /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F366DA1821ECC621001824AE /* GCDWebServerFileRequest.m */; };
 		F3A5B05C212FD8F00034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
-		F3A5B05D212FD93E0034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
 		F3A5B05E212FE4920034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
+		F3D0215F21E3703E00C05483 /* libsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D0215E21E3703E00C05483 /* libsim.a */; };
+		F3D0218021E370B200C05483 /* libsim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D0215E21E3703E00C05483 /* libsim.a */; };
+		F3D0218421E3717400C05483 /* NCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218321E3717400C05483 /* NCServerManager.m */; };
+		F3D0218F21E373E300C05483 /* UIView+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218E21E373E300C05483 /* UIView+Avatar.m */; };
+		F3D021AB21E4934A00C05483 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021AA21E4934A00C05483 /* AppDelegate.m */; };
+		F3D021AE21E4934A00C05483 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021AD21E4934A00C05483 /* ViewController.m */; };
+		F3D021B021E4934C00C05483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D021AF21E4934C00C05483 /* Assets.xcassets */; };
+		F3D021B321E4934C00C05483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D021B121E4934C00C05483 /* Main.storyboard */; };
+		F3D021B621E4934C00C05483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021B521E4934C00C05483 /* main.m */; };
+		F3D021C121E4934D00C05483 /* NaiveStudioMACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */; };
+		F3D021C921E494A600C05483 /* NCBuiltinManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */; };
+		F3D021CA21E494A600C05483 /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
+		F3D021CB21E494A600C05483 /* NCCodeEngine_iOS.h in Sources */ = {isa = PBXBuildFile; fileRef = F31D7FC22122FC9B00E11E5F /* NCCodeEngine_iOS.h */; };
+		F3D021CC21E494A600C05483 /* NCTestCenter.h in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB12058C02F00EC49AE /* NCTestCenter.h */; };
+		F3D021CD21E494A600C05483 /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
+		F3D021CE21E494A600C05483 /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBE203703970095F442 /* Common.h */; };
+		F3D021CF21E494A600C05483 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
+		F3D021D021E494A600C05483 /* image.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBF203703970095F442 /* image.xcassets */; };
+		F3D021D121E494A600C05483 /* NCProject.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA7203703940095F442 /* NCProject.h */; };
+		F3D021D221E494A600C05483 /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
+		F3D021D321E494A600C05483 /* NCProjectManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA8203703940095F442 /* NCProjectManager.h */; };
+		F3D021D421E494A600C05483 /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
+		F3D021D521E494A600C05483 /* NSTestManager.h in Sources */ = {isa = PBXBuildFile; fileRef = ED2438802050220800AC27EB /* NSTestManager.h */; };
+		F3D021D621E494A600C05483 /* NSTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2438812050220800AC27EB /* NSTestManager.m */; };
+		F3D021D721E494A600C05483 /* NCAddNewFileViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */; };
+		F3D021D821E494A600C05483 /* NCAddNewFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB5203703960095F442 /* NCAddNewFileViewController.m */; };
+		F3D021D921E494A600C05483 /* NCCodeFastInputViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */; };
+		F3D021DA21E494A600C05483 /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
+		F3D021DB21E494A600C05483 /* NCCodeTemplate.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB8203703960095F442 /* NCCodeTemplate.h */; };
+		F3D021DC21E494A600C05483 /* NCCodeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBB203703960095F442 /* NCCodeTemplate.m */; };
+		F3D021DD21E494A600C05483 /* NCConsole.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB2203703950095F442 /* NCConsole.h */; };
+		F3D021DE21E494A600C05483 /* NCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA9203703950095F442 /* NCConsole.m */; };
+		F3D021DF21E494A600C05483 /* NCDataSource.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAE203703950095F442 /* NCDataSource.h */; };
+		F3D021E021E494A600C05483 /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
+		F3D021E121E494A600C05483 /* NCEditorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC3203703970095F442 /* NCEditorViewController.h */; };
+		F3D021E221E494A600C05483 /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
+		F3D021E321E494A600C05483 /* NCInterpreterController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCInterpreterController.h */; };
+		F3D021E421E494A600C05483 /* NCInterpreterController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCInterpreterController.mm */; };
+		F3D021E521E494A600C05483 /* NCMainViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9E2043B41F0052267E /* NCMainViewCell.h */; };
+		F3D021E621E494A600C05483 /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
+		F3D021E721E494A600C05483 /* NCMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; };
+		F3D021E821E494A600C05483 /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
+		F3D021E921E494A600C05483 /* NCProjectContentViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBC203703970095F442 /* NCProjectContentViewController.h */; };
+		F3D021EA21E494A600C05483 /* NCProjectContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB4203703960095F442 /* NCProjectContentViewController.m */; };
+		F3D021EB21E494A600C05483 /* NCProjectTableViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBD203703970095F442 /* NCProjectTableViewCell.h */; };
+		F3D021EC21E494A600C05483 /* NCProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB6203703960095F442 /* NCProjectTableViewCell.m */; };
+		F3D021ED21E494A600C05483 /* NCTextManager.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAD203703950095F442 /* NCTextManager.h */; };
+		F3D021EE21E494A600C05483 /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
+		F3D021EF21E494A600C05483 /* UIViewController+NCExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC1203703970095F442 /* UIViewController+NCExtension.h */; };
+		F3D021F021E494A600C05483 /* UIViewController+NCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB7203703960095F442 /* UIViewController+NCExtension.m */; };
+		F3D021F121E494A600C05483 /* NaiveStudio.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2A204577600052267E /* NaiveStudio.h */; };
+		F3D021F221E494A600C05483 /* NaiveStudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4892F2B204577600052267E /* NaiveStudio.mm */; };
+		F3EAAC3921ED797B00D7CBA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */; };
+		F3EAAC3A21ED797B00D7CBA4 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */; };
+		F3EAAC3B21ED797B00D7CBA4 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2721ED797B00D7CBA4 /* DDTTYLogger.m */; };
+		F3EAAC3C21ED797B00D7CBA4 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2A21ED797B00D7CBA4 /* DDASLLogger.m */; };
+		F3EAAC3D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m */; };
+		F3EAAC3E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m */; };
+		F3EAAC3F21ED797B00D7CBA4 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3121ED797B00D7CBA4 /* DDMultiFormatter.m */; };
+		F3EAAC4021ED797B00D7CBA4 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3321ED797B00D7CBA4 /* DDLog.m */; };
+		F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */; };
+		F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */; };
+		F3EAAC8321EDD1CF00D7CBA4 /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D4892EF4204569800052267E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E06E72203701C90095F442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4892EE92045697F0052267E;
-			remoteInfo = NaiveStudioSDK;
-		};
-		D4892EF6204569800052267E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E06E72203701C90095F442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4E06E79203701C90095F442;
-			remoteInfo = NaiveStudio;
-		};
-		D4892EFD204569800052267E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4E06E72203701C90095F442 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4892EE92045697F0052267E;
-			remoteInfo = NaiveStudioSDK;
-		};
 		D4E06E93203701CA0095F442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4E06E72203701C90095F442 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D4E06E79203701C90095F442;
 			remoteInfo = NaiveStudio;
+		};
+		F3D021BD21E4934C00C05483 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4E06E72203701C90095F442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3D021A621E4934900C05483;
+			remoteInfo = NaiveStudioMAC;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -169,7 +184,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */,
-				D4892F00204569800052267E /* NaiveStudioSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,10 +207,8 @@
 		D4892E962043B1730052267E /* NCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewController.m; sourceTree = "<group>"; };
 		D4892E9E2043B41F0052267E /* NCMainViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewCell.h; sourceTree = "<group>"; };
 		D4892E9F2043B41F0052267E /* NCMainViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainViewCell.m; sourceTree = "<group>"; };
-		D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NaiveStudioSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4892EEC204569800052267E /* NaiveStudioSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaiveStudioSDK.h; sourceTree = "<group>"; };
 		D4892EED204569800052267E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaiveStudioSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4892EF9204569800052267E /* NaiveStudioSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioSDKTests.m; sourceTree = "<group>"; };
 		D4892EFB204569800052267E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4892F2A204577600052267E /* NaiveStudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaiveStudio.h; sourceTree = "<group>"; };
@@ -253,32 +265,86 @@
 		F31D7FFD2123BD7400E11E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F31D80502124221900E11E5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F31D80512124221A00E11E5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F366D9FC21ECC621001824AE /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFunctions.h; sourceTree = "<group>"; };
+		F366D9FD21ECC621001824AE /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerPrivate.h; sourceTree = "<group>"; };
+		F366D9FE21ECC621001824AE /* GCDWebServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerResponse.m; sourceTree = "<group>"; };
+		F366D9FF21ECC621001824AE /* GCDWebServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerConnection.h; sourceTree = "<group>"; };
+		F366DA0021ECC621001824AE /* GCDWebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServer.h; sourceTree = "<group>"; };
+		F366DA0121ECC621001824AE /* GCDWebServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerRequest.m; sourceTree = "<group>"; };
+		F366DA0221ECC621001824AE /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerHTTPStatusCodes.h; sourceTree = "<group>"; };
+		F366DA0321ECC621001824AE /* GCDWebServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerResponse.h; sourceTree = "<group>"; };
+		F366DA0421ECC621001824AE /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFunctions.m; sourceTree = "<group>"; };
+		F366DA0521ECC621001824AE /* GCDWebServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServer.m; sourceTree = "<group>"; };
+		F366DA0621ECC621001824AE /* GCDWebServerConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerConnection.m; sourceTree = "<group>"; };
+		F366DA0721ECC621001824AE /* GCDWebServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerRequest.h; sourceTree = "<group>"; };
+		F366DA0921ECC621001824AE /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileResponse.h; sourceTree = "<group>"; };
+		F366DA0A21ECC621001824AE /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
+		F366DA0B21ECC621001824AE /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerErrorResponse.m; sourceTree = "<group>"; };
+		F366DA0C21ECC621001824AE /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerDataResponse.h; sourceTree = "<group>"; };
+		F366DA0D21ECC621001824AE /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileResponse.m; sourceTree = "<group>"; };
+		F366DA0E21ECC621001824AE /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerDataResponse.m; sourceTree = "<group>"; };
+		F366DA0F21ECC621001824AE /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerErrorResponse.h; sourceTree = "<group>"; };
+		F366DA1021ECC621001824AE /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
+		F366DA1221ECC621001824AE /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerDataRequest.h; sourceTree = "<group>"; };
+		F366DA1321ECC621001824AE /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
+		F366DA1421ECC621001824AE /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileRequest.h; sourceTree = "<group>"; };
+		F366DA1521ECC621001824AE /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
+		F366DA1621ECC621001824AE /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
+		F366DA1721ECC621001824AE /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerDataRequest.m; sourceTree = "<group>"; };
+		F366DA1821ECC621001824AE /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileRequest.m; sourceTree = "<group>"; };
+		F366DA1921ECC621001824AE /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
 		F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBuiltinManager.h; sourceTree = "<group>"; };
 		F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NCBuiltinManager.mm; sourceTree = "<group>"; };
+		F3D0215E21E3703E00C05483 /* libsim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsim.a; path = NaiveStudio/Dependency/thirdparty/sim/libsim.a; sourceTree = "<group>"; };
+		F3D0218221E3717400C05483 /* NCServerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCServerManager.h; sourceTree = "<group>"; };
+		F3D0218321E3717400C05483 /* NCServerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCServerManager.m; sourceTree = "<group>"; };
+		F3D0218D21E373E300C05483 /* UIView+Avatar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Avatar.h"; sourceTree = "<group>"; };
+		F3D0218E21E373E300C05483 /* UIView+Avatar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Avatar.m"; sourceTree = "<group>"; };
+		F3D021A721E4934900C05483 /* NaiveStudioMAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudioMAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D021A921E4934A00C05483 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3D021AA21E4934A00C05483 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3D021AC21E4934A00C05483 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F3D021AD21E4934A00C05483 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3D021AF21E4934C00C05483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3D021B221E4934C00C05483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3D021B421E4934C00C05483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D021B521E4934C00C05483 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3D021B721E4934C00C05483 /* NaiveStudioMAC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NaiveStudioMAC.entitlements; sourceTree = "<group>"; };
+		F3D021BC21E4934C00C05483 /* NaiveStudioMACTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaiveStudioMACTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioMACTests.m; sourceTree = "<group>"; };
+		F3D021C221E4934D00C05483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		F3EAAC2221ED797B00D7CBA4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		F3EAAC2321ED797B00D7CBA4 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		F3EAAC2421ED797B00D7CBA4 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		F3EAAC2721ED797B00D7CBA4 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		F3EAAC2821ED797B00D7CBA4 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		F3EAAC2921ED797B00D7CBA4 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		F3EAAC2A21ED797B00D7CBA4 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		F3EAAC2B21ED797B00D7CBA4 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		F3EAAC2D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		F3EAAC2E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		F3EAAC2F21ED797B00D7CBA4 /* DDMultiFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMultiFormatter.h; sourceTree = "<group>"; };
+		F3EAAC3021ED797B00D7CBA4 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F3EAAC3121ED797B00D7CBA4 /* DDMultiFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMultiFormatter.m; sourceTree = "<group>"; };
+		F3EAAC3221ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		F3EAAC3321ED797B00D7CBA4 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		F3EAAC3421ED797B00D7CBA4 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		F3EAAC3521ED797B00D7CBA4 /* DDLog+LOGV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDLog+LOGV.h"; sourceTree = "<group>"; };
+		F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		F3EAAC3821ED797B00D7CBA4 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCNetworkData.h; path = ../../../NaiveStudioMac/NaiveStudioMac/NaiveStudioMac/Remote/NCNetworkData.h; sourceTree = "<group>"; };
+		F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCNetworkData.m; path = ../../../NaiveStudioMac/NaiveStudioMac/NaiveStudioMac/Remote/NCNetworkData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D4892EE62045697F0052267E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4B9A78F2045B2000077EA1B /* NaiveC.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4892EEF204569800052267E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4892EF3204569800052267E /* NaiveStudioSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4E06E77203701C90095F442 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4892EFF204569800052267E /* NaiveStudioSDK.framework in Frameworks */,
+				F3D0218021E370B200C05483 /* libsim.a in Frameworks */,
 				D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +360,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D0215F21E3703E00C05483 /* libsim.a in Frameworks */,
 				F31D7F8C2122FB8700E11E5F /* liblibNaiveC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D021A421E4934900C05483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D021B921E4934C00C05483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +403,7 @@
 		D4E06E71203701C90095F442 = {
 			isa = PBXGroup;
 			children = (
+				F366D95621EC9050001824AE /* Thirdparty */,
 				F36762DE212FB47400A497F8 /* Builtin */,
 				F31D7FC12122FC9B00E11E5F /* inc */,
 				D4E06E7C203701C90095F442 /* NaiveStudio */,
@@ -329,6 +411,8 @@
 				D4892EEB204569800052267E /* NaiveStudioSDK */,
 				D4892EF8204569800052267E /* NaiveStudioSDKTests */,
 				F31D7F832122FB5600E11E5F /* libOnlineDebugToolkit */,
+				F3D021A821E4934A00C05483 /* NaiveStudioMAC */,
+				F3D021BF21E4934C00C05483 /* NaiveStudioMACTests */,
 				D4E06E7B203701C90095F442 /* Products */,
 				D4E06EDC203705390095F442 /* Frameworks */,
 			);
@@ -339,9 +423,9 @@
 			children = (
 				D4E06E7A203701C90095F442 /* NaiveStudio.app */,
 				D4E06E92203701CA0095F442 /* NaiveStudioTests.xctest */,
-				D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */,
-				D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */,
 				F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */,
+				F3D021A721E4934900C05483 /* NaiveStudioMAC.app */,
+				F3D021BC21E4934C00C05483 /* NaiveStudioMACTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,6 +433,7 @@
 		D4E06E7C203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXGroup;
 			children = (
+				F3D0218121E3710F00C05483 /* Remote */,
 				D430BCB12058C02F00EC49AE /* NCTestCenter.h */,
 				D430BCB22058C02F00EC49AE /* NCTestCenter.m */,
 				D4E06EBA203703960095F442 /* Assets.xcassets */,
@@ -429,6 +514,7 @@
 		D4E06EDC203705390095F442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3D0215E21E3703E00C05483 /* libsim.a */,
 				F31D7FFD2123BD7400E11E5F /* Foundation.framework */,
 				F31D7FFB2123BD3E00E11E5F /* libstdc++.6.0.9.tbd */,
 				F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */,
@@ -455,6 +541,74 @@
 			path = NaiveStudio/inc;
 			sourceTree = "<group>";
 		};
+		F366D95621EC9050001824AE /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC1E21ED797B00D7CBA4 /* CocoaAsyncSocket */,
+				F366D9FA21ECC621001824AE /* GCDWebServer */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		F366D9FA21ECC621001824AE /* GCDWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				F366D9FB21ECC621001824AE /* Core */,
+				F366DA0821ECC621001824AE /* Responses */,
+				F366DA1121ECC621001824AE /* Requests */,
+			);
+			path = GCDWebServer;
+			sourceTree = "<group>";
+		};
+		F366D9FB21ECC621001824AE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F366D9FC21ECC621001824AE /* GCDWebServerFunctions.h */,
+				F366D9FD21ECC621001824AE /* GCDWebServerPrivate.h */,
+				F366D9FE21ECC621001824AE /* GCDWebServerResponse.m */,
+				F366D9FF21ECC621001824AE /* GCDWebServerConnection.h */,
+				F366DA0021ECC621001824AE /* GCDWebServer.h */,
+				F366DA0121ECC621001824AE /* GCDWebServerRequest.m */,
+				F366DA0221ECC621001824AE /* GCDWebServerHTTPStatusCodes.h */,
+				F366DA0321ECC621001824AE /* GCDWebServerResponse.h */,
+				F366DA0421ECC621001824AE /* GCDWebServerFunctions.m */,
+				F366DA0521ECC621001824AE /* GCDWebServer.m */,
+				F366DA0621ECC621001824AE /* GCDWebServerConnection.m */,
+				F366DA0721ECC621001824AE /* GCDWebServerRequest.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F366DA0821ECC621001824AE /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				F366DA0921ECC621001824AE /* GCDWebServerFileResponse.h */,
+				F366DA0A21ECC621001824AE /* GCDWebServerStreamedResponse.h */,
+				F366DA0B21ECC621001824AE /* GCDWebServerErrorResponse.m */,
+				F366DA0C21ECC621001824AE /* GCDWebServerDataResponse.h */,
+				F366DA0D21ECC621001824AE /* GCDWebServerFileResponse.m */,
+				F366DA0E21ECC621001824AE /* GCDWebServerDataResponse.m */,
+				F366DA0F21ECC621001824AE /* GCDWebServerErrorResponse.h */,
+				F366DA1021ECC621001824AE /* GCDWebServerStreamedResponse.m */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		F366DA1121ECC621001824AE /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F366DA1221ECC621001824AE /* GCDWebServerDataRequest.h */,
+				F366DA1321ECC621001824AE /* GCDWebServerMultiPartFormRequest.h */,
+				F366DA1421ECC621001824AE /* GCDWebServerFileRequest.h */,
+				F366DA1521ECC621001824AE /* GCDWebServerURLEncodedFormRequest.m */,
+				F366DA1621ECC621001824AE /* GCDWebServerMultiPartFormRequest.m */,
+				F366DA1721ECC621001824AE /* GCDWebServerDataRequest.m */,
+				F366DA1821ECC621001824AE /* GCDWebServerFileRequest.m */,
+				F366DA1921ECC621001824AE /* GCDWebServerURLEncodedFormRequest.h */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		F36762DE212FB47400A497F8 /* Builtin */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,59 +619,124 @@
 			path = NaiveStudio/Builtin;
 			sourceTree = "<group>";
 		};
+		F3D0218121E3710F00C05483 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */,
+				F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */,
+				F3D0218921E372A000C05483 /* Avatar */,
+				F3D0218521E3718300C05483 /* Server */,
+				F3D0218221E3717400C05483 /* NCServerManager.h */,
+				F3D0218321E3717400C05483 /* NCServerManager.m */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		F3D0218521E3718300C05483 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		F3D0218921E372A000C05483 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				F3D0218D21E373E300C05483 /* UIView+Avatar.h */,
+				F3D0218E21E373E300C05483 /* UIView+Avatar.m */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		F3D021A821E4934A00C05483 /* NaiveStudioMAC */ = {
+			isa = PBXGroup;
+			children = (
+				F3D021A921E4934A00C05483 /* AppDelegate.h */,
+				F3D021AA21E4934A00C05483 /* AppDelegate.m */,
+				F3D021AC21E4934A00C05483 /* ViewController.h */,
+				F3D021AD21E4934A00C05483 /* ViewController.m */,
+				F3D021AF21E4934C00C05483 /* Assets.xcassets */,
+				F3D021B121E4934C00C05483 /* Main.storyboard */,
+				F3D021B421E4934C00C05483 /* Info.plist */,
+				F3D021B521E4934C00C05483 /* main.m */,
+				F3D021B721E4934C00C05483 /* NaiveStudioMAC.entitlements */,
+			);
+			path = NaiveStudioMAC;
+			sourceTree = "<group>";
+		};
+		F3D021BF21E4934C00C05483 /* NaiveStudioMACTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */,
+				F3D021C221E4934D00C05483 /* Info.plist */,
+			);
+			path = NaiveStudioMACTests;
+			sourceTree = "<group>";
+		};
+		F3EAAC1E21ED797B00D7CBA4 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC1F21ED797B00D7CBA4 /* GCD */,
+				F3EAAC2421ED797B00D7CBA4 /* CocoaAsyncSocket.h */,
+				F3EAAC2521ED797B00D7CBA4 /* Vendor */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		F3EAAC1F21ED797B00D7CBA4 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */,
+				F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */,
+				F3EAAC2221ED797B00D7CBA4 /* GCDAsyncUdpSocket.h */,
+				F3EAAC2321ED797B00D7CBA4 /* GCDAsyncSocket.h */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		F3EAAC2521ED797B00D7CBA4 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC2621ED797B00D7CBA4 /* CocoaLumberjack */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F3EAAC2621ED797B00D7CBA4 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC2721ED797B00D7CBA4 /* DDTTYLogger.m */,
+				F3EAAC2821ED797B00D7CBA4 /* DDLog.h */,
+				F3EAAC2921ED797B00D7CBA4 /* DDAbstractDatabaseLogger.h */,
+				F3EAAC2A21ED797B00D7CBA4 /* DDASLLogger.m */,
+				F3EAAC2B21ED797B00D7CBA4 /* DDFileLogger.h */,
+				F3EAAC2C21ED797B00D7CBA4 /* Extensions */,
+				F3EAAC3321ED797B00D7CBA4 /* DDLog.m */,
+				F3EAAC3421ED797B00D7CBA4 /* DDTTYLogger.h */,
+				F3EAAC3521ED797B00D7CBA4 /* DDLog+LOGV.h */,
+				F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */,
+				F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */,
+				F3EAAC3821ED797B00D7CBA4 /* DDASLLogger.h */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		F3EAAC2C21ED797B00D7CBA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3EAAC2D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m */,
+				F3EAAC2E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m */,
+				F3EAAC2F21ED797B00D7CBA4 /* DDMultiFormatter.h */,
+				F3EAAC3021ED797B00D7CBA4 /* DDContextFilterLogFormatter.h */,
+				F3EAAC3121ED797B00D7CBA4 /* DDMultiFormatter.m */,
+				F3EAAC3221ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.h */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		D4892EE72045697F0052267E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4892EFC204569800052267E /* NaiveStudioSDK.h in Headers */,
-				D4892F2D2045787A0052267E /* NCMainViewController.h in Headers */,
-				D4892F2E2045787A0052267E /* NaiveStudio.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		D4892EE92045697F0052267E /* NaiveStudioSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4892F01204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDK" */;
-			buildPhases = (
-				D4892EE52045697F0052267E /* Sources */,
-				D4892EE62045697F0052267E /* Frameworks */,
-				D4892EE72045697F0052267E /* Headers */,
-				D4892EE82045697F0052267E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NaiveStudioSDK;
-			productName = NaiveStudioSDK;
-			productReference = D4892EEA2045697F0052267E /* NaiveStudioSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D4892EF1204569800052267E /* NaiveStudioSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4892F04204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDKTests" */;
-			buildPhases = (
-				D4892EEE204569800052267E /* Sources */,
-				D4892EEF204569800052267E /* Frameworks */,
-				D4892EF0204569800052267E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4892EF5204569800052267E /* PBXTargetDependency */,
-				D4892EF7204569800052267E /* PBXTargetDependency */,
-			);
-			name = NaiveStudioSDKTests;
-			productName = NaiveStudioSDKTests;
-			productReference = D4892EF2204569800052267E /* NaiveStudioSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		D4E06E79203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E06E9B203701CA0095F442 /* Build configuration list for PBXNativeTarget "NaiveStudio" */;
@@ -530,7 +749,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D4892EFE204569800052267E /* PBXTargetDependency */,
 			);
 			name = NaiveStudio;
 			productName = NaiveStudio;
@@ -573,6 +791,41 @@
 			productReference = F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		F3D021A621E4934900C05483 /* NaiveStudioMAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D021C321E4934D00C05483 /* Build configuration list for PBXNativeTarget "NaiveStudioMAC" */;
+			buildPhases = (
+				F3D021A321E4934900C05483 /* Sources */,
+				F3D021A421E4934900C05483 /* Frameworks */,
+				F3D021A521E4934900C05483 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NaiveStudioMAC;
+			productName = NaiveStudioMAC;
+			productReference = F3D021A721E4934900C05483 /* NaiveStudioMAC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3D021BB21E4934C00C05483 /* NaiveStudioMACTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D021C621E4934D00C05483 /* Build configuration list for PBXNativeTarget "NaiveStudioMACTests" */;
+			buildPhases = (
+				F3D021B821E4934C00C05483 /* Sources */,
+				F3D021B921E4934C00C05483 /* Frameworks */,
+				F3D021BA21E4934C00C05483 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D021BE21E4934C00C05483 /* PBXTargetDependency */,
+			);
+			name = NaiveStudioMACTests;
+			productName = NaiveStudioMACTests;
+			productReference = F3D021BC21E4934C00C05483 /* NaiveStudioMACTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -582,15 +835,6 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Liang,Zhiyuan(GIS)";
 				TargetAttributes = {
-					D4892EE92045697F0052267E = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
-					};
-					D4892EF1204569800052267E = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = D4E06E79203701C90095F442;
-					};
 					D4E06E79203701C90095F442 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
@@ -603,6 +847,15 @@
 					F31D7F812122FB5600E11E5F = {
 						CreatedOnToolsVersion = 9.4.1;
 						ProvisioningStyle = Automatic;
+					};
+					F3D021A621E4934900C05483 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
+					F3D021BB21E4934C00C05483 = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3D021A621E4934900C05483;
 					};
 				};
 			};
@@ -621,31 +874,14 @@
 			targets = (
 				D4E06E79203701C90095F442 /* NaiveStudio */,
 				D4E06E91203701CA0095F442 /* NaiveStudioTests */,
-				D4892EE92045697F0052267E /* NaiveStudioSDK */,
-				D4892EF1204569800052267E /* NaiveStudioSDKTests */,
 				F31D7F812122FB5600E11E5F /* OnlineDebugToolkit */,
+				F3D021A621E4934900C05483 /* NaiveStudioMAC */,
+				F3D021BB21E4934C00C05483 /* NaiveStudioMACTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D4892EE82045697F0052267E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4F0229A20465F870039A449 /* Assets.xcassets in Resources */,
-				D4F0229B20465F870039A449 /* image.xcassets in Resources */,
-				D4F022732046497C0039A449 /* NaiveStudio.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4892EF0204569800052267E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4E06E78203701C90095F442 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,85 +908,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D021A521E4934900C05483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D021B021E4934C00C05483 /* Assets.xcassets in Resources */,
+				F3D021B321E4934C00C05483 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D021BA21E4934C00C05483 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D4892EE52045697F0052267E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3A5B05D212FD93E0034232C /* NCBuiltinManager.mm in Sources */,
-				D4BB862D20458C5D00582695 /* NaiveStudioSDK.h in Sources */,
-				D4BB862B2045833600582695 /* NaiveStudio.h in Sources */,
-				D4BB862C2045833600582695 /* NaiveStudio.mm in Sources */,
-				D4892F07204569FF0052267E /* Common.h in Sources */,
-				D4892F08204569FF0052267E /* Common.mm in Sources */,
-				D4892F0A204569FF0052267E /* NCProject.m in Sources */,
-				D4892F0B204569FF0052267E /* NCProjectManager.m in Sources */,
-				D4892F0C204569FF0052267E /* NCProject.h in Sources */,
-				D4892F0D204569FF0052267E /* NCProjectManager.h in Sources */,
-				D4892F0E204569FF0052267E /* NCAddNewFileViewController.h in Sources */,
-				D4892F0F204569FF0052267E /* NCAddNewFileViewController.m in Sources */,
-				D4892F10204569FF0052267E /* NCCodeFastInputViewController.h in Sources */,
-				D4892F11204569FF0052267E /* NCCodeFastInputViewController.m in Sources */,
-				D4892F12204569FF0052267E /* NCCodeTemplate.h in Sources */,
-				D4892F13204569FF0052267E /* NCCodeTemplate.m in Sources */,
-				D4892F14204569FF0052267E /* NCConsole.h in Sources */,
-				D4892F15204569FF0052267E /* NCConsole.m in Sources */,
-				D4892F16204569FF0052267E /* NCDataSource.h in Sources */,
-				D4892F17204569FF0052267E /* NCDataSource.m in Sources */,
-				D4892F18204569FF0052267E /* NCEditorViewController.h in Sources */,
-				D4892F19204569FF0052267E /* NCEditorViewController.mm in Sources */,
-				D4892F1A204569FF0052267E /* NCInterpreterController.h in Sources */,
-				D4892F1B204569FF0052267E /* NCInterpreterController.mm in Sources */,
-				D4892F1C204569FF0052267E /* NCMainViewCell.h in Sources */,
-				D4892F1D204569FF0052267E /* NCMainViewCell.m in Sources */,
-				D4892F1E204569FF0052267E /* NCMainViewController.h in Sources */,
-				D4892F1F204569FF0052267E /* NCMainViewController.m in Sources */,
-				D4892F20204569FF0052267E /* NCProjectContentViewController.h in Sources */,
-				D4892F21204569FF0052267E /* NCProjectContentViewController.m in Sources */,
-				D4892F22204569FF0052267E /* NCProjectTableViewCell.h in Sources */,
-				D4892F23204569FF0052267E /* NCProjectTableViewCell.m in Sources */,
-				D4892F24204569FF0052267E /* NCTextManager.h in Sources */,
-				D4892F25204569FF0052267E /* NCTextManager.mm in Sources */,
-				D4892F26204569FF0052267E /* UIViewController+NCExtension.h in Sources */,
-				D4892F27204569FF0052267E /* UIViewController+NCExtension.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4892EEE204569800052267E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4892EFA204569800052267E /* NaiveStudioSDKTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D4E06E76203701C90095F442 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EAAC4021ED797B00D7CBA4 /* DDLog.m in Sources */,
 				D4892E972043B1730052267E /* NCMainViewController.m in Sources */,
 				D4E06ED5203703980095F442 /* NCCodeTemplate.m in Sources */,
 				ED2438822050220800AC27EB /* NSTestManager.m in Sources */,
 				D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */,
+				F3EAAC3B21ED797B00D7CBA4 /* DDTTYLogger.m in Sources */,
 				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
 				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
+				F366DA2221ECC622001824AE /* GCDWebServerStreamedResponse.m in Sources */,
+				F3EAAC3C21ED797B00D7CBA4 /* DDASLLogger.m in Sources */,
 				D4E06ECD203703980095F442 /* Common.mm in Sources */,
+				F366DA2321ECC622001824AE /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				D4892F2C204577600052267E /* NaiveStudio.mm in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
+				F366DA2421ECC622001824AE /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				F3EAAC8321EDD1CF00D7CBA4 /* NCNetworkData.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
+				F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */,
+				F366DA2521ECC622001824AE /* GCDWebServerDataRequest.m in Sources */,
+				F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */,
+				F366DA1F21ECC622001824AE /* GCDWebServerErrorResponse.m in Sources */,
 				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
+				F3EAAC3F21ED797B00D7CBA4 /* DDMultiFormatter.m in Sources */,
+				F3D0218F21E373E300C05483 /* UIView+Avatar.m in Sources */,
 				D4E06E8D203701CA0095F442 /* main.m in Sources */,
+				F3EAAC3A21ED797B00D7CBA4 /* GCDAsyncSocket.m in Sources */,
 				F3A5B05C212FD8F00034232C /* NCBuiltinManager.mm in Sources */,
+				F366DA2621ECC622001824AE /* GCDWebServerFileRequest.m in Sources */,
+				F366DA2121ECC622001824AE /* GCDWebServerDataResponse.m in Sources */,
+				F3EAAC3E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m in Sources */,
 				D4E06ED1203703980095F442 /* NCProjectTableViewCell.m in Sources */,
+				F366DA2021ECC622001824AE /* GCDWebServerFileResponse.m in Sources */,
 				D4E06ECC203703980095F442 /* NCInterpreterController.mm in Sources */,
 				D4E06EC9203703980095F442 /* NCProject.m in Sources */,
 				D4E06ED3203703980095F442 /* NCEditorViewController.mm in Sources */,
+				F3EAAC3921ED797B00D7CBA4 /* GCDAsyncUdpSocket.m in Sources */,
+				F3D0218421E3717400C05483 /* NCServerManager.m in Sources */,
 				D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */,
+				F366DA1D21ECC622001824AE /* GCDWebServer.m in Sources */,
 				D4E06ECE203703980095F442 /* NCTextManager.mm in Sources */,
+				F366DA1E21ECC622001824AE /* GCDWebServerConnection.m in Sources */,
+				F366DA1B21ECC622001824AE /* GCDWebServerRequest.m in Sources */,
 				D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */,
+				F3EAAC3D21ED797B00D7CBA4 /* DDContextFilterLogFormatter.m in Sources */,
+				F366DA1A21ECC622001824AE /* GCDWebServerResponse.m in Sources */,
 				D4E06ECA203703980095F442 /* NCProjectManager.m in Sources */,
+				F366DA1C21ECC622001824AE /* GCDWebServerFunctions.m in Sources */,
 				F31D80522124221A00E11E5F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,28 +1039,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3D021A321E4934900C05483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D021C921E494A600C05483 /* NCBuiltinManager.h in Sources */,
+				F3D021CA21E494A600C05483 /* NCBuiltinManager.mm in Sources */,
+				F3D021CB21E494A600C05483 /* NCCodeEngine_iOS.h in Sources */,
+				F3D021CC21E494A600C05483 /* NCTestCenter.h in Sources */,
+				F3D021CD21E494A600C05483 /* NCTestCenter.m in Sources */,
+				F3D021CE21E494A600C05483 /* Common.h in Sources */,
+				F3D021CF21E494A600C05483 /* Common.mm in Sources */,
+				F3D021D021E494A600C05483 /* image.xcassets in Sources */,
+				F3D021D121E494A600C05483 /* NCProject.h in Sources */,
+				F3D021D221E494A600C05483 /* NCProject.m in Sources */,
+				F3D021D321E494A600C05483 /* NCProjectManager.h in Sources */,
+				F3D021D421E494A600C05483 /* NCProjectManager.m in Sources */,
+				F3D021D521E494A600C05483 /* NSTestManager.h in Sources */,
+				F3D021D621E494A600C05483 /* NSTestManager.m in Sources */,
+				F3D021D721E494A600C05483 /* NCAddNewFileViewController.h in Sources */,
+				F3D021D821E494A600C05483 /* NCAddNewFileViewController.m in Sources */,
+				F3D021D921E494A600C05483 /* NCCodeFastInputViewController.h in Sources */,
+				F3D021DA21E494A600C05483 /* NCCodeFastInputViewController.m in Sources */,
+				F3D021DB21E494A600C05483 /* NCCodeTemplate.h in Sources */,
+				F3D021DC21E494A600C05483 /* NCCodeTemplate.m in Sources */,
+				F3D021DD21E494A600C05483 /* NCConsole.h in Sources */,
+				F3D021DE21E494A600C05483 /* NCConsole.m in Sources */,
+				F3D021DF21E494A600C05483 /* NCDataSource.h in Sources */,
+				F3D021E021E494A600C05483 /* NCDataSource.m in Sources */,
+				F3D021E121E494A600C05483 /* NCEditorViewController.h in Sources */,
+				F3D021E221E494A600C05483 /* NCEditorViewController.mm in Sources */,
+				F3D021E321E494A600C05483 /* NCInterpreterController.h in Sources */,
+				F3D021E421E494A600C05483 /* NCInterpreterController.mm in Sources */,
+				F3D021E521E494A600C05483 /* NCMainViewCell.h in Sources */,
+				F3D021E621E494A600C05483 /* NCMainViewCell.m in Sources */,
+				F3D021E721E494A600C05483 /* NCMainViewController.h in Sources */,
+				F3D021E821E494A600C05483 /* NCMainViewController.m in Sources */,
+				F3D021E921E494A600C05483 /* NCProjectContentViewController.h in Sources */,
+				F3D021EA21E494A600C05483 /* NCProjectContentViewController.m in Sources */,
+				F3D021EB21E494A600C05483 /* NCProjectTableViewCell.h in Sources */,
+				F3D021EC21E494A600C05483 /* NCProjectTableViewCell.m in Sources */,
+				F3D021ED21E494A600C05483 /* NCTextManager.h in Sources */,
+				F3D021EE21E494A600C05483 /* NCTextManager.mm in Sources */,
+				F3D021EF21E494A600C05483 /* UIViewController+NCExtension.h in Sources */,
+				F3D021F021E494A600C05483 /* UIViewController+NCExtension.m in Sources */,
+				F3D021F121E494A600C05483 /* NaiveStudio.h in Sources */,
+				F3D021F221E494A600C05483 /* NaiveStudio.mm in Sources */,
+				F3D021AE21E4934A00C05483 /* ViewController.m in Sources */,
+				F3D021B621E4934C00C05483 /* main.m in Sources */,
+				F3D021AB21E4934A00C05483 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D021B821E4934C00C05483 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D021C121E4934D00C05483 /* NaiveStudioMACTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D4892EF5204569800052267E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4892EE92045697F0052267E /* NaiveStudioSDK */;
-			targetProxy = D4892EF4204569800052267E /* PBXContainerItemProxy */;
-		};
-		D4892EF7204569800052267E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4E06E79203701C90095F442 /* NaiveStudio */;
-			targetProxy = D4892EF6204569800052267E /* PBXContainerItemProxy */;
-		};
-		D4892EFE204569800052267E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4892EE92045697F0052267E /* NaiveStudioSDK */;
-			targetProxy = D4892EFD204569800052267E /* PBXContainerItemProxy */;
-		};
 		D4E06E94203701CA0095F442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4E06E79203701C90095F442 /* NaiveStudio */;
 			targetProxy = D4E06E93203701CA0095F442 /* PBXContainerItemProxy */;
+		};
+		F3D021BE21E4934C00C05483 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3D021A621E4934900C05483 /* NaiveStudioMAC */;
+			targetProxy = F3D021BD21E4934C00C05483 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -862,99 +1139,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F3D021B121E4934C00C05483 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3D021B221E4934C00C05483 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D4892F02204569800052267E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NaiveStudioSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-lstdc++",
-				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDK;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D4892F03204569800052267E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = NaiveStudioSDK/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-lstdc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDK;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D4892F05204569800052267E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NaiveStudioSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudio.app/NaiveStudio";
-			};
-			name = Debug;
-		};
-		D4892F06204569800052267E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NaiveStudioSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudio.app/NaiveStudio";
-			};
-			name = Release;
-		};
 		D4E06E99203701CA0095F442 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1079,10 +1274,14 @@
 				INFOPLIST_FILE = NaiveStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "85fa56aa-396b-4522-aab6-df43df009449";
-				PROVISIONING_PROFILE_SPECIFIER = 20180713;
+				PROVISIONING_PROFILE_SPECIFIER = 20190109;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1101,6 +1300,10 @@
 				INFOPLIST_FILE = NaiveStudio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1147,6 +1350,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1165,6 +1372,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1172,27 +1383,87 @@
 			};
 			name = Release;
 		};
+		F3D021C421E4934D00C05483 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = NaiveStudioMAC/NaiveStudioMAC.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NaiveStudioMAC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioMAC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3D021C521E4934D00C05483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = NaiveStudioMAC/NaiveStudioMAC.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NaiveStudioMAC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioMAC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3D021C721E4934D00C05483 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NaiveStudioMACTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioMACTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudioMAC.app/Contents/MacOS/NaiveStudioMAC";
+			};
+			name = Debug;
+		};
+		F3D021C821E4934D00C05483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NaiveStudioMACTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudioMACTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaiveStudioMAC.app/Contents/MacOS/NaiveStudioMAC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4892F01204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4892F02204569800052267E /* Debug */,
-				D4892F03204569800052267E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4892F04204569800052267E /* Build configuration list for PBXNativeTarget "NaiveStudioSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4892F05204569800052267E /* Debug */,
-				D4892F06204569800052267E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D4E06E75203701C90095F442 /* Build configuration list for PBXProject "NaiveStudio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1225,6 +1496,24 @@
 			buildConfigurations = (
 				F31D7F882122FB5600E11E5F /* Debug */,
 				F31D7F892122FB5600E11E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D021C321E4934D00C05483 /* Build configuration list for PBXNativeTarget "NaiveStudioMAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D021C421E4934D00C05483 /* Debug */,
+				F3D021C521E4934D00C05483 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D021C621E4934D00C05483 /* Build configuration list for PBXNativeTarget "NaiveStudioMACTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D021C721E4934D00C05483 /* Debug */,
+				F3D021C821E4934D00C05483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,6 +12,7 @@
 #import "NCProjectTableViewCell.h"
 #import "NCAddNewFileViewController.h"
 #import "Common.h"
+#import "NCServerManager.h"
 
 @interface NCProjectContentViewController ()<UITableViewDataSource, UITableViewDelegate,NCAddNewFileViewControllerDelegate>
 
@@ -21,6 +22,10 @@
 
 @property (nonatomic) NCInterpreterController * interpreter;
 
+@property  (nonatomic) UILabel * startServerLabel;
+
+@property  (nonatomic) UISwitch * startServerSwitch;
+
 @end
 
 @implementation NCProjectContentViewController
@@ -29,7 +34,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    CGFloat bottomBarHeight = 40;
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - bottomBarHeight)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -52,11 +59,25 @@
     //btn0.image = [UIImage imageNamed:@"add" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     self.navigationItem.rightBarButtonItems = @[btn0];
     
+    self.startServerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottomBarHeight, self.view.bounds.size.width - 100, bottomBarHeight)];
+    [self updateServerInfo];
+    
+    self.startServerLabel.textAlignment = NSTextAlignmentCenter;
+    
+    self.startServerSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.startServerLabel.frame), self.view.bounds.size.height - bottomBarHeight, 100, bottomBarHeight)];
+    self.startServerSwitch.on = [NCServerManager sharedManager].isServerRunning;
+    [self.startServerSwitch addTarget:self action:@selector(didChangeSwitchValue:) forControlEvents:UIControlEventValueChanged];;
+    
+    [self.view addSubview:self.startServerLabel];
+    [self.view addSubview:self.startServerSwitch];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
     self.interpreter = [[NCInterpreterController alloc] init];
     self.interpreter.project = self.project;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -72,6 +93,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)updateServerInfo{
+    if ([NCServerManager sharedManager].isServerRunning) {
+        self.startServerLabel.text = [NSString stringWithFormat:@"服务器 %@:%d",[NCServerManager sharedManager].host,[NCServerManager sharedManager].port];
+    }
+    else {
+        self.startServerLabel.text = @"启动服务器";
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.project.sourceFiles.count;
 }
@@ -146,6 +177,19 @@
         editController.interpreter = self.interpreter;
     }
     editController.mode = self.mode;
+}
+
+-(void)didChangeSwitchValue:(UIControl*)switchControl{
+    if (switchControl == self.startServerSwitch) {
+        if (self.startServerSwitch.isOn) {
+            [[NCServerManager sharedManager] startServer];
+        }
+        else {
+            [[NCServerManager sharedManager] stopServer];
+        }
+        
+        [self updateServerInfo];
+    }
 }
 
 @end
