@@ -16,6 +16,8 @@
 #define TAG_TEXT 101
 #define TAG_BIN 102
 
+//#define DATA_FRAGMENT_DELIMITER [GCDAsyncSocket CRLFData]
+
 @interface NCServerManager()<GCDAsyncSocketDelegate>
 
 @property (strong, nonatomic) GCDAsyncSocket *serverSocket;
@@ -113,7 +115,8 @@ static NCServerManager *_instance = nil;
     LOG_SERVER(@"链接成功");
     LOG_SERVER(@"客户端的地址: %@ -------端口: %d", newSocket.connectedHost, newSocket.connectedPort);
     
-    [newSocket readDataWithTimeout:- 1 tag:0];
+//    [newSocket readDataWithTimeout:- 1 tag:0];
+    [newSocket readDataToData:DATA_FRAGMENT_DELIMITER withTimeout:-1 tag:0];
 }
 
 /**
@@ -132,8 +135,8 @@ static NCServerManager *_instance = nil;
 //        [self.interpreter runWithCode:text];
 //    }
 //
-    
-    NCNetworkData * ncData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSData * dataWithoutDelim = [data subdataWithRange:NSMakeRange(0, data.length-2)];
+    NCNetworkData * ncData = [NSKeyedUnarchiver unarchiveObjectWithData:dataWithoutDelim];
     switch (ncData.type) {
         case NCNetworkDataTypeString:
             {
@@ -152,7 +155,8 @@ static NCServerManager *_instance = nil;
             break;
     }
     
-    [sock readDataWithTimeout:- 1 tag:0];
+//    [sock readDataWithTimeout:- 1 tag:0];
+    [sock readDataToData:DATA_FRAGMENT_DELIMITER withTimeout:-1 tag:0];
 }
 
 - (NSString *)getIpAddresses{
@@ -188,7 +192,10 @@ static NCServerManager *_instance = nil;
 -(void)writeToClientWithText:(NSString*)text{
     NCNetworkData * networkData = [[NCNetworkData alloc] initWithString:text];
     NSData * data = [NSKeyedArchiver archivedDataWithRootObject:networkData];
-    [self.clientSockect writeData:data withTimeout:10 tag:TAG_TEXT];
+//    [self.clientSockect writeData:data withTimeout:10 tag:TAG_TEXT];
+    NSMutableData * dataWithDelimiter = [[NSMutableData alloc] initWithData:data];
+    [dataWithDelimiter appendData:DATA_FRAGMENT_DELIMITER];
+    [self.clientSockect writeData:dataWithDelimiter withTimeout:10 tag:TAG_TEXT];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
