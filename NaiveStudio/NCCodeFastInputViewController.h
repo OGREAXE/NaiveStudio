@@ -1,4 +1,4 @@
-//
+///
 //  NCCodeFastInputViewController.h
 //  NaiveC
 //
