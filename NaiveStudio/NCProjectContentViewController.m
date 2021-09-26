@@ -34,6 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    CGFloat bottomBarBottom = 60;
     CGFloat bottomBarHeight = 40;
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - bottomBarHeight)];
@@ -59,12 +60,12 @@
     //btn0.image = [UIImage imageNamed:@"add" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     self.navigationItem.rightBarButtonItems = @[btn0];
     
-    self.startServerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottomBarHeight, self.view.bounds.size.width - 100, bottomBarHeight)];
+    self.startServerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottomBarHeight - bottomBarBottom, self.view.bounds.size.width - 100, bottomBarHeight)];
     [self updateServerInfo];
     
     self.startServerLabel.textAlignment = NSTextAlignmentCenter;
     
-    self.startServerSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.startServerLabel.frame), self.view.bounds.size.height - bottomBarHeight, 100, bottomBarHeight)];
+    self.startServerSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.startServerLabel.frame), self.view.bounds.size.height - bottomBarHeight - bottomBarBottom, 100, bottomBarHeight)];
     self.startServerSwitch.on = [NCServerManager sharedManager].isServerRunning;
     [self.startServerSwitch addTarget:self action:@selector(didChangeSwitchValue:) forControlEvents:UIControlEventValueChanged];;
     
