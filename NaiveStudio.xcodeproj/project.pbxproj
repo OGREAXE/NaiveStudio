@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4300C05A2701664F0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
 		D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
@@ -154,7 +155,6 @@
 		F3EAAC4021ED797B00D7CBA4 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3321ED797B00D7CBA4 /* DDLog.m */; };
 		F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */; };
 		F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */; };
-		F3EAAC8321EDD1CF00D7CBA4 /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */; };
 		F3EAAC8421EDFC5300D7CBA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */; };
 		F3EAAC8521EDFC5300D7CBA4 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */; };
 		F3EAAC8621EDFC5300D7CBA4 /* GCDAsyncUdpSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC2221ED797B00D7CBA4 /* GCDAsyncUdpSocket.h */; };
@@ -178,8 +178,6 @@
 		F3EAAC9821EDFC5300D7CBA4 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */; };
 		F3EAAC9921EDFC5300D7CBA4 /* DDASLLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC3821ED797B00D7CBA4 /* DDASLLogger.h */; };
 		F3EAAC9A21EDFC5300D7CBA4 /* NCBuiltinManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */; };
-		F3EAAC9B21EDFC5300D7CBA4 /* NCNetworkData.h in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */; };
-		F3EAAC9C21EDFC5300D7CBA4 /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */; };
 		F3EAAC9D21EDFC5300D7CBA4 /* UIView+Avatar.h in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218D21E373E300C05483 /* UIView+Avatar.h */; };
 		F3EAAC9E21EDFC5300D7CBA4 /* UIView+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218E21E373E300C05483 /* UIView+Avatar.m */; };
 		F3EAAC9F21EDFC5300D7CBA4 /* NCServerManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218221E3717400C05483 /* NCServerManager.h */; };
@@ -228,6 +226,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4300C0582701664E0069473A /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNetworkData.h; sourceTree = "<group>"; };
+		4300C0592701664E0069473A /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNetworkData.m; sourceTree = "<group>"; };
 		D430BCB12058C02F00EC49AE /* NCTestCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTestCenter.h; sourceTree = "<group>"; };
 		D430BCB22058C02F00EC49AE /* NCTestCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTestCenter.m; sourceTree = "<group>"; };
 		D4892E952043B1730052267E /* NCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewController.h; sourceTree = "<group>"; };
@@ -361,8 +361,6 @@
 		F3EAAC3621ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		F3EAAC3721ED797B00D7CBA4 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
 		F3EAAC3821ED797B00D7CBA4 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCNetworkData.h; path = ../../../NaiveStudioMac/NaiveStudioMac/NaiveStudioMac/Remote/NCNetworkData.h; sourceTree = "<group>"; };
-		F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCNetworkData.m; path = ../../../NaiveStudioMac/NaiveStudioMac/NaiveStudioMac/Remote/NCNetworkData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -645,8 +643,8 @@
 		F3D0218121E3710F00C05483 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				F3EAAC8121EDD1CF00D7CBA4 /* NCNetworkData.h */,
-				F3EAAC8221EDD1CF00D7CBA4 /* NCNetworkData.m */,
+				4300C0582701664E0069473A /* NCNetworkData.h */,
+				4300C0592701664E0069473A /* NCNetworkData.m */,
 				F3D0218921E372A000C05483 /* Avatar */,
 				F3D0218521E3718300C05483 /* Server */,
 				F3D0218221E3717400C05483 /* NCServerManager.h */,
@@ -990,7 +988,7 @@
 				D4892F2C204577600052267E /* NaiveStudio.mm in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
 				F366DA2421ECC622001824AE /* GCDWebServerMultiPartFormRequest.m in Sources */,
-				F3EAAC8321EDD1CF00D7CBA4 /* NCNetworkData.m in Sources */,
+				4300C05A2701664F0069473A /* NCNetworkData.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
 				F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */,
 				F366DA2521ECC622001824AE /* GCDWebServerDataRequest.m in Sources */,
@@ -1061,8 +1059,6 @@
 				F3EAAC9821EDFC5300D7CBA4 /* DDFileLogger.m in Sources */,
 				F3EAAC9921EDFC5300D7CBA4 /* DDASLLogger.h in Sources */,
 				F3EAAC9A21EDFC5300D7CBA4 /* NCBuiltinManager.h in Sources */,
-				F3EAAC9B21EDFC5300D7CBA4 /* NCNetworkData.h in Sources */,
-				F3EAAC9C21EDFC5300D7CBA4 /* NCNetworkData.m in Sources */,
 				F3EAAC9D21EDFC5300D7CBA4 /* UIView+Avatar.h in Sources */,
 				F3EAAC9E21EDFC5300D7CBA4 /* UIView+Avatar.m in Sources */,
 				F3EAAC9F21EDFC5300D7CBA4 /* NCServerManager.h in Sources */,
