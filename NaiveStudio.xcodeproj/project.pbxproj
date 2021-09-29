@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4300C05A2701664F0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
+		4300C0602701775E0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
+		4386FB29270446CC00C6EE2A /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* ViewManager.m */; };
 		D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
@@ -97,12 +99,6 @@
 		F3A5B05E212FE4920034232C /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
 		F3D0218421E3717400C05483 /* NCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218321E3717400C05483 /* NCServerManager.m */; };
 		F3D0218F21E373E300C05483 /* UIView+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D0218E21E373E300C05483 /* UIView+Avatar.m */; };
-		F3D021AB21E4934A00C05483 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021AA21E4934A00C05483 /* AppDelegate.m */; };
-		F3D021AE21E4934A00C05483 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021AD21E4934A00C05483 /* ViewController.m */; };
-		F3D021B021E4934C00C05483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3D021AF21E4934C00C05483 /* Assets.xcassets */; };
-		F3D021B321E4934C00C05483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3D021B121E4934C00C05483 /* Main.storyboard */; };
-		F3D021B621E4934C00C05483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021B521E4934C00C05483 /* main.m */; };
-		F3D021C121E4934D00C05483 /* NaiveStudioMACTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */; };
 		F3D021C921E494A600C05483 /* NCBuiltinManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05A212FD8F00034232C /* NCBuiltinManager.h */; };
 		F3D021CA21E494A600C05483 /* NCBuiltinManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3A5B05B212FD8F00034232C /* NCBuiltinManager.mm */; };
 		F3D021CB21E494A600C05483 /* NCCodeEngine_iOS.h in Sources */ = {isa = PBXBuildFile; fileRef = F31D7FC22122FC9B00E11E5F /* NCCodeEngine_iOS.h */; };
@@ -228,6 +224,8 @@
 /* Begin PBXFileReference section */
 		4300C0582701664E0069473A /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNetworkData.h; sourceTree = "<group>"; };
 		4300C0592701664E0069473A /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNetworkData.m; sourceTree = "<group>"; };
+		4386FB27270446CB00C6EE2A /* ViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewManager.h; sourceTree = "<group>"; };
+		4386FB28270446CB00C6EE2A /* ViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewManager.m; sourceTree = "<group>"; };
 		D430BCB12058C02F00EC49AE /* NCTestCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTestCenter.h; sourceTree = "<group>"; };
 		D430BCB22058C02F00EC49AE /* NCTestCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTestCenter.m; sourceTree = "<group>"; };
 		D4892E952043B1730052267E /* NCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewController.h; sourceTree = "<group>"; };
@@ -327,18 +325,7 @@
 		F3D0218D21E373E300C05483 /* UIView+Avatar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Avatar.h"; sourceTree = "<group>"; };
 		F3D0218E21E373E300C05483 /* UIView+Avatar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Avatar.m"; sourceTree = "<group>"; };
 		F3D021A721E4934900C05483 /* NaiveStudioMAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaiveStudioMAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D021A921E4934A00C05483 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F3D021AA21E4934A00C05483 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F3D021AC21E4934A00C05483 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3D021AD21E4934A00C05483 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F3D021AF21E4934C00C05483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3D021B221E4934C00C05483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F3D021B421E4934C00C05483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3D021B521E4934C00C05483 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3D021B721E4934C00C05483 /* NaiveStudioMAC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NaiveStudioMAC.entitlements; sourceTree = "<group>"; };
 		F3D021BC21E4934C00C05483 /* NaiveStudioMACTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NaiveStudioMACTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaiveStudioMACTests.m; sourceTree = "<group>"; };
-		F3D021C221E4934D00C05483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3EAAC2021ED797B00D7CBA4 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		F3EAAC2121ED797B00D7CBA4 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		F3EAAC2221ED797B00D7CBA4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -404,6 +391,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4386FB262704463300C6EE2A /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				4386FB27270446CB00C6EE2A /* ViewManager.h */,
+				4386FB28270446CB00C6EE2A /* ViewManager.m */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
 		D4892EEB204569800052267E /* NaiveStudioSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,8 +429,6 @@
 				D4892EEB204569800052267E /* NaiveStudioSDK */,
 				D4892EF8204569800052267E /* NaiveStudioSDKTests */,
 				F31D7F832122FB5600E11E5F /* libOnlineDebugToolkit */,
-				F3D021A821E4934A00C05483 /* NaiveStudioMAC */,
-				F3D021BF21E4934C00C05483 /* NaiveStudioMACTests */,
 				D4E06E7B203701C90095F442 /* Products */,
 				D4E06EDC203705390095F442 /* Frameworks */,
 			);
@@ -455,6 +449,7 @@
 		D4E06E7C203701C90095F442 /* NaiveStudio */ = {
 			isa = PBXGroup;
 			children = (
+				4386FB262704463300C6EE2A /* Host */,
 				F3D0218121E3710F00C05483 /* Remote */,
 				D430BCB12058C02F00EC49AE /* NCTestCenter.h */,
 				D430BCB22058C02F00EC49AE /* NCTestCenter.m */,
@@ -667,31 +662,6 @@
 				F3D0218E21E373E300C05483 /* UIView+Avatar.m */,
 			);
 			path = Avatar;
-			sourceTree = "<group>";
-		};
-		F3D021A821E4934A00C05483 /* NaiveStudioMAC */ = {
-			isa = PBXGroup;
-			children = (
-				F3D021A921E4934A00C05483 /* AppDelegate.h */,
-				F3D021AA21E4934A00C05483 /* AppDelegate.m */,
-				F3D021AC21E4934A00C05483 /* ViewController.h */,
-				F3D021AD21E4934A00C05483 /* ViewController.m */,
-				F3D021AF21E4934C00C05483 /* Assets.xcassets */,
-				F3D021B121E4934C00C05483 /* Main.storyboard */,
-				F3D021B421E4934C00C05483 /* Info.plist */,
-				F3D021B521E4934C00C05483 /* main.m */,
-				F3D021B721E4934C00C05483 /* NaiveStudioMAC.entitlements */,
-			);
-			path = NaiveStudioMAC;
-			sourceTree = "<group>";
-		};
-		F3D021BF21E4934C00C05483 /* NaiveStudioMACTests */ = {
-			isa = PBXGroup;
-			children = (
-				F3D021C021E4934C00C05483 /* NaiveStudioMACTests.m */,
-				F3D021C221E4934D00C05483 /* Info.plist */,
-			);
-			path = NaiveStudioMACTests;
 			sourceTree = "<group>";
 		};
 		F3EAAC1E21ED797B00D7CBA4 /* CocoaAsyncSocket */ = {
@@ -934,8 +904,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3D021B021E4934C00C05483 /* Assets.xcassets in Resources */,
-				F3D021B321E4934C00C05483 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,6 +952,7 @@
 				F366DA2221ECC622001824AE /* GCDWebServerStreamedResponse.m in Sources */,
 				F3EAAC3C21ED797B00D7CBA4 /* DDASLLogger.m in Sources */,
 				D4E06ECD203703980095F442 /* Common.mm in Sources */,
+				4386FB29270446CC00C6EE2A /* ViewManager.m in Sources */,
 				F366DA2321ECC622001824AE /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				D4892F2C204577600052267E /* NaiveStudio.mm in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
@@ -1036,6 +1005,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4300C0602701775E0069473A /* NCNetworkData.m in Sources */,
 				F3EAAC8421EDFC5300D7CBA4 /* GCDAsyncUdpSocket.m in Sources */,
 				F3EAAC8521EDFC5300D7CBA4 /* GCDAsyncSocket.m in Sources */,
 				F3EAAC8621EDFC5300D7CBA4 /* GCDAsyncUdpSocket.h in Sources */,
@@ -1154,9 +1124,6 @@
 				F3D021F021E494A600C05483 /* UIViewController+NCExtension.m in Sources */,
 				F3D021F121E494A600C05483 /* NaiveStudio.h in Sources */,
 				F3D021F221E494A600C05483 /* NaiveStudio.mm in Sources */,
-				F3D021AE21E4934A00C05483 /* ViewController.m in Sources */,
-				F3D021B621E4934C00C05483 /* main.m in Sources */,
-				F3D021AB21E4934A00C05483 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1164,7 +1131,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3D021C121E4934D00C05483 /* NaiveStudioMACTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,14 +1172,6 @@
 				D4E06EC6203703980095F442 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F3D021B121E4934C00C05483 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F3D021B221E4934C00C05483 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1336,7 +1294,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: rd szlbs (KWNPF2348G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KLS72L88F6;
+				DEVELOPMENT_TEAM = 28KB4W64D4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
@@ -1348,10 +1306,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.dnfgamehelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "85fa56aa-396b-4522-aab6-df43df009449";
-				PROVISIONING_PROFILE_SPECIFIER = 20200107New;
+				PROVISIONING_PROFILE_SPECIFIER = dev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;

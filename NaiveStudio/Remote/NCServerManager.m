@@ -12,6 +12,7 @@
 #import "CocoaAsyncSocket.h"
 #import "NCInterpreterController.h"
 #import "NCNetworkData.h"
+#import "ViewManager.h"
 
 #define TAG_TEXT 101
 #define TAG_BIN 102
@@ -22,9 +23,9 @@
 
 @property (strong, nonatomic) GCDAsyncSocket *serverSocket;
 
-@property (strong, nonatomic) GCDAsyncSocket* clientSockect;
+@property (strong, nonatomic) GCDAsyncSocket *clientSockect;
 
-@property (strong, nonatomic) NCInterpreterController * interpreter;
+@property (strong, nonatomic) NCInterpreterController *interpreter;
 
 @end
 
@@ -34,7 +35,7 @@
 
 static NCServerManager *_instance = nil;
 
-+(instancetype)sharedManager{
++ (instancetype)sharedManager {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instance = [[NCServerManager alloc] init];
@@ -42,7 +43,7 @@ static NCServerManager *_instance = nil;
     return _instance;
 }
 
--(id)init{
+- (id)init{
     self = [super init];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
@@ -52,11 +53,11 @@ static NCServerManager *_instance = nil;
     return self;
 }
 
--(void)dealloc{
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(GCDAsyncSocket * )clientSockects{
+- (GCDAsyncSocket *)clientSockects {
     if (!_clientSockect) {
         _clientSockect = [[GCDAsyncSocket alloc] init];
     }
@@ -64,7 +65,7 @@ static NCServerManager *_instance = nil;
     return _clientSockect;
 }
 
--(NCInterpreterController*)interpreter{
+- (NCInterpreterController *)interpreter {
     if (!_interpreter) {
         _interpreter = [[NCInterpreterController alloc] init];
     }
@@ -74,7 +75,7 @@ static NCServerManager *_instance = nil;
 
 
 
--(BOOL)startServer{
+- (BOOL)startServer {
     self.serverSocket = [[GCDAsyncSocket alloc]initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     NSError * error = nil;
     BOOL result = [self.serverSocket acceptOnPort:LISTENING_PORT error:&error];
@@ -87,28 +88,27 @@ static NCServerManager *_instance = nil;
     return result;
 }
 
--(void)stopServer{
+- (void)stopServer {
     [self.serverSocket disconnect];
     self.serverSocket = nil;
     self.clientSockect = nil;
 }
 
 
--(BOOL)isServerRunning{
+- (BOOL)isServerRunning{
     return self.serverSocket != nil;
 }
 
--(NSString*)host{
+- (NSString *)host{
     return [self getIpAddresses];
 }
 
--(NSUInteger)port{
+- (NSUInteger)port{
     return LISTENING_PORT;
 }
 
 // 连接上新的客户端socket
-- (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(nonnull GCDAsyncSocket *)newSocket
-{
+- (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(nonnull GCDAsyncSocket *)newSocket {
     // 保存客户端的socket
     self.clientSockect = newSocket;
     
@@ -126,8 +126,7 @@ static NCServerManager *_instance = nil;
  @param data 客户端发送的数据
  @param tag 当前读取的标记
  */
-- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
-{
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
 //    if (tag == TAG_TEXT) {
 //        NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 //        LOG_SERVER(@"didReadData:**************\n%@",text);
@@ -142,7 +141,7 @@ static NCServerManager *_instance = nil;
             {
                 LOG_SERVER(@"didReadData:**************\n%@",ncData.string);
             
-                    [self.interpreter runWithCode:ncData.string];
+                [self dispatchWithString:ncData.string];
             }
             break;
         case NCNetworkDataTypeImage:
@@ -157,6 +156,19 @@ static NCServerManager *_instance = nil;
     
 //    [sock readDataWithTimeout:- 1 tag:0];
     [sock readDataToData:DATA_FRAGMENT_DELIMITER withTimeout:-1 tag:0];
+}
+
+- (void)dispatchWithString:(NSString *)string {
+    if ([string isEqualToString:@"lock"]) {
+        //handle lock screen
+        [self handleLockScreenCommand];
+    } else {
+        [self.interpreter runWithCode:string];
+    }
+}
+
+- (void)handleLockScreenCommand {
+    [[ViewManager sharedManager] beginLockScreenMode];
 }
 
 - (NSString *)getIpAddresses{
@@ -189,7 +201,7 @@ static NCServerManager *_instance = nil;
     return address;
 }
 
--(void)writeToClientWithText:(NSString*)text{
+- (void)writeToClientWithText:(NSString *)text {
     NCNetworkData * networkData = [[NCNetworkData alloc] initWithString:text];
     NSData * data = [NSKeyedArchiver archivedDataWithRootObject:networkData];
 //    [self.clientSockect writeData:data withTimeout:10 tag:TAG_TEXT];
@@ -204,14 +216,14 @@ static NCServerManager *_instance = nil;
     }
 }
 
--(void)didReceivePrintNotification:(NSNotification*)notification{
+- (void)didReceivePrintNotification:(NSNotification*)notification {
     NSString * str = notification.object;
     
     [self writeToClientWithText:str];
     
 }
 
--(void)didReceiveLogNotification:(NSNotification*)notification{
+- (void)didReceiveLogNotification:(NSNotification*)notification {
     NSString * str = notification.object;
     
     [self writeToClientWithText:str];
