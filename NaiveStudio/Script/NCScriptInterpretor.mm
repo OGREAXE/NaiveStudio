@@ -6,12 +6,12 @@
 //  Copyright © 2017年 Ogreaxe. All rights reserved.
 //
 
-#import "NCInterpreterController.h"
+#import "NCScriptInterpretor.h"
 //#import <NaiveC/NaiveC.h>
 
 #include "Common.h"
 
-@interface NCInterpreterController()
+@interface NCScriptInterpretor()
 
 @property (nonatomic) NSMutableDictionary * parserDict;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation NCInterpreterController{
+@implementation NCScriptInterpretor{
 //    NCTokenizer *_tokenizer;
 //    NCParser * _parser;
 //    NCInterpreter * _interpreter;
