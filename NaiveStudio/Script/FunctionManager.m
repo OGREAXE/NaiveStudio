@@ -10,8 +10,8 @@
 
 @implementation FunctionManager
 
-+ (NSString *)statementOfGetObjectWithAddress:(unsigned long long)address {
-    NSString *smt = [NSString stringWithFormat:@"getObject(%lluu)", (unsigned long long)address];
++ (NSString *)statementOfGetObjectWithObject:(NSObject *)object {
+    NSString *smt = [NSString stringWithFormat:@"a = getObject(\"%p\")\nprint(a)\n", object];
     return smt;
 }
 

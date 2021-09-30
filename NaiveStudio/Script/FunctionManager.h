@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FunctionManager : NSObject
 
-+ (NSString *)statementOfGetObjectWithAddress:(unsigned long long)address;
++ (NSString *)statementOfGetObjectWithObject:(NSObject *)object;
 
 @end
 

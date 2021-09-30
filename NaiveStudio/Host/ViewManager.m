@@ -36,6 +36,48 @@ UIView *getRootView(){
 
 @implementation TapDetectView
 
+- (id)init {
+    self = [super init];
+    [self commonInit];
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    [self commonInit];
+    return self;
+}
+
+- (void)commonInit {
+    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                       action:@selector(didTapView:)]];
+}
+
+- (void)didTapView:(UITapGestureRecognizer *)tap {
+    CGPoint point = [tap locationInView:self];
+    
+    UIView *root = getRootView();
+    UIView *hit = [[ViewManager sharedManager] queryViewByPostion:point view:root];
+    
+    if (hit) {
+        NSLog(@"hit view %@", hit);
+        
+        if (!_targetView) {
+            _targetView = [[UIView alloc] initWithFrame:hit.frame];
+            _targetView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+            [self addSubview:_targetView];
+        }
+        
+        _targetView.hidden = NO;
+        _targetView.frame = [hit.superview convertRect:hit.frame toView:self];
+        
+        [[ViewManager sharedManager] viewIsSelected:hit];
+    } else {
+        _targetView.hidden = YES;
+    }
+}
+
+/*
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     UIView *root = getRootView();
     UIView *hit = [[ViewManager sharedManager] queryViewByPostion:point view:root];
@@ -59,6 +101,7 @@ UIView *getRootView(){
     
     return self;
 }
+ */
 
 @end
 
@@ -84,9 +127,7 @@ UIView *getRootView(){
 }
 
 - (void)viewIsSelected:(UIView *)view {
-    void *pV = (void *)CFBridgingRetain(view);
-    unsigned long long address = (unsigned long long)pV;
-    NSString *cmd = [FunctionManager statementOfGetObjectWithAddress:address];
+    NSString *cmd = [FunctionManager statementOfGetObjectWithObject:view];
     
     [[NCServerManager sharedManager] writeToClientWithContent:cmd
                                                      metaData:@{
