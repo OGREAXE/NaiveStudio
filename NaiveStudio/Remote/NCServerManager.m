@@ -222,14 +222,12 @@ static NCServerManager *_instance = nil;
     [self.clientSockect writeData:dataWithDelimiter withTimeout:10 tag:TAG_TEXT];
 }
 
-- (void)writeToClientWithContent:(NSString *)text metaData:(NSDictionary *)meta contentType:(NCWriteToClientContentType)type{
+- (void)writeToClientWithContent:(NSString *)text metaData:(NSDictionary *)meta{
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:meta];
     
     if (text) {
         [dict setObject:text forKey:@"content"];
     }
-    
-    [dict setObject:@(type) forKey:@"meta"];
     
     NSError *err = nil;
     

@@ -9,7 +9,7 @@
 #import "ViewManager.h"
 #import "NCServerManager.h"
 #import "FunctionManager.h"
-"
+
 @class TapDetectView;
 
 @interface ViewManager ()
@@ -84,11 +84,12 @@ UIView *getRootView(){
 }
 
 - (void)viewIsSelected:(UIView *)view {
-    NSUInteger address = (NSUInteger)view;
+    void *pV = (void *)CFBridgingRetain(view);
+    unsigned long long address = (unsigned long long)pV;
     NSString *cmd = [FunctionManager statementOfGetObjectWithAddress:address];
     
     [[NCServerManager sharedManager] writeToClientWithContent:cmd
-                                                     metaData:{
+                                                     metaData:@{
         WRITE_CLIENT_CONTENT_TYPE_KEY:@(NCWriteToClientContentTypeOverrideInput)
     }];
 }

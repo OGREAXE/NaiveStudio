@@ -7,4 +7,7 @@
    <FileRef
       location = "container:NaiveStudio.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../NaiveStudioMac/NaiveStudioMac.xcodeproj">
+   </FileRef>
 </Workspace>
