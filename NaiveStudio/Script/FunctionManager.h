@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FunctionManager : NSObject
 
++ (NSString *)statementOfGetObjectWithAddress:(NSUInteger)address;
+
 @end
 
 NS_ASSUME_NONNULL_END

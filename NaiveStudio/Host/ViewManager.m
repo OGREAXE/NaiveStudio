@@ -7,12 +7,16 @@
 //
 
 #import "ViewManager.h"
-
+#import "NCServerManager.h"
+#import "FunctionManager.h"
+"
 @class TapDetectView;
 
 @interface ViewManager ()
 
 @property (nonatomic) TapDetectView *tdView;
+
+- (void)viewIsSelected:(UIView *)view;
 
 - (UIView *)queryViewByPostion:(CGPoint)point view:(UIView *)p;
 
@@ -47,6 +51,8 @@ UIView *getRootView(){
         
         _targetView.hidden = NO;
         _targetView.frame = [hit.superview convertRect:hit.frame toView:self];
+        
+        [[ViewManager sharedManager] viewIsSelected:hit];
     } else {
         _targetView.hidden = YES;
     }
@@ -75,6 +81,16 @@ UIView *getRootView(){
     
     UIView *root = getRootView();
     [root addSubview:_tdView];
+}
+
+- (void)viewIsSelected:(UIView *)view {
+    NSUInteger address = (NSUInteger)view;
+    NSString *cmd = [FunctionManager statementOfGetObjectWithAddress:address];
+    
+    [[NCServerManager sharedManager] writeToClientWithContent:cmd
+                                                     metaData:{
+        WRITE_CLIENT_CONTENT_TYPE_KEY:@(NCWriteToClientContentTypeOverrideInput)
+    }];
 }
 
 - (void)exitLockScreenMode {

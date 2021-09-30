@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Common.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,6 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,readonly) NSString * host;
 
 @property (nonatomic,readonly) NSUInteger port;
+
+- (void)writeToClientWithText:(NSString *)text;
+
+- (void)writeToClientWithContent:(NSString *)text
+                        metaData:(NSDictionary *)meta;
 
 @end
 

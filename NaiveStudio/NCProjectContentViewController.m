@@ -20,7 +20,7 @@
 
 @property  (nonatomic) UITableView * tableView;
 
-@property (nonatomic) NCInterpreterController * interpreter;
+@property (nonatomic) NCScriptInterpretor * interpreter;
 
 @property  (nonatomic) UILabel * startServerLabel;
 
@@ -75,7 +75,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
-    self.interpreter = [[NCInterpreterController alloc] init];
+    self.interpreter = [[NCScriptInterpretor alloc] init];
     self.interpreter.project = self.project;
     
     self.view.backgroundColor = [UIColor whiteColor];

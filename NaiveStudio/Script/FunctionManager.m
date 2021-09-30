@@ -10,4 +10,9 @@
 
 @implementation FunctionManager
 
++ (NSString *)statementOfGetObjectWithAddress:(NSUInteger)address {
+    NSString *smt = [NSString stringWithFormat:@"getObject(%d)", address];
+    return smt;
+}
+
 @end

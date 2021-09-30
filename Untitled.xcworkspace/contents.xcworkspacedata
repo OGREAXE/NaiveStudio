@@ -8,6 +8,6 @@
       location = "container:NaiveStudio.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../ODTTestProject/ODTTestProject.xcodeproj">
+      location = "group:../NaiveStudioMac/NaiveStudioMac.xcodeproj">
    </FileRef>
 </Workspace>

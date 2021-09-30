@@ -7,7 +7,7 @@
 //
 
 #import "NCEditorViewController.h"
-#import "NCInterpreterController.h"
+#import "NCScriptInterpretor.h"
 #import "NCCodeTemplate.h"
 #import "NCProject.h"
 #import "Common.h"
@@ -73,7 +73,7 @@
     
     self.runButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.runButton setTitle:@"run" forState:UIControlStateNormal];
-    [self.runButton addTarget:self action:@selector(didTapCompile:) forControlEvents:UIControlEventTouchUpInside];
+    [self.runButton addTarget:self action:@selector(didTapRun:) forControlEvents:UIControlEventTouchUpInside];
     [self.inputPanel addSubview:self.runButton];
     
     self.moveUpButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -136,7 +136,7 @@
     [self.textViewDataSource addDelegate:self.interpreter];
     self.textViewDataSource.linkedStorage = self.sourceFile.filepath;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:NCPrintContentFromEngineNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogNotification:) name:@"NCLogNotification" object:nil];
     

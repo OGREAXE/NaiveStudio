@@ -10,9 +10,10 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import "CocoaAsyncSocket.h"
-#import "NCInterpreterController.h"
+#import "NCScriptInterpretor.h"
 #import "NCNetworkData.h"
 #import "ViewManager.h"
+#import "Common.h"
 
 #define TAG_TEXT 101
 #define TAG_BIN 102
@@ -25,7 +26,7 @@
 
 @property (strong, nonatomic) GCDAsyncSocket *clientSockect;
 
-@property (strong, nonatomic) NCInterpreterController *interpreter;
+@property (strong, nonatomic) NCScriptInterpretor *interpreter;
 
 @end
 
@@ -46,7 +47,7 @@ static NCServerManager *_instance = nil;
 - (id)init{
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintNotification:) name:@"NCPrintStringNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintFromEngineNotification:) name:NCPrintContentFromEngineNotification object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogNotification:) name:@"NCLogNotification" object:nil];
     }
@@ -65,9 +66,9 @@ static NCServerManager *_instance = nil;
     return _clientSockect;
 }
 
-- (NCInterpreterController *)interpreter {
+- (NCScriptInterpretor *)interpreter {
     if (!_interpreter) {
-        _interpreter = [[NCInterpreterController alloc] init];
+        _interpreter = [[NCScriptInterpretor alloc] init];
     }
     
     return _interpreter;
@@ -162,6 +163,9 @@ static NCServerManager *_instance = nil;
     if ([string isEqualToString:@"lock"]) {
         //handle lock screen
         [self handleLockScreenCommand];
+    } else if ([string isEqualToString:@"unlock"]) {
+        //handle lock screen
+        [self handleUnlockScreenCommand];
     } else {
         [self.interpreter runWithCode:string];
     }
@@ -169,6 +173,14 @@ static NCServerManager *_instance = nil;
 
 - (void)handleLockScreenCommand {
     [[ViewManager sharedManager] beginLockScreenMode];
+    
+    [self writeToClientWithText:@"lock success"];
+}
+
+- (void)handleUnlockScreenCommand {
+    [[ViewManager sharedManager] exitLockScreenMode];
+    
+    [self writeToClientWithText:@"unlock success"];
 }
 
 - (NSString *)getIpAddresses{
@@ -210,17 +222,41 @@ static NCServerManager *_instance = nil;
     [self.clientSockect writeData:dataWithDelimiter withTimeout:10 tag:TAG_TEXT];
 }
 
+- (void)writeToClientWithContent:(NSString *)text metaData:(NSDictionary *)meta contentType:(NCWriteToClientContentType)type{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:meta];
+    
+    if (text) {
+        [dict setObject:text forKey:@"content"];
+    }
+    
+    [dict setObject:@(type) forKey:@"meta"];
+    
+    NSError *err = nil;
+    
+    NSData *json = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&err];
+    
+    if (err) {
+        NSLog(@"error creating json %@", err);
+        return;
+    }
+    
+    NSString *outputJsonText = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+    
+    [self writeToClientWithText:outputJsonText];
+}
+
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
     if (tag == TAG_TEXT) {
         LOG_SERVER(@"didWriteDataWithTag");
     }
 }
 
-- (void)didReceivePrintNotification:(NSNotification*)notification {
+- (void)didReceivePrintFromEngineNotification:(NSNotification*)notification {
     NSString * str = notification.object;
     
-    [self writeToClientWithText:str];
-    
+//    [self writeToClientWithText:str];
+    [self writeToClientWithContent:str
+                          metaData:@{WRITE_CLIENT_CONTENT_TYPE_KEY:@(NCWriteToClientContentTypeFromEngine)}];
 }
 
 - (void)didReceiveLogNotification:(NSNotification*)notification {
