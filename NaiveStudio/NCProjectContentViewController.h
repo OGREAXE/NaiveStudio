@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NCScriptInterpretor.h"
+#import "NCScriptInterpreter.h"
 
 @class NCProject;
 

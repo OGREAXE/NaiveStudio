@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4300C05A2701664F0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
 		4300C0602701775E0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
-		4386FB29270446CC00C6EE2A /* ViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* ViewManager.m */; };
-		4386FB35270597A100C6EE2A /* FunctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB34270597A000C6EE2A /* FunctionManager.m */; };
+		4386FB29270446CC00C6EE2A /* NCViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* NCViewManager.m */; };
+		4386FB35270597A100C6EE2A /* NCScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB34270597A000C6EE2A /* NCScriptManager.m */; };
 		D430BCB32058C03000EC49AE /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		D4892E972043B1730052267E /* NCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E962043B1730052267E /* NCMainViewController.m */; };
 		D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
@@ -23,7 +23,7 @@
 		D4E06EC9203703980095F442 /* NCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA5203703940095F442 /* NCProject.m */; };
 		D4E06ECA203703980095F442 /* NCProjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA6203703940095F442 /* NCProjectManager.m */; };
 		D4E06ECB203703980095F442 /* NCConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EA9203703950095F442 /* NCConsole.m */; };
-		D4E06ECC203703980095F442 /* NCScriptInterpretor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpretor.mm */; };
+		D4E06ECC203703980095F442 /* NCScriptInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpreter.mm */; };
 		D4E06ECD203703980095F442 /* Common.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAB203703950095F442 /* Common.mm */; };
 		D4E06ECE203703980095F442 /* NCTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB3203703960095F442 /* NCTextManager.mm */; };
 		D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB4203703960095F442 /* NCProjectContentViewController.m */; };
@@ -64,8 +64,8 @@
 		F31D7FA22122FB9500E11E5F /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
 		F31D7FA32122FB9500E11E5F /* NCEditorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC3203703970095F442 /* NCEditorViewController.h */; };
 		F31D7FA42122FB9500E11E5F /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
-		F31D7FA52122FB9500E11E5F /* NCScriptInterpretor.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCScriptInterpretor.h */; };
-		F31D7FA62122FB9500E11E5F /* NCScriptInterpretor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpretor.mm */; };
+		F31D7FA52122FB9500E11E5F /* NCScriptInterpreter.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCScriptInterpreter.h */; };
+		F31D7FA62122FB9500E11E5F /* NCScriptInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpreter.mm */; };
 		F31D7FA72122FB9500E11E5F /* NCMainViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9E2043B41F0052267E /* NCMainViewCell.h */; };
 		F31D7FA82122FB9500E11E5F /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
 		F31D7FA92122FB9500E11E5F /* NCMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; };
@@ -126,8 +126,8 @@
 		F3D021E021E494A600C05483 /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
 		F3D021E121E494A600C05483 /* NCEditorViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC3203703970095F442 /* NCEditorViewController.h */; };
 		F3D021E221E494A600C05483 /* NCEditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EB9203703960095F442 /* NCEditorViewController.mm */; };
-		F3D021E321E494A600C05483 /* NCScriptInterpretor.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCScriptInterpretor.h */; };
-		F3D021E421E494A600C05483 /* NCScriptInterpretor.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpretor.mm */; };
+		F3D021E321E494A600C05483 /* NCScriptInterpreter.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAF203703950095F442 /* NCScriptInterpreter.h */; };
+		F3D021E421E494A600C05483 /* NCScriptInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EAA203703950095F442 /* NCScriptInterpreter.mm */; };
 		F3D021E521E494A600C05483 /* NCMainViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9E2043B41F0052267E /* NCMainViewCell.h */; };
 		F3D021E621E494A600C05483 /* NCMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4892E9F2043B41F0052267E /* NCMainViewCell.m */; };
 		F3D021E721E494A600C05483 /* NCMainViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = D4892E952043B1730052267E /* NCMainViewController.h */; };
@@ -225,10 +225,10 @@
 /* Begin PBXFileReference section */
 		4300C0582701664E0069473A /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNetworkData.h; sourceTree = "<group>"; };
 		4300C0592701664E0069473A /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNetworkData.m; sourceTree = "<group>"; };
-		4386FB27270446CB00C6EE2A /* ViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewManager.h; sourceTree = "<group>"; };
-		4386FB28270446CB00C6EE2A /* ViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewManager.m; sourceTree = "<group>"; };
-		4386FB33270597A000C6EE2A /* FunctionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionManager.h; sourceTree = "<group>"; };
-		4386FB34270597A000C6EE2A /* FunctionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionManager.m; sourceTree = "<group>"; };
+		4386FB27270446CB00C6EE2A /* NCViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCViewManager.h; sourceTree = "<group>"; };
+		4386FB28270446CB00C6EE2A /* NCViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCViewManager.m; sourceTree = "<group>"; };
+		4386FB33270597A000C6EE2A /* NCScriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCScriptManager.h; sourceTree = "<group>"; };
+		4386FB34270597A000C6EE2A /* NCScriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCScriptManager.m; sourceTree = "<group>"; };
 		D430BCB12058C02F00EC49AE /* NCTestCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTestCenter.h; sourceTree = "<group>"; };
 		D430BCB22058C02F00EC49AE /* NCTestCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTestCenter.m; sourceTree = "<group>"; };
 		D4892E952043B1730052267E /* NCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainViewController.h; sourceTree = "<group>"; };
@@ -255,11 +255,11 @@
 		D4E06EA7203703940095F442 /* NCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProject.h; sourceTree = "<group>"; };
 		D4E06EA8203703940095F442 /* NCProjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCProjectManager.h; sourceTree = "<group>"; };
 		D4E06EA9203703950095F442 /* NCConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCConsole.m; sourceTree = "<group>"; };
-		D4E06EAA203703950095F442 /* NCScriptInterpretor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCScriptInterpretor.mm; sourceTree = "<group>"; };
+		D4E06EAA203703950095F442 /* NCScriptInterpreter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NCScriptInterpreter.mm; sourceTree = "<group>"; };
 		D4E06EAB203703950095F442 /* Common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Common.mm; sourceTree = "<group>"; };
 		D4E06EAD203703950095F442 /* NCTextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTextManager.h; sourceTree = "<group>"; };
 		D4E06EAE203703950095F442 /* NCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDataSource.h; sourceTree = "<group>"; };
-		D4E06EAF203703950095F442 /* NCScriptInterpretor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScriptInterpretor.h; sourceTree = "<group>"; };
+		D4E06EAF203703950095F442 /* NCScriptInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScriptInterpreter.h; sourceTree = "<group>"; };
 		D4E06EB0203703950095F442 /* NCCodeFastInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCodeFastInputViewController.h; sourceTree = "<group>"; };
 		D4E06EB1203703950095F442 /* NCAddNewFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAddNewFileViewController.h; sourceTree = "<group>"; };
 		D4E06EB2203703950095F442 /* NCConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCConsole.h; sourceTree = "<group>"; };
@@ -397,8 +397,8 @@
 		4386FB262704463300C6EE2A /* Host */ = {
 			isa = PBXGroup;
 			children = (
-				4386FB27270446CB00C6EE2A /* ViewManager.h */,
-				4386FB28270446CB00C6EE2A /* ViewManager.m */,
+				4386FB27270446CB00C6EE2A /* NCViewManager.h */,
+				4386FB28270446CB00C6EE2A /* NCViewManager.m */,
 			);
 			path = Host;
 			sourceTree = "<group>";
@@ -406,10 +406,10 @@
 		4386FB36270598C100C6EE2A /* Script */ = {
 			isa = PBXGroup;
 			children = (
-				D4E06EAF203703950095F442 /* NCScriptInterpretor.h */,
-				D4E06EAA203703950095F442 /* NCScriptInterpretor.mm */,
-				4386FB33270597A000C6EE2A /* FunctionManager.h */,
-				4386FB34270597A000C6EE2A /* FunctionManager.m */,
+				D4E06EAF203703950095F442 /* NCScriptInterpreter.h */,
+				D4E06EAA203703950095F442 /* NCScriptInterpreter.mm */,
+				4386FB33270597A000C6EE2A /* NCScriptManager.h */,
+				4386FB34270597A000C6EE2A /* NCScriptManager.m */,
 			);
 			path = Script;
 			sourceTree = "<group>";
@@ -959,14 +959,14 @@
 				D4E06ED5203703980095F442 /* NCCodeTemplate.m in Sources */,
 				ED2438822050220800AC27EB /* NSTestManager.m in Sources */,
 				D4892EA02043B41F0052267E /* NCMainViewCell.m in Sources */,
-				4386FB35270597A100C6EE2A /* FunctionManager.m in Sources */,
+				4386FB35270597A100C6EE2A /* NCScriptManager.m in Sources */,
 				F3EAAC3B21ED797B00D7CBA4 /* DDTTYLogger.m in Sources */,
 				D4E06ECF203703980095F442 /* NCProjectContentViewController.m in Sources */,
 				D4E06ECB203703980095F442 /* NCConsole.m in Sources */,
 				F366DA2221ECC622001824AE /* GCDWebServerStreamedResponse.m in Sources */,
 				F3EAAC3C21ED797B00D7CBA4 /* DDASLLogger.m in Sources */,
 				D4E06ECD203703980095F442 /* Common.mm in Sources */,
-				4386FB29270446CC00C6EE2A /* ViewManager.m in Sources */,
+				4386FB29270446CC00C6EE2A /* NCViewManager.m in Sources */,
 				F366DA2321ECC622001824AE /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				D4892F2C204577600052267E /* NaiveStudio.mm in Sources */,
 				D4E06ED7203703980095F442 /* NCDataSource.m in Sources */,
@@ -988,7 +988,7 @@
 				F3EAAC3E21ED797B00D7CBA4 /* DDDispatchQueueLogFormatter.m in Sources */,
 				D4E06ED1203703980095F442 /* NCProjectTableViewCell.m in Sources */,
 				F366DA2021ECC622001824AE /* GCDWebServerFileResponse.m in Sources */,
-				D4E06ECC203703980095F442 /* NCScriptInterpretor.mm in Sources */,
+				D4E06ECC203703980095F442 /* NCScriptInterpreter.mm in Sources */,
 				D4E06EC9203703980095F442 /* NCProject.m in Sources */,
 				D4E06ED3203703980095F442 /* NCEditorViewController.mm in Sources */,
 				F3EAAC3921ED797B00D7CBA4 /* GCDAsyncUdpSocket.m in Sources */,
@@ -1070,8 +1070,8 @@
 				F31D7FA22122FB9500E11E5F /* NCDataSource.m in Sources */,
 				F31D7FA32122FB9500E11E5F /* NCEditorViewController.h in Sources */,
 				F31D7FA42122FB9500E11E5F /* NCEditorViewController.mm in Sources */,
-				F31D7FA52122FB9500E11E5F /* NCScriptInterpretor.h in Sources */,
-				F31D7FA62122FB9500E11E5F /* NCScriptInterpretor.mm in Sources */,
+				F31D7FA52122FB9500E11E5F /* NCScriptInterpreter.h in Sources */,
+				F31D7FA62122FB9500E11E5F /* NCScriptInterpreter.mm in Sources */,
 				F31D7FA72122FB9500E11E5F /* NCMainViewCell.h in Sources */,
 				F31D7FA82122FB9500E11E5F /* NCMainViewCell.m in Sources */,
 				F31D7FA92122FB9500E11E5F /* NCMainViewController.h in Sources */,
@@ -1122,8 +1122,8 @@
 				F3D021E021E494A600C05483 /* NCDataSource.m in Sources */,
 				F3D021E121E494A600C05483 /* NCEditorViewController.h in Sources */,
 				F3D021E221E494A600C05483 /* NCEditorViewController.mm in Sources */,
-				F3D021E321E494A600C05483 /* NCScriptInterpretor.h in Sources */,
-				F3D021E421E494A600C05483 /* NCScriptInterpretor.mm in Sources */,
+				F3D021E321E494A600C05483 /* NCScriptInterpreter.h in Sources */,
+				F3D021E421E494A600C05483 /* NCScriptInterpreter.mm in Sources */,
 				F3D021E521E494A600C05483 /* NCMainViewCell.h in Sources */,
 				F3D021E621E494A600C05483 /* NCMainViewCell.m in Sources */,
 				F3D021E721E494A600C05483 /* NCMainViewController.h in Sources */,

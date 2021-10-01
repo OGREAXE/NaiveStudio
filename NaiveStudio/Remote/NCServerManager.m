@@ -10,9 +10,9 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #import "CocoaAsyncSocket.h"
-#import "NCScriptInterpretor.h"
+#import "NCScriptInterpreter.h"
 #import "NCNetworkData.h"
-#import "ViewManager.h"
+#import "NCViewManager.h"
 #import "Common.h"
 
 #define TAG_TEXT 101
@@ -26,7 +26,7 @@
 
 @property (strong, nonatomic) GCDAsyncSocket *clientSockect;
 
-@property (strong, nonatomic) NCScriptInterpretor *interpreter;
+@property (strong, nonatomic) NCScriptInterpreter *interpreter;
 
 @end
 
@@ -47,9 +47,13 @@ static NCServerManager *_instance = nil;
 - (id)init{
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceivePrintFromEngineNotification:) name:NCPrintContentFromEngineNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceivePrintFromEngineNotification:)
+                                                     name:NCPrintContentFromEngineNotification object:nil];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogNotification:) name:@"NCLogNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(didReceiveLogNotification:)
+                                                     name:@"NCLogNotification" object:nil];
     }
     return self;
 }
@@ -66,9 +70,9 @@ static NCServerManager *_instance = nil;
     return _clientSockect;
 }
 
-- (NCScriptInterpretor *)interpreter {
+- (NCScriptInterpreter *)interpreter {
     if (!_interpreter) {
-        _interpreter = [[NCScriptInterpretor alloc] init];
+        _interpreter = [[NCScriptInterpreter alloc] init];
     }
     
     return _interpreter;
@@ -172,13 +176,13 @@ static NCServerManager *_instance = nil;
 }
 
 - (void)handleLockScreenCommand {
-    [[ViewManager sharedManager] beginLockScreenMode];
+    [[NCViewManager sharedManager] beginLockScreenMode];
     
     [self writeToClientWithText:@"lock success"];
 }
 
 - (void)handleUnlockScreenCommand {
-    [[ViewManager sharedManager] exitLockScreenMode];
+    [[NCViewManager sharedManager] exitLockScreenMode];
     
     [self writeToClientWithText:@"unlock success"];
 }

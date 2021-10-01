@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NCDataSource.h"
-#import "NCScriptInterpretor.h"
+#import "NCScriptInterpreter.h"
 #import "NCCodeTemplate.h"
 
 @interface NCTextManager : NSObject<NCDataSourceDelegate,NCInterpreterControllerDelegate>

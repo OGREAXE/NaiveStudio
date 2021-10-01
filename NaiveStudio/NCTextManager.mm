@@ -7,7 +7,7 @@
 //
 
 #import "NCTextManager.h"
-#import "NCScriptInterpretor.h"
+#import "NCScriptInterpreter.h"
 //#import "NCParser.hpp"
 
 @interface ParensisInfo:NSObject
@@ -232,7 +232,7 @@ struct BalanceInfo{
 }
 
 #pragma mark interpreter delegate
--(void)interpreterController:(NCScriptInterpretor*)controller didFinishParsingDataSource:(NCDataSource*)dataSource WithParser:(void*)parser{
+-(void)interpreterController:(NCScriptInterpreter*)controller didFinishParsingDataSource:(NCDataSource*)dataSource WithParser:(void*)parser{
 //    auto _parser = (NCParser*)parser;
 //    auto tokens =  _parser->getTokens();
 //    for (int i=0;i<tokens->size();i++) {

@@ -6,15 +6,17 @@
 //  Copyright © 2021 Liang,Zhiyuan(GIS). All rights reserved.
 //
 
-#import "ViewManager.h"
+#import "NCViewManager.h"
 #import "NCServerManager.h"
-#import "FunctionManager.h"
+#import "NCScriptManager.h"
 
 @class TapDetectView;
 
-@interface ViewManager ()
+@interface NCViewManager ()
 
-@property (nonatomic) TapDetectView *tdView;
+@property (nonatomic) TapDetectView *tapdectView;
+
+@property (nonatomic, weak) UIView *selectedView;
 
 - (void)viewIsSelected:(UIView *)view;
 
@@ -57,7 +59,7 @@ UIView *getRootView(){
     CGPoint point = [tap locationInView:self];
     
     UIView *root = getRootView();
-    UIView *hit = [[ViewManager sharedManager] queryViewByPostion:point view:root];
+    UIView *hit = [[NCViewManager sharedManager] queryViewByPostion:point view:root];
     
     if (hit) {
         NSLog(@"hit view %@", hit);
@@ -71,7 +73,7 @@ UIView *getRootView(){
         _targetView.hidden = NO;
         _targetView.frame = [hit.superview convertRect:hit.frame toView:self];
         
-        [[ViewManager sharedManager] viewIsSelected:hit];
+        [[NCViewManager sharedManager] viewIsSelected:hit];
     } else {
         _targetView.hidden = YES;
     }
@@ -105,10 +107,10 @@ UIView *getRootView(){
 
 @end
 
-@implementation ViewManager
+@implementation NCViewManager
 
 + (instancetype)sharedManager {
-    static ViewManager *sharedManager;
+    static NCViewManager *sharedManager;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
@@ -119,15 +121,18 @@ UIView *getRootView(){
 }
 
 - (void)beginLockScreenMode {
-    [_tdView removeFromSuperview];
-    _tdView = [[TapDetectView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [_tapdectView removeFromSuperview];
+    _tapdectView = [[TapDetectView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     UIView *root = getRootView();
-    [root addSubview:_tdView];
+    [root addSubview:_tapdectView];
 }
 
 - (void)viewIsSelected:(UIView *)view {
-    NSString *cmd = [FunctionManager statementOfGetObjectWithObject:view];
+    
+    self.selectedView = view;
+    
+    NSString *cmd = [NCScriptManager statementOfGetObjectWithObject:view];
     
     [[NCServerManager sharedManager] writeToClientWithContent:cmd
                                                      metaData:@{
@@ -136,7 +141,7 @@ UIView *getRootView(){
 }
 
 - (void)exitLockScreenMode {
-    [_tdView removeFromSuperview];
+    [_tapdectView removeFromSuperview];
 }
 
 - (BOOL)viewVisible:(UIView *)view {

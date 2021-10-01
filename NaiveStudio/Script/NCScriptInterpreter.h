@@ -12,17 +12,17 @@
 #import "NCCodeEngine_iOS.h"
 #import "NCProject.h"
 
-@class NCScriptInterpretor;
+@class NCScriptInterpreter;
 
 @protocol NCInterpreterControllerDelegate<NSObject>
 
--(void)interpreterController:(NCScriptInterpretor*)controller didFinishParsingDataSource:(NCDataSource*)dataSource WithParser:(void*)parser;
+-(void)interpreterController:(NCScriptInterpreter*)controller didFinishParsingDataSource:(NCDataSource*)dataSource WithParser:(void*)parser;
 
 //-(void)didFinishParsing:(NCInterpreterController*)controller;
 
 @end
 
-@interface NCScriptInterpretor : NSObject<NCDataSourceDelegate>
+@interface NCScriptInterpreter : NSObject<NCDataSourceDelegate>
 
 @property (nonatomic) id<NCInterpreterControllerDelegate> delegate;
 
