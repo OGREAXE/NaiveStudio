@@ -22,6 +22,8 @@
 //appears in the meta data that server writes back to client
 
 #define WRITE_CLIENT_CONTENT_TYPE_KEY @"contentType"
+#define WRITE_CLIENT_TEXT_COLOR_KEY @"textColor"
+
 typedef NS_ENUM(NSInteger, NCWriteToClientContentType) {
     NCWriteToClientContentTypeFromEngine = 0,          // default, display in client output window
     NCWriteToClientContentTypeOverrideInput,       //  ask client to display in input window

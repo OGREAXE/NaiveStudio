@@ -7,13 +7,14 @@
 //
 
 #import "NCScriptManager.h"
+#import "NCViewManager.h"
 
 @implementation NCScriptManager
 
 + (NSString *)statementOfGetObjectWithObject:(NSObject *)object {
 //    NSString *smt = [NSString stringWithFormat:@"a = getObject(\"%p\")\nprint(a)\n", object];
     
-    NSString *smt = [NSString stringWithFormat:@"a = [ViewManager sharedManager].selectedView; \nprint(a);"];
+    NSString *smt = [NSString stringWithFormat:@"a = [%@ sharedManager].selectedView; \nprint(a);", NSStringFromClass(NCViewManager.class)];
     return smt;
 }
 

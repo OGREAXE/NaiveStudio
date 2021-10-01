@@ -18,6 +18,8 @@
 #define TAG_TEXT 101
 #define TAG_BIN 102
 
+#define DEFAULT_SEND_TIMEOUT 10
+
 //#define DATA_FRAGMENT_DELIMITER [GCDAsyncSocket CRLFData]
 
 @interface NCServerManager()<GCDAsyncSocketDelegate>
@@ -88,7 +90,7 @@ static NCServerManager *_instance = nil;
         LOG_SERVER(@"error start server socket %@",error);
     }
     if (result) {
-        LOG_SERVER(@"服务器的地址: %@ -------端口: %d", [self getIpAddresses], self.serverSocket.localPort);
+        LOG_SERVER(@"server address: %@ -------port: %d", [self getIpAddresses], self.serverSocket.localPort);
     }
     return result;
 }
@@ -117,8 +119,8 @@ static NCServerManager *_instance = nil;
     // 保存客户端的socket
     self.clientSockect = newSocket;
     
-    LOG_SERVER(@"链接成功");
-    LOG_SERVER(@"客户端的地址: %@ -------端口: %d", newSocket.connectedHost, newSocket.connectedPort);
+    LOG_SERVER(@"new socket connected!");
+    LOG_SERVER(@"client address: %@ -------port: %d", newSocket.connectedHost, newSocket.connectedPort);
     
 //    [newSocket readDataWithTimeout:- 1 tag:0];
     [newSocket readDataToData:DATA_FRAGMENT_DELIMITER withTimeout:-1 tag:0];
@@ -178,13 +180,15 @@ static NCServerManager *_instance = nil;
 - (void)handleLockScreenCommand {
     [[NCViewManager sharedManager] beginLockScreenMode];
     
-    [self writeToClientWithText:@"lock success"];
+//    [self writeToClientWithText:@"lock success"];
+    [self writeToClientWithContent:@"lock success" metaData:@{WRITE_CLIENT_TEXT_COLOR_KEY:@"0x0000ffff"}];
 }
 
 - (void)handleUnlockScreenCommand {
     [[NCViewManager sharedManager] exitLockScreenMode];
     
-    [self writeToClientWithText:@"unlock success"];
+//    [self writeToClientWithText:@"unlock success"];
+    [self writeToClientWithContent:@"unlock success" metaData:@{WRITE_CLIENT_TEXT_COLOR_KEY:@"0x0000ffff"}];
 }
 
 - (NSString *)getIpAddresses{
@@ -223,7 +227,11 @@ static NCServerManager *_instance = nil;
 //    [self.clientSockect writeData:data withTimeout:10 tag:TAG_TEXT];
     NSMutableData * dataWithDelimiter = [[NSMutableData alloc] initWithData:data];
     [dataWithDelimiter appendData:DATA_FRAGMENT_DELIMITER];
-    [self.clientSockect writeData:dataWithDelimiter withTimeout:10 tag:TAG_TEXT];
+    [self.clientSockect writeData:dataWithDelimiter withTimeout:DEFAULT_SEND_TIMEOUT tag:TAG_TEXT];
+}
+
+- (void)writeToClientWithContent:(NSString *)text {
+    [self writeToClientWithContent:text metaData:nil];
 }
 
 - (void)writeToClientWithContent:(NSString *)text metaData:(NSDictionary *)meta{
@@ -264,7 +272,8 @@ static NCServerManager *_instance = nil;
 - (void)didReceiveLogNotification:(NSNotification*)notification {
     NSString * str = notification.object;
     
-    [self writeToClientWithText:str];
+//    [self writeToClientWithText:str];
+    [self writeToClientWithContent:str metaData:@{WRITE_CLIENT_TEXT_COLOR_KEY:@"0x0000FFFF"}];
 }
 
 @end

@@ -27,10 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,readonly) NSUInteger port;
 
-- (void)writeToClientWithText:(NSString *)text;
+//- (void)writeToClientWithText:(NSString *)text;
+
+- (void)writeToClientWithContent:(NSString *)text;
 
 - (void)writeToClientWithContent:(NSString *)text
-                        metaData:(NSDictionary *)meta;
+                        metaData:(nullable NSDictionary *)meta;
 
 @end
 
