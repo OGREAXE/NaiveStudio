@@ -73,7 +73,7 @@
     
     self.runButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.runButton setTitle:@"run" forState:UIControlStateNormal];
-    [self.runButton addTarget:self action:@selector(didTapRun:) forControlEvents:UIControlEventTouchUpInside];
+    [self.runButton addTarget:self action:@selector(didTapCompile:) forControlEvents:UIControlEventTouchUpInside];
     [self.inputPanel addSubview:self.runButton];
     
     self.moveUpButton = [UIButton buttonWithType:UIButtonTypeSystem];
