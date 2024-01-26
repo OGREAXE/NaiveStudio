@@ -66,8 +66,8 @@
     
     [self.tableView reloadData];
     
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.baidu.com"]];
-    NSLog(@"%@",data);
+//    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+//    NSLog(@"%@",data);
 }
 
 -(void)viewDidLayoutSubviews{
