@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include "NCAST.hpp"
 
+#define NCAssert(cond, msg) if(!(cond)){throw  NCRuntimeException(0,msg);}
+
 struct NCStackElement{
     NCStackElement(){}
     virtual ~NCStackElement(){}
@@ -28,7 +30,11 @@ struct NCStackElement{
     virtual shared_ptr<NCStackElement> copy(){return nullptr;};
     
     virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> & lastStack){return false;}
+    virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> &formatArguments,vector<shared_ptr<NCStackElement>> & lastStack){return false;}
     virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments){return false;}
+    virtual bool invokeMethod(const NCMethodCallExpr &call, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> &lastStack){
+        return invokeMethod(call.name, arguments, lastStack);
+    }
     
     virtual shared_ptr<NCStackElement> getAttribute(const string & attrName){return nullptr;}
     
@@ -86,6 +92,7 @@ struct NCStackVariableElement:NCStackElement{
     virtual shared_ptr<NCStackElement> copy();
     
     virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> & lastStack);
+    virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> &formatArguments,vector<shared_ptr<NCStackElement>> & lastStack);
     
     virtual shared_ptr<NCStackElement> getAttribute(const string & attrName){
         if(valueElement){
@@ -120,12 +127,16 @@ public:
     virtual shared_ptr<NCStackElement> value();
     
     virtual string toString();
+    virtual NCInt toInt();
+    virtual NCFloat toFloat();
     
     virtual shared_ptr<NCStackElement> getAttribute(const string & attrName);
     
     virtual void setAttribute(const string & attrName, shared_ptr<NCStackElement> value);
     
     virtual shared_ptr<NCStackElement> doOperator(const string&op, shared_ptr<NCStackElement> rightOperand);
+    
+    virtual bool invokeMethod(string methodName, vector<shared_ptr<NCStackElement>> &arguments,vector<shared_ptr<NCStackElement>> & lastStack);
 };
 
 #endif /* NCStackElement_hpp */

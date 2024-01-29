@@ -10,19 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define NPNUMBER(a) [NPNumber numberWithNumber:@(a)]
-
-//for primitive type like int, float ,char
-@interface NPNumber : NSObject
-
-@property (nonatomic) NSNumber *number;
-
-+ (NPNumber *)numberWithNumber:(NSNumber *)number;
-
-@end
+#define NPNUMBER(a, t) [NPValue valueWithNumber:@(a) type:t]
 
 @interface NPValue : NSObject
 
++ (NPValue *)valueWithNumber:(NSNumber *)number type:(char)type;
 + (NPValue *)valueWithRect:(CGRect)rect;
 + (NPValue *)valueWithPoint:(CGPoint)point;
 + (NPValue *)valueWithSize:(CGSize)size;

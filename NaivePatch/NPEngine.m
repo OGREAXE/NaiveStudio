@@ -291,7 +291,7 @@ static void JPForwardInvocation(__unsafe_unretained id assignSlf, SEL selector, 
             case _typeChar: {   \
                 _type arg;  \
                 [invocation getArgument:&arg atIndex:i];    \
-                [argList addObject:NPNUMBER(arg)]; \
+                [argList addObject:NPNUMBER(arg, _typeChar)]; \
                 break;  \
             }
             JP_FWD_ARG_CASE('c', char)

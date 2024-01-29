@@ -108,9 +108,15 @@ public:
 //class.method(...)
 class NCMethodCallExpr:public NCPrimarySuffix{
 public:
-    vector<shared_ptr<NCExpression>> args;
     string name;
+    
     shared_ptr<NCExpression> scope;
+    
+    vector<shared_ptr<NCExpression>> args;
+    
+    vector<shared_ptr<NCExpression>> formatArgs;
+    
+//    bool isFormat;
 
     //method(args);
     NCMethodCallExpr(vector<shared_ptr<NCExpression>> & args,string &name):args(args), name(name), scope(nullptr){
@@ -121,14 +127,44 @@ public:
     }
 };
 
+//support objective c style syntactic sugar starting with @
+class NCObjcSyntacticSugarExpr:public NCPrimarySuffix{
+private:
+//    shared_ptr<NCExpression> exporession;
+public:
+    //method(args);
+//    NCObjCSendMessageExpr(shared_ptr<NCExpression> &expression):expression(expression){}
+};
+
+class NCObjcStringExpr:public NCObjcSyntacticSugarExpr{
+private:
+    
+public:
+    string content;
+    NCObjcStringExpr(string &content):content(content){}
+};
+
+class NCObjcNumberExpr:public NCObjcSyntacticSugarExpr{
+private:
+    
+public:
+    //method(args);
+    shared_ptr<NCExpression> expression;
+    NCObjcNumberExpr(shared_ptr<NCExpression> &expression):expression(expression){}
+};
+
 //support calling oc message [obj msg:para1:para2]
 class NCObjCSendMessageExpr:public NCPrimarySuffix{
 private:
     shared_ptr<NCMethodCallExpr> m_methodCallExpr;
 public:
     vector<shared_ptr<NCExpression>> argument_expression_list;
+    
     vector<string> parameter_list;
     shared_ptr<NCExpression> scope;
+    
+//    bool isFormat = false; // format function
+    vector<shared_ptr<NCExpression>> format_argument_expression_list;
     
     //method(args);
     NCObjCSendMessageExpr(vector<shared_ptr<NCExpression>> & argument_expression_list,vector<string> parameter_list, shared_ptr<NCExpression> scope):argument_expression_list(argument_expression_list), parameter_list(parameter_list), scope(scope),m_methodCallExpr(nullptr){}
@@ -162,6 +198,11 @@ class NCArrayInitializer:public NCExpression{
 public:
     vector<shared_ptr<NCExpression>> elements;
 };
+
+//class NCNSDictionaryInitializer:public NCExpression{
+//public:
+//    vector<pair<shared_ptr<NCExpression>, shared_ptr<NCExpression>>> keyValueList;
+//};
 
 class NCNameExpression:public NCExpression{
 private:
@@ -438,9 +479,18 @@ public:
     
     vector<shared_ptr<NCBodyDeclaration>> members;
     
-    vector<shared_ptr<NCBodyDeclaration>> fields;
+    vector<shared_ptr<NCFieldDeclaration>> fields;
     
-    unordered_map<string, shared_ptr<NCBodyDeclaration>> methods;
+    unordered_map<string, shared_ptr<NCMethodDeclaration>> methods;
+    
+    shared_ptr<NCFieldDeclaration> getField(const string & name){
+        for (auto field : fields) {
+            if (field->name == name) {
+                return field;
+            }
+        }
+        return nullptr;
+    }
 };
 
 class NCLambdaLiteral:public NCLiteral{
@@ -452,6 +502,29 @@ class NCASTRoot:public NCASTNode {
 public:
     vector<shared_ptr<NCClassDeclaration>> classList;
     vector<shared_ptr<NCASTFunctionDefinition>> functionList;
+};
+
+
+class NCObjcArrayInitializer:public NCObjcSyntacticSugarExpr{
+private:
+    
+public:
+    //method(args);
+    shared_ptr<NCArrayInitializer> arrayInitializer;
+    NCObjcArrayInitializer(shared_ptr<NCArrayInitializer> &arrayInitializer):arrayInitializer(arrayInitializer){}
+};
+//
+//class NCObjcDictionaryExpr:public NCObjcSyntacticSugarExpr{
+//private:
+//    shared_ptr<NCNSDictionaryInitializer> dictionaryInitializer;
+//public:
+//    //method(args);
+//    NCObjcDictionaryExpr(shared_ptr<NCNSDictionaryInitializer> &dictionaryInitializer):dictionaryInitializer(dictionaryInitializer){}
+//};
+
+class NCObjcDictionaryInitializer:public NCExpression{
+public:
+    vector<pair<shared_ptr<NCExpression>, shared_ptr<NCExpression>>> keyValueList;
 };
 
 #endif /* MCAST_hpp */

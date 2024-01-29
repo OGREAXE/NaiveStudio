@@ -172,6 +172,10 @@ static NCServerManager *_instance = nil;
     } else if ([string isEqualToString:@"unlock"]) {
         //handle lock screen
         [self handleUnlockScreenCommand];
+    }  else if ([string isEqualToString:@"?NAIVE_PATCH?"]) {
+        //todo patch
+        NSLog(@"NAIVE_PATCH:%@", string);
+        
     } else {
         [self.interpreter runWithCode:string];
     }
