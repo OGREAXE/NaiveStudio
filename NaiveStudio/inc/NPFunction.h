@@ -7,14 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+//#include "NCObject.hpp"
+#import "NPPatchedClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define NPNUMBER(a, t) [NPValue valueWithNumber:@(a) type:t]
+#define NPNumber(number, type) [NPValue numberWithNumber:number type:type]
 
 @interface NPValue : NSObject
 
-+ (NPValue *)valueWithNumber:(NSNumber *)number type:(char)type;
++ (NPValue *)numberWithNumber:(NSNumber *)number type:(char)type;
+
 + (NPValue *)valueWithRect:(CGRect)rect;
 + (NPValue *)valueWithPoint:(CGPoint)point;
 + (NPValue *)valueWithSize:(CGSize)size;
@@ -22,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NPValue *)valueWithInset:(UIEdgeInsets)inset;
 
 @property (nonatomic) NSString *types;
+
+//@property (nonatomic, readonly) NCStackElement *stackElement;
 
 - (id)toObject;
 - (CGRect)toRect;
@@ -33,7 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPFunction : NSObject
 
-@property (nonatomic) NSString *code;
+//@property (nonatomic) NSString *code;
+
+@property (nonatomic) NPPatchedMethod *method;
 
 - (NPValue *)callWithArguments:(NSArray<NPValue*> *)args;
 

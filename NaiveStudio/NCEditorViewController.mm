@@ -18,6 +18,8 @@
 //#include "NCInterpreter.hpp"
 #include "NCTextManager.h"
 
+#include "NPEngine.h"
+
 @interface NCEditorViewController ()<UIGestureRecognizerDelegate, NCCodeFastInputViewControllerDelegate>
 
 //@property (weak, nonatomic) IBOutlet  UITextView * textView;
@@ -101,7 +103,7 @@
     [self.inputPanel addSubview:self.moveRightButton];
     
     self.closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.closeButton setTitle:@"close" forState:UIControlStateNormal];
+    [self.closeButton setTitle:@"patch" forState:UIControlStateNormal];
     [self.closeButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [self.inputPanel addSubview:self.closeButton];
     
@@ -410,9 +412,10 @@
 }
 
 -(void)close{
-    [self.navigationController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+//        
+//    }];
+    [NPEngine patchWithCode:self.textView.text];
 }
 
 @end

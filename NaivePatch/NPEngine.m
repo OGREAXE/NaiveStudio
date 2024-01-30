@@ -156,7 +156,8 @@ static NSDictionary *defineClass(NSString *classDeclaration, NSArray<NPPatchedMe
             
             //todo init ncMethod
             NPFunction *ncMethod = [[NPFunction alloc] init];
-            ncMethod.code = method.body;
+//            ncMethod.code = method.body;
+            ncMethod.method = method;
             
             if (class_respondsToSelector(currCls, NSSelectorFromString(method.selector))) {
                 overrideMethod(currCls, method.selector, ncMethod, !isInstance, NULL);
@@ -309,7 +310,7 @@ static void JPForwardInvocation(__unsafe_unretained id assignSlf, SEL selector, 
             case _typeChar: {   \
                 _type arg;  \
                 [invocation getArgument:&arg atIndex:i];    \
-                [argList addObject:NPNUMBER(arg, _typeChar)]; \
+                [argList addObject:[NPValue numberWithNumber:@(arg) type:_typeChar]]; \
                 break;  \
             }
             JP_FWD_ARG_CASE('c', char)

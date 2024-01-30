@@ -7,22 +7,6 @@
 
 #import "NCObjCSourceParser.h"
 
-@implementation NPPatchedMethod
-
-- (BOOL)isClassMethod {
-    if (self.selector.length) {
-        return [self.selector characterAtIndex:0] == '+';
-    }
-    
-    return NO;
-}
-
-@end
-
-@implementation NPPatchedClass
-
-@end
-
 @implementation NCObjCSourceParser
 
 - (NSArray<NPPatchedClass *> *)extractPatchMethodFromContent:(NSString *)content {
@@ -71,7 +55,12 @@
             NSLog(@"body: %@ \n end of %@\n", body, decl);
             
             NPPatchedMethod *pMethod = [NPPatchedMethod new];
-            pMethod.selector = decl;
+            
+            NSArray *pairs = [self parameterPairFromString:decl];
+            pMethod.parameterPairs = pairs;
+            
+            pMethod.declaration = decl;
+            pMethod.selector = [self selectorFromString:decl andParamPairs:pairs] ;
             pMethod.body = body;
             
             if (pMethod.isClassMethod) {
@@ -88,6 +77,20 @@
     }
     
     return classes;
+}
+
+- (NSString *)selectorFromString:(NSString *)str andParamPairs:(NSArray<NPParamterPair *> *)pairs {
+    
+    if (pairs.count > 0) {
+        NSString *ret = @"";
+        for (NPParamterPair *pair in pairs) {
+            if (pair.formal.length)ret = [ret stringByAppendingFormat:@"%@:", pair.formal];
+        }
+        
+        return ret;
+    }
+
+    return [self methodFirstNameFromString:str];
 }
 
 - (NSString *)stringByRemovingCommentsInString:(NSString *)string {
@@ -136,5 +139,64 @@
     return nil;
 }
 
+- (NSString *)methodFirstNameFromString:(NSString *)str {
+    NSString *patchMethodRegexPattern = @"[-|+] *\\([^:]+\\)([^:]+)";
+    NSRegularExpression *methodRegex = [NSRegularExpression regularExpressionWithPattern:patchMethodRegexPattern options:NSRegularExpressionCaseInsensitive error:NULL];
+    
+    NSArray *methodArray = [methodRegex matchesInString:str options:0 range:NSMakeRange(0, [str length])] ;
+    
+    if (methodArray.count) {
+        NSRange methodDeclareMatchRange = [methodArray[0] rangeAtIndex:1];
+        
+        NSString *name = [str substringWithRange:methodDeclareMatchRange];
+        
+        return name;
+    }
+    
+    return nil;
+}
+
+- (NSArray<NPParamterPair *> *)parameterPairFromString:(NSString *)str {
+    str = [str stringByAppendingString:@" "];
+    NSString *patchMethodRegexPattern = @"\\) *([^ ]*) *: *\\(([^:]+)\\)([^ ]+) +";
+    NSRegularExpression *methodRegex = [NSRegularExpression regularExpressionWithPattern:patchMethodRegexPattern options:NSRegularExpressionCaseInsensitive error:NULL];
+    
+    NSArray *methodArray = [methodRegex matchesInString:str options:0 range:NSMakeRange(0, [str length])] ;
+    
+    NSMutableArray *pairs = [NSMutableArray array];
+    
+    //self
+    NPParamterPair *selfPair = [NPParamterPair new];
+    selfPair.type = @"id";
+    selfPair.name = @"self";
+    
+    [pairs addObject:selfPair];
+    
+    for (NSTextCheckingResult *methodMatch in methodArray) {
+        NSRange methodDeclareMatchRange = [methodMatch rangeAtIndex:0];
+        
+//        NSString *pair = [str substringWithRange:methodDeclareMatchRange];
+        
+        if (methodMatch.numberOfRanges == 4) {
+            NSRange formalRange = [methodMatch rangeAtIndex:1];
+            NSRange typeRange = [methodMatch rangeAtIndex:2];
+            NSRange nameRange = [methodMatch rangeAtIndex:3];
+            
+            NPParamterPair *pair = [NPParamterPair new];
+            pair.formal = [str substringWithRange:formalRange];
+            pair.type = [str substringWithRange:typeRange];
+            pair.name = [str substringWithRange:nameRange];
+            
+            [pairs addObject:pair];
+            
+//            NSLog(@"(%@)%@", [str substringWithRange:typeRange], [str substringWithRange:nameRange]);
+        } else {
+            NSLog(@"fail to run parameterPairFromString for %@", str);
+            break;
+        }
+    }
+    
+    return pairs;
+}
 
 @end

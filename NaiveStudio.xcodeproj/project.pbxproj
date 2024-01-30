@@ -234,6 +234,7 @@
 		0D7285A42B674A52002DBE5C /* NCObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCObject.hpp; sourceTree = "<group>"; };
 		0D7285A52B674A52002DBE5C /* NCAST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCAST.hpp; sourceTree = "<group>"; };
 		0D7285AC2B6783B9002DBE5C /* NPFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPFunction.h; sourceTree = "<group>"; };
+		0D7285C12B68FE3D002DBE5C /* NPPatchedClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPPatchedClass.h; sourceTree = "<group>"; };
 		0D73F8AE2B440FE0003EA49B /* libNaiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNaiveC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4300C0582701664E0069473A /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNetworkData.h; sourceTree = "<group>"; };
 		4300C0592701664E0069473A /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNetworkData.m; sourceTree = "<group>"; };
@@ -584,6 +585,7 @@
 		F31D7FC12122FC9B00E11E5F /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				0D7285C12B68FE3D002DBE5C /* NPPatchedClass.h */,
 				0D7285AC2B6783B9002DBE5C /* NPFunction.h */,
 				0D7285A52B674A52002DBE5C /* NCAST.hpp */,
 				0D7285A42B674A52002DBE5C /* NCObject.hpp */,
