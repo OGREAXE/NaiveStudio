@@ -79,6 +79,14 @@ static NSString *extractStructName(NSString *typeEncodeString)
 
 @implementation NPEngine
 
++ (void)patchWithCode:(NSString *)code {
+    NCObjCSourceParser *parser = [NCObjCSourceParser new];
+    
+    NSArray *patches = [parser extractPatchMethodFromContent:code];
+    
+    [self.class defineClasses:patches];
+}
+
 + (void)defineClasses:(NSArray<NPPatchedClass *> *)classes {
     for (NPPatchedClass *cls in classes) {
         [self.class defineClass:cls.name 

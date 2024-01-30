@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPEngine : NSObject
 
++ (void)patchWithCode:(NSString *)code;
+
 + (void)defineClasses:(NSArray<NPPatchedClass *> *)classes;
 
 + (NSDictionary *)defineClass:(NSString *)classDeclaration

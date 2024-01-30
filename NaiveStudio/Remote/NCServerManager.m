@@ -14,6 +14,7 @@
 #import "NCNetworkData.h"
 #import "NCViewManager.h"
 #import "Common.h"
+#import "NPEngine.h"
 
 #define TAG_TEXT 101
 #define TAG_BIN 102
@@ -165,6 +166,8 @@ static NCServerManager *_instance = nil;
     [sock readDataToData:DATA_FRAGMENT_DELIMITER withTimeout:-1 tag:0];
 }
 
+#define kPatchCodePrefix @"?NAIVE_PATCH?"
+
 - (void)dispatchWithString:(NSString *)string {
     if ([string isEqualToString:@"lock"]) {
         //handle lock screen
@@ -172,10 +175,11 @@ static NCServerManager *_instance = nil;
     } else if ([string isEqualToString:@"unlock"]) {
         //handle lock screen
         [self handleUnlockScreenCommand];
-    }  else if ([string isEqualToString:@"?NAIVE_PATCH?"]) {
-        //todo patch
-        NSLog(@"NAIVE_PATCH:%@", string);
+    }  else if ([string hasPrefix:kPatchCodePrefix]) {
+        NSString *code = [string substringFromIndex:kPatchCodePrefix.length];
+        NSLog(@"get code :%@", code);
         
+        [NPEngine patchWithCode:code];
     } else {
         [self.interpreter runWithCode:string];
     }
