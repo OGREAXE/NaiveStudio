@@ -9,6 +9,7 @@
 #import "NPFunction.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "NCObjCSourceParser.h"
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIApplication.h>
@@ -78,9 +79,17 @@ static NSString *extractStructName(NSString *typeEncodeString)
 
 @implementation NPEngine
 
++ (void)defineClasses:(NSArray<NPPatchedClass *> *)classes {
+    for (NPPatchedClass *cls in classes) {
+        [self.class defineClass:cls.name 
+                instanceMethods:cls.patchedMethods
+                   classMethods:cls.patchedClassMethods];
+    }
+}
+
 + (NSDictionary *)defineClass:(NSString *)classDeclaration
-              instanceMethods:(NSArray<NSString *> *)instanceMethods
-                 classMethods:(NSArray<NSString *> *)classMethods {
+              instanceMethods:(NSArray<NPPatchedMethod *> *)instanceMethods
+                 classMethods:(NSArray<NPPatchedMethod *> *)classMethods {
     return defineClass(classDeclaration, instanceMethods, classMethods);
 }
 
@@ -88,7 +97,7 @@ static void (^_exceptionBlock)(NSString *log) = ^void(NSString *log) {
     NSCAssert(NO, log);
 };
 
-static NSDictionary *defineClass(NSString *classDeclaration, NSArray<NSString *> *instanceMethods, NSArray<NSString *> *classMethods)
+static NSDictionary *defineClass(NSString *classDeclaration, NSArray<NPPatchedMethod *> *instanceMethods, NSArray<NPPatchedMethod *> *classMethods)
 {
     NSScanner *scanner = [NSScanner scannerWithString:classDeclaration];
     
@@ -131,17 +140,18 @@ static NSDictionary *defineClass(NSString *classDeclaration, NSArray<NSString *>
     
     for (int i = 0; i < 2; i ++) {
         BOOL isInstance = i == 0;
-        NSArray<NSString *> *methods = isInstance ? instanceMethods: classMethods;
+        NSArray<NPPatchedMethod *> *methods = isInstance ? instanceMethods: classMethods;
         
         Class currCls = isInstance ? cls: objc_getMetaClass(className.UTF8String);
         
-        for (NSString *selectorName in methods) {
+        for (NPPatchedMethod *method in methods) {
             
             //todo init ncMethod
             NPFunction *ncMethod = [[NPFunction alloc] init];
+            ncMethod.code = method.body;
             
-            if (class_respondsToSelector(currCls, NSSelectorFromString(selectorName))) {
-                overrideMethod(currCls, selectorName, ncMethod, !isInstance, NULL);
+            if (class_respondsToSelector(currCls, NSSelectorFromString(method.selector))) {
+                overrideMethod(currCls, method.selector, ncMethod, !isInstance, NULL);
             } else {
 //                BOOL overrided = NO;
 //                for (NSString *protocolName in protocols) {

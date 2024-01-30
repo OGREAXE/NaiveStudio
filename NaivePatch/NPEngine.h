@@ -6,14 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NCObjCSourceParser.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NPEngine : NSObject
 
++ (void)defineClasses:(NSArray<NPPatchedClass *> *)classes;
+
 + (NSDictionary *)defineClass:(NSString *)classDeclaration
-              instanceMethods:(NSArray<NSString *> *)instanceMethods
-                 classMethods:(NSArray<NSString *> *)classMethods;
+              instanceMethods:(NSArray<NPPatchedMethod *> *)instanceMethods
+                 classMethods:(NSArray<NPPatchedMethod *> *)classMethods;
 @end
 
 @interface JPBoxing : NSObject

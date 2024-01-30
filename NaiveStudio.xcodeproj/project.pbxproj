@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1696472B2830AD0055D837 /* libNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1696452B2830AD0055D837 /* libNaiveC.a */; };
+		0D16964B2B2891F90055D837 /* NCViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* NCViewManager.m */; };
+		0D16964C2B2892240055D837 /* NCScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB34270597A000C6EE2A /* NCScriptManager.m */; };
+		0D7285A12B674281002DBE5C /* NCObjCSourceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */; };
+		0D7285A22B674281002DBE5C /* NPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D72859E2B674281002DBE5C /* NPEngine.m */; };
+		0D73F8AF2B440FE0003EA49B /* libNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D73F8AE2B440FE0003EA49B /* libNaiveC.a */; };
 		4300C05A2701664F0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
 		4300C0602701775E0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
 		4386FB29270446CC00C6EE2A /* NCViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* NCViewManager.m */; };
@@ -36,12 +42,9 @@
 		D4E06ED7203703980095F442 /* NCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC0203703970095F442 /* NCDataSource.m */; };
 		D4E06ED8203703980095F442 /* NCCodeFastInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */; };
 		D4E06ED9203703980095F442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E06EC5203703980095F442 /* LaunchScreen.storyboard */; };
-		D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; };
-		D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4E06EE420370E1C0095F442 /* NaiveC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED2438822050220800AC27EB /* NSTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2438812050220800AC27EB /* NSTestManager.m */; };
 		F31D7F862122FB5600E11E5F /* libOnlineDebugToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = F31D7F852122FB5600E11E5F /* libOnlineDebugToolkit.m */; };
 		F31D7F872122FB5600E11E5F /* libOnlineDebugToolkit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */; };
-		F31D7F8C2122FB8700E11E5F /* liblibNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */; };
 		F31D7F8D2122FB9500E11E5F /* NCTestCenter.h in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB12058C02F00EC49AE /* NCTestCenter.h */; };
 		F31D7F8E2122FB9500E11E5F /* NCTestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D430BCB22058C02F00EC49AE /* NCTestCenter.m */; };
 		F31D7F902122FB9500E11E5F /* Common.h in Sources */ = {isa = PBXBuildFile; fileRef = D4E06EBE203703970095F442 /* Common.h */; };
@@ -205,7 +208,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4E06F0A20386B810095F442 /* NaiveC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +225,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D1696452B2830AD0055D837 /* libNaiveC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNaiveC.a; path = NaiveStudio/lib/libNaiveC.a; sourceTree = "<group>"; };
+		0D7285992B674281002DBE5C /* NCObjCSourceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCObjCSourceParser.h; sourceTree = "<group>"; };
+		0D72859A2B674281002DBE5C /* NPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPEngine.h; sourceTree = "<group>"; };
+		0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCObjCSourceParser.m; sourceTree = "<group>"; };
+		0D72859E2B674281002DBE5C /* NPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPEngine.m; sourceTree = "<group>"; };
+		0D7285A32B674A52002DBE5C /* NCStackElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCStackElement.hpp; sourceTree = "<group>"; };
+		0D7285A42B674A52002DBE5C /* NCObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCObject.hpp; sourceTree = "<group>"; };
+		0D7285A52B674A52002DBE5C /* NCAST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCAST.hpp; sourceTree = "<group>"; };
+		0D7285AC2B6783B9002DBE5C /* NPFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPFunction.h; sourceTree = "<group>"; };
+		0D73F8AE2B440FE0003EA49B /* libNaiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libNaiveC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4300C0582701664E0069473A /* NCNetworkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNetworkData.h; sourceTree = "<group>"; };
 		4300C0592701664E0069473A /* NCNetworkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNetworkData.m; sourceTree = "<group>"; };
 		4386FB27270446CB00C6EE2A /* NCViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCViewManager.h; sourceTree = "<group>"; };
@@ -281,15 +293,12 @@
 		D4E06EC2203703970095F442 /* NCCodeFastInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCodeFastInputViewController.m; sourceTree = "<group>"; };
 		D4E06EC3203703970095F442 /* NCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCEditorViewController.h; sourceTree = "<group>"; };
 		D4E06EC6203703980095F442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4E06EE420370E1C0095F442 /* NaiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NaiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2438802050220800AC27EB /* NSTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTestManager.h; sourceTree = "<group>"; };
 		ED2438812050220800AC27EB /* NSTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTestManager.m; sourceTree = "<group>"; };
 		F31D7F822122FB5600E11E5F /* libOnlineDebugToolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOnlineDebugToolkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31D7F842122FB5600E11E5F /* libOnlineDebugToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libOnlineDebugToolkit.h; sourceTree = "<group>"; };
 		F31D7F852122FB5600E11E5F /* libOnlineDebugToolkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libOnlineDebugToolkit.m; sourceTree = "<group>"; };
-		F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblibNaiveC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31D7FC22122FC9B00E11E5F /* NCCodeEngine_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCodeEngine_iOS.h; sourceTree = "<group>"; };
-		F31D7FFB2123BD3E00E11E5F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F31D7FFD2123BD7400E11E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F31D80502124221900E11E5F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F31D80512124221A00E11E5F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -358,7 +367,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E06F0920386B810095F442 /* NaiveC.framework in Frameworks */,
+				0D73F8AF2B440FE0003EA49B /* libNaiveC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +382,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31D7F8C2122FB8700E11E5F /* liblibNaiveC.a in Frameworks */,
+				0D1696472B2830AD0055D837 /* libNaiveC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +403,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7285962B674281002DBE5C /* NaivePatch */ = {
+			isa = PBXGroup;
+			children = (
+				0D7285992B674281002DBE5C /* NCObjCSourceParser.h */,
+				0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */,
+				0D72859A2B674281002DBE5C /* NPEngine.h */,
+				0D72859E2B674281002DBE5C /* NPEngine.m */,
+			);
+			path = NaivePatch;
+			sourceTree = "<group>";
+		};
 		4386FB262704463300C6EE2A /* Host */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +455,7 @@
 		D4E06E71203701C90095F442 = {
 			isa = PBXGroup;
 			children = (
+				0D7285962B674281002DBE5C /* NaivePatch */,
 				F366D95621EC9050001824AE /* Thirdparty */,
 				F36762DE212FB47400A497F8 /* Builtin */,
 				F31D7FC12122FC9B00E11E5F /* inc */,
@@ -544,10 +565,9 @@
 		D4E06EDC203705390095F442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D73F8AE2B440FE0003EA49B /* libNaiveC.a */,
 				F31D7FFD2123BD7400E11E5F /* Foundation.framework */,
-				F31D7FFB2123BD3E00E11E5F /* libstdc++.6.0.9.tbd */,
-				F31D7F8B2122FB8700E11E5F /* liblibNaiveC.a */,
-				D4E06EE420370E1C0095F442 /* NaiveC.framework */,
+				0D1696452B2830AD0055D837 /* libNaiveC.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -564,6 +584,10 @@
 		F31D7FC12122FC9B00E11E5F /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				0D7285AC2B6783B9002DBE5C /* NPFunction.h */,
+				0D7285A52B674A52002DBE5C /* NCAST.hpp */,
+				0D7285A42B674A52002DBE5C /* NCObject.hpp */,
+				0D7285A32B674A52002DBE5C /* NCStackElement.hpp */,
 				F31D7FC22122FC9B00E11E5F /* NCCodeEngine_iOS.h */,
 			);
 			name = inc;
@@ -974,11 +998,13 @@
 				4300C05A2701664F0069473A /* NCNetworkData.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
 				F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */,
+				0D7285A12B674281002DBE5C /* NCObjCSourceParser.m in Sources */,
 				F366DA2521ECC622001824AE /* GCDWebServerDataRequest.m in Sources */,
 				F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */,
 				F366DA1F21ECC622001824AE /* GCDWebServerErrorResponse.m in Sources */,
 				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
 				F3EAAC3F21ED797B00D7CBA4 /* DDMultiFormatter.m in Sources */,
+				0D7285A22B674281002DBE5C /* NPEngine.m in Sources */,
 				F3D0218F21E373E300C05483 /* UIView+Avatar.m in Sources */,
 				D4E06E8D203701CA0095F442 /* main.m in Sources */,
 				F3EAAC3A21ED797B00D7CBA4 /* GCDAsyncSocket.m in Sources */,
@@ -1019,6 +1045,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D16964C2B2892240055D837 /* NCScriptManager.m in Sources */,
+				0D16964B2B2891F90055D837 /* NCViewManager.m in Sources */,
 				4300C0602701775E0069473A /* NCNetworkData.m in Sources */,
 				F3EAAC8421EDFC5300D7CBA4 /* GCDAsyncUdpSocket.m in Sources */,
 				F3EAAC8521EDFC5300D7CBA4 /* GCDAsyncSocket.m in Sources */,
@@ -1319,6 +1347,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.dnfgamehelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1345,6 +1374,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1395,6 +1425,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1417,6 +1448,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
+					"$(PROJECT_DIR)/NaiveStudio/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
