@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NCObjCSourceParser.h"
+#import "NPPatchedClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDictionary *)defineClass:(NSString *)classDeclaration
               instanceMethods:(NSArray<NPPatchedMethod *> *)instanceMethods
                  classMethods:(NSArray<NPPatchedMethod *> *)classMethods;
+
++ (void)defineStruct:(NSDictionary *)defineDict;
+
++ (NSMutableDictionary *)registeredStruct;
+
 @end
 
 @interface JPBoxing : NSObject

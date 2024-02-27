@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0A748A2B70FF70008D5A81 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0A74892B70FF70008D5A81 /* libffi.a */; };
+		0D0A748B2B70FFB4008D5A81 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0A74892B70FF70008D5A81 /* libffi.a */; };
 		0D1696472B2830AD0055D837 /* libNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1696452B2830AD0055D837 /* libNaiveC.a */; };
 		0D16964B2B2891F90055D837 /* NCViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB28270446CB00C6EE2A /* NCViewManager.m */; };
 		0D16964C2B2892240055D837 /* NCScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4386FB34270597A000C6EE2A /* NCScriptManager.m */; };
-		0D7285A12B674281002DBE5C /* NCObjCSourceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */; };
-		0D7285A22B674281002DBE5C /* NPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D72859E2B674281002DBE5C /* NPEngine.m */; };
 		0D73F8AF2B440FE0003EA49B /* libNaiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D73F8AE2B440FE0003EA49B /* libNaiveC.a */; };
 		4300C05A2701664F0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
 		4300C0602701775E0069473A /* NCNetworkData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4300C0592701664E0069473A /* NCNetworkData.m */; };
@@ -225,11 +225,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D00F7C52B8CC09D00A8E9AD /* NPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPEngine.h; sourceTree = "<group>"; };
+		0D0A74892B70FF70008D5A81 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = NaivePatch/libffi/libffi.a; sourceTree = "<group>"; };
 		0D1696452B2830AD0055D837 /* libNaiveC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNaiveC.a; path = NaiveStudio/lib/libNaiveC.a; sourceTree = "<group>"; };
-		0D7285992B674281002DBE5C /* NCObjCSourceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCObjCSourceParser.h; sourceTree = "<group>"; };
-		0D72859A2B674281002DBE5C /* NPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPEngine.h; sourceTree = "<group>"; };
-		0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCObjCSourceParser.m; sourceTree = "<group>"; };
-		0D72859E2B674281002DBE5C /* NPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPEngine.m; sourceTree = "<group>"; };
 		0D7285A32B674A52002DBE5C /* NCStackElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCStackElement.hpp; sourceTree = "<group>"; };
 		0D7285A42B674A52002DBE5C /* NCObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCObject.hpp; sourceTree = "<group>"; };
 		0D7285A52B674A52002DBE5C /* NCAST.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NCAST.hpp; sourceTree = "<group>"; };
@@ -368,6 +366,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0A748B2B70FFB4008D5A81 /* libffi.a in Frameworks */,
 				0D73F8AF2B440FE0003EA49B /* libNaiveC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +382,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0A748A2B70FF70008D5A81 /* libffi.a in Frameworks */,
 				0D1696472B2830AD0055D837 /* libNaiveC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,17 +404,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D7285962B674281002DBE5C /* NaivePatch */ = {
-			isa = PBXGroup;
-			children = (
-				0D7285992B674281002DBE5C /* NCObjCSourceParser.h */,
-				0D72859D2B674281002DBE5C /* NCObjCSourceParser.m */,
-				0D72859A2B674281002DBE5C /* NPEngine.h */,
-				0D72859E2B674281002DBE5C /* NPEngine.m */,
-			);
-			path = NaivePatch;
-			sourceTree = "<group>";
-		};
 		4386FB262704463300C6EE2A /* Host */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,7 +445,6 @@
 		D4E06E71203701C90095F442 = {
 			isa = PBXGroup;
 			children = (
-				0D7285962B674281002DBE5C /* NaivePatch */,
 				F366D95621EC9050001824AE /* Thirdparty */,
 				F36762DE212FB47400A497F8 /* Builtin */,
 				F31D7FC12122FC9B00E11E5F /* inc */,
@@ -566,6 +554,7 @@
 		D4E06EDC203705390095F442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D0A74892B70FF70008D5A81 /* libffi.a */,
 				0D73F8AE2B440FE0003EA49B /* libNaiveC.a */,
 				F31D7FFD2123BD7400E11E5F /* Foundation.framework */,
 				0D1696452B2830AD0055D837 /* libNaiveC.a */,
@@ -585,6 +574,7 @@
 		F31D7FC12122FC9B00E11E5F /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				0D00F7C52B8CC09D00A8E9AD /* NPEngine.h */,
 				0D7285C12B68FE3D002DBE5C /* NPPatchedClass.h */,
 				0D7285AC2B6783B9002DBE5C /* NPFunction.h */,
 				0D7285A52B674A52002DBE5C /* NCAST.hpp */,
@@ -1000,13 +990,11 @@
 				4300C05A2701664F0069473A /* NCNetworkData.m in Sources */,
 				D4E06ED2203703980095F442 /* UIViewController+NCExtension.m in Sources */,
 				F3EAAC4221ED797B00D7CBA4 /* DDFileLogger.m in Sources */,
-				0D7285A12B674281002DBE5C /* NCObjCSourceParser.m in Sources */,
 				F366DA2521ECC622001824AE /* GCDWebServerDataRequest.m in Sources */,
 				F3EAAC4121ED797B00D7CBA4 /* DDAbstractDatabaseLogger.m in Sources */,
 				F366DA1F21ECC622001824AE /* GCDWebServerErrorResponse.m in Sources */,
 				D4E06ED0203703980095F442 /* NCAddNewFileViewController.m in Sources */,
 				F3EAAC3F21ED797B00D7CBA4 /* DDMultiFormatter.m in Sources */,
-				0D7285A22B674281002DBE5C /* NPEngine.m in Sources */,
 				F3D0218F21E373E300C05483 /* UIView+Avatar.m in Sources */,
 				D4E06E8D203701CA0095F442 /* main.m in Sources */,
 				F3EAAC3A21ED797B00D7CBA4 /* GCDAsyncSocket.m in Sources */,
@@ -1350,6 +1338,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
+					"$(PROJECT_DIR)/NaivePatch/libffi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.dnfgamehelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1377,6 +1366,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
+					"$(PROJECT_DIR)/NaivePatch/libffi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bd.NaiveStudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1428,6 +1418,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
+					"$(PROJECT_DIR)/NaivePatch/libffi",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1451,6 +1442,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NaiveStudio/Dependency/thirdparty/sim",
 					"$(PROJECT_DIR)/NaiveStudio/lib",
+					"$(PROJECT_DIR)/NaivePatch/libffi",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

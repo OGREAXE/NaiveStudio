@@ -17,6 +17,14 @@
     NSLog(@"go Dummy");
 }
 
+- (void)goWithBlock:(void (^)(int i))block {
+    block(123);
+}
+
+- (void)goWithReturnableBlock:(int (^)(int i))block {
+    block(123);
+}
+
 @end
 
 @interface NCTestCenter()
