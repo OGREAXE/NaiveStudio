@@ -115,7 +115,7 @@
         self.saveButton.hidden = YES;
     }
     
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
@@ -415,6 +415,7 @@
 //    [self.navigationController dismissViewControllerAnimated:YES completion:^{
 //        
 //    }];
+    [self saveCurrentContent];
     [NPEngine patchWithCode:self.textView.text];
 }
 

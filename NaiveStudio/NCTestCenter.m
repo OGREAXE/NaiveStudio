@@ -8,12 +8,54 @@
 
 #import "NCTestCenter.h"
 
-@interface Dummy:NSObject
+@interface TestObject : NSObject
+
+@end
+
+@implementation TestObject
+
+- (void)dealloc {
+    NSLog(@"TestObject dealloc");
+}
+
+@end
+
+@interface DummyBase : NSObject
+
+@end
+
+@implementation DummyBase
+
+- (void)go {
+    NSLog(@"go base");
+}
+
+- (void)toBePatch:(int)i {
+    NSLog(@"super not patched");
+}
+
+@end
+
+@interface Dummy:DummyBase
+
+@property (nonatomic) NSString *str;
+
 @end
 
 @implementation Dummy
 
+- (id)init {
+    self = [super init];
+    
+    if (self) {
+        _str = @"hahaha";
+    }
+    
+    return self;
+}
+
 -(void)go{
+//    [super go];
     NSLog(@"go Dummy");
 }
 
@@ -22,7 +64,31 @@
 }
 
 - (void)goWithReturnableBlock:(int (^)(int i))block {
-    block(123);
+    int res = block(123);
+    NSLog(@"result of block is %d", res);
+}
+
+- (void)goWithReturnableBlock2:(NSString * (^)(int i, NSString *s))block {
+    NSString *res = block(123, @"456");
+    NSLog(@"result of goWithReturnableBlock2 is %@", res);
+    
+    [self goWithBlock:^(int i) {
+        NSLog(@"oc invoke block %d", i);
+    }];
+}
+
+- (void)toBePatch:(int)i {
+    NSLog(@"I am not patched");
+}
+
+- (void)toBePatch2:(void (^)(int i))block {
+    NSLog(@"toBePatch2 is not patched");
+}
+
+- (void)testGCD:(id)obj {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"testGCD %@", obj);
+    });
 }
 
 @end
