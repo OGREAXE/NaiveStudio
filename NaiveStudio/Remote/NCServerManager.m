@@ -147,7 +147,7 @@ static NCServerManager *_instance = nil;
     switch (ncData.type) {
         case NCNetworkDataTypeString:
             {
-                LOG_SERVER(@"didReadData:**************\n%@",ncData.string);
+                //LOG_SERVER(@"didReadData:**************\n%@",ncData.string);
             
                 [self dispatchWithString:ncData.string];
             }
